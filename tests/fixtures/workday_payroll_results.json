@@ -1,0 +1,3773 @@
+{
+  "Get_Payroll_Results_Response": {
+    "Response_Data": {
+      "Payroll_Run_Reference": {
+        "ID": "WD-PRRUN-2026-PP09-USCORP"
+      },
+      "Pay_Group_Reference": {
+        "ID": "BIWEEKLY-US-CORP"
+      },
+      "Pay_Period_Start_Date": "2026-04-27",
+      "Pay_Period_End_Date": "2026-05-10",
+      "Pay_Date": "2026-05-15",
+      "Currency": "USD",
+      "Pay_Result": [
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1001",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Alex Smith",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2767.20",
+          "Net_Pay": "1764.72",
+          "Total_Employer_Cost": "276.72",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2767.20",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "332.06"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "138.36"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "166.03"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "27.67"
+            },
+            {
+              "Code": "401K",
+              "Amount": "138.36"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "166.03",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "27.67",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "83.02",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1002",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Jamie Johnson",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2889.60",
+          "Net_Pay": "1851.61",
+          "Total_Employer_Cost": "288.97",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2889.60",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "346.75"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "144.48"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "173.38"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "28.90"
+            },
+            {
+              "Code": "401K",
+              "Amount": "144.48"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "173.38",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "28.90",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "86.69",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1003",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Taylor Williams",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2523.15",
+          "Net_Pay": "1591.43",
+          "Total_Employer_Cost": "252.31",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2268.00",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "6",
+              "Amount": "255.15",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "302.78"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "126.16"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "151.39"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "25.23"
+            },
+            {
+              "Code": "401K",
+              "Amount": "126.16"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "151.39",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "25.23",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "75.69",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1004",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Jordan Brown",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2362.06",
+          "Net_Pay": "1477.07",
+          "Total_Employer_Cost": "236.20",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2123.20",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "6",
+              "Amount": "238.86",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "283.45"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "118.10"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "141.72"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "23.62"
+            },
+            {
+              "Code": "401K",
+              "Amount": "118.10"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "141.72",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "23.62",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "70.86",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1005",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Morgan Jones",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "3070.40",
+          "Net_Pay": "1979.99",
+          "Total_Employer_Cost": "307.03",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "3070.40",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "368.45"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "153.52"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "184.22"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "30.70"
+            },
+            {
+              "Code": "401K",
+              "Amount": "153.52"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "184.22",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "30.70",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "92.11",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1006",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Casey Garcia",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2708.80",
+          "Net_Pay": "1723.24",
+          "Total_Employer_Cost": "270.88",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2708.80",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "325.06"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "135.44"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "162.53"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "27.09"
+            },
+            {
+              "Code": "401K",
+              "Amount": "135.44"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "162.53",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "27.09",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "81.26",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1007",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Riley Miller",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2341.40",
+          "Net_Pay": "1462.40",
+          "Total_Employer_Cost": "234.13",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2036.00",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "8",
+              "Amount": "305.40",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "280.97"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "117.07"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "140.48"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "23.41"
+            },
+            {
+              "Code": "401K",
+              "Amount": "117.07"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "140.48",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "23.41",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "70.24",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1008",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Avery Davis",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2450.14",
+          "Net_Pay": "1539.59",
+          "Total_Employer_Cost": "245.01",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2279.20",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "4",
+              "Amount": "170.94",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "294.02"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "122.51"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "147.01"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "24.50"
+            },
+            {
+              "Code": "401K",
+              "Amount": "122.51"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "147.01",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "24.50",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "73.50",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1009",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Cameron Rodriguez",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2032.00",
+          "Net_Pay": "1242.72",
+          "Total_Employer_Cost": "203.20",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2032.00",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "243.84"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "101.60"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "121.92"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "20.32"
+            },
+            {
+              "Code": "401K",
+              "Amount": "101.60"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "121.92",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "20.32",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "60.96",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1010",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Quinn Martinez",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "3180.86",
+          "Net_Pay": "2058.42",
+          "Total_Employer_Cost": "318.09",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2859.20",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "6",
+              "Amount": "321.66",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "381.70"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "159.04"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "190.85"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "31.81"
+            },
+            {
+              "Code": "401K",
+              "Amount": "159.04"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "190.85",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "31.81",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "95.43",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1011",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Drew Hernandez",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2653.60",
+          "Net_Pay": "1684.05",
+          "Total_Employer_Cost": "265.37",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2653.60",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "318.43"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "132.68"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "159.22"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "26.54"
+            },
+            {
+              "Code": "401K",
+              "Amount": "132.68"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "159.22",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "26.54",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "79.61",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1012",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Reese Lopez",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2539.20",
+          "Net_Pay": "1602.84",
+          "Total_Employer_Cost": "253.92",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2539.20",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "304.70"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "126.96"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "152.35"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "25.39"
+            },
+            {
+              "Code": "401K",
+              "Amount": "126.96"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "152.35",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "25.39",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "76.18",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1013",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Skyler Gonzalez",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2971.20",
+          "Net_Pay": "1909.56",
+          "Total_Employer_Cost": "297.12",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2971.20",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "356.54"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "148.56"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "178.27"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "29.71"
+            },
+            {
+              "Code": "401K",
+              "Amount": "148.56"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "178.27",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "29.71",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "89.14",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1014",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Hayden Wilson",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2910.40",
+          "Net_Pay": "1866.39",
+          "Total_Employer_Cost": "291.03",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2910.40",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "349.25"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "145.52"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "174.62"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "29.10"
+            },
+            {
+              "Code": "401K",
+              "Amount": "145.52"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "174.62",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "29.10",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "87.31",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1015",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Rowan Anderson",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2837.60",
+          "Net_Pay": "1814.69",
+          "Total_Employer_Cost": "283.77",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2837.60",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "340.51"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "141.88"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "170.26"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "28.38"
+            },
+            {
+              "Code": "401K",
+              "Amount": "141.88"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "170.26",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "28.38",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "85.13",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1016",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Emerson Thomas",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2333.60",
+          "Net_Pay": "1456.85",
+          "Total_Employer_Cost": "233.37",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2333.60",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "280.03"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "116.68"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "140.02"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "23.34"
+            },
+            {
+              "Code": "401K",
+              "Amount": "116.68"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "140.02",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "23.34",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "70.01",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1017",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Finley Patel",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "3148.80",
+          "Net_Pay": "2035.64",
+          "Total_Employer_Cost": "314.88",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "3148.80",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "377.86"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "157.44"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "188.93"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "31.49"
+            },
+            {
+              "Code": "401K",
+              "Amount": "157.44"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "188.93",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "31.49",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "94.46",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1018",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Sage Moore",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2122.40",
+          "Net_Pay": "1306.91",
+          "Total_Employer_Cost": "212.23",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2122.40",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "254.69"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "106.12"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "127.34"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "21.22"
+            },
+            {
+              "Code": "401K",
+              "Amount": "106.12"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "127.34",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "21.22",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "63.67",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1019",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Phoenix Jackson",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2433.40",
+          "Net_Pay": "1527.72",
+          "Total_Employer_Cost": "243.33",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2116.00",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "8",
+              "Amount": "317.40",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "292.01"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "121.67"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "146.00"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "24.33"
+            },
+            {
+              "Code": "401K",
+              "Amount": "121.67"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "146.00",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "24.33",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "73.00",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1020",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "River Martin",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2412.80",
+          "Net_Pay": "1513.08",
+          "Total_Employer_Cost": "241.28",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2412.80",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "289.54"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "120.64"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "144.77"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "24.13"
+            },
+            {
+              "Code": "401K",
+              "Amount": "120.64"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "144.77",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "24.13",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "72.38",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1021",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Charlie Lee",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "3302.79",
+          "Net_Pay": "2144.98",
+          "Total_Employer_Cost": "330.28",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2968.80",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "6",
+              "Amount": "333.99",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "396.33"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "165.14"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "198.17"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "33.03"
+            },
+            {
+              "Code": "401K",
+              "Amount": "165.14"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "198.17",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "33.03",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "99.08",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1022",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Logan Perez",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2551.20",
+          "Net_Pay": "1611.36",
+          "Total_Employer_Cost": "255.12",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2551.20",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "306.14"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "127.56"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "153.07"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "25.51"
+            },
+            {
+              "Code": "401K",
+              "Amount": "127.56"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "153.07",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "25.51",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "76.54",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1023",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Parker Thompson",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "3168.00",
+          "Net_Pay": "2049.28",
+          "Total_Employer_Cost": "316.80",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "3168.00",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "380.16"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "158.40"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "190.08"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "31.68"
+            },
+            {
+              "Code": "401K",
+              "Amount": "158.40"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "190.08",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "31.68",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "95.04",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1024",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Blake White",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "2094.40",
+          "Net_Pay": "1287.03",
+          "Total_Employer_Cost": "209.43",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2094.40",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "251.33"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "104.72"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "125.66"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "20.94"
+            },
+            {
+              "Code": "401K",
+              "Amount": "104.72"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "125.66",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "20.94",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "62.83",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1025",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Dakota Harris",
+          "Worker_Type": "Hourly",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-1000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "3219.84",
+          "Net_Pay": "2086.09",
+          "Total_Employer_Cost": "321.99",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "2995.20",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "OVERTIME",
+              "Hours": "4",
+              "Amount": "224.64",
+              "GL_Account": "50110000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "386.38"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "160.99"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "193.19"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "32.20"
+            },
+            {
+              "Code": "401K",
+              "Amount": "160.99"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "193.19",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "32.20",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "96.60",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1026",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Devon Sanchez",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "8541.81",
+          "Net_Pay": "5864.68",
+          "Total_Employer_Cost": "854.18",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "8541.81",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1025.02"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "427.09"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "512.51"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "85.42"
+            },
+            {
+              "Code": "401K",
+              "Amount": "427.09"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "512.51",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "85.42",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "256.25",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1027",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Ellis Clark",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "6446.54",
+          "Net_Pay": "4377.04",
+          "Total_Employer_Cost": "644.66",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "6446.54",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "773.58"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "322.33"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "386.79"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "64.47"
+            },
+            {
+              "Code": "401K",
+              "Amount": "322.33"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "386.79",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "64.47",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "193.40",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1028",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Frankie Ramirez",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "5769.15",
+          "Net_Pay": "3896.09",
+          "Total_Employer_Cost": "576.91",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "5769.15",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "692.30"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "288.46"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "346.15"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "57.69"
+            },
+            {
+              "Code": "401K",
+              "Amount": "288.46"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "346.15",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "57.69",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "173.07",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1029",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Harper Lewis",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "5278.22",
+          "Net_Pay": "3547.54",
+          "Total_Employer_Cost": "527.82",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "5278.22",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "633.39"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "263.91"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "316.69"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "52.78"
+            },
+            {
+              "Code": "401K",
+              "Amount": "263.91"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "316.69",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "52.78",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "158.35",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1030",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Indigo Robinson",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "7645.05",
+          "Net_Pay": "5227.99",
+          "Total_Employer_Cost": "764.50",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "7645.05",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "917.41"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "382.25"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "458.70"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "76.45"
+            },
+            {
+              "Code": "401K",
+              "Amount": "382.25"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "458.70",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "76.45",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "229.35",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1031",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Justice Walker",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "10092.27",
+          "Net_Pay": "6965.52",
+          "Total_Employer_Cost": "1009.23",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "8092.27",
+              "GL_Account": "50100000"
+            },
+            {
+              "Code": "BONUS",
+              "Hours": "0",
+              "Amount": "2000.00",
+              "GL_Account": "50130000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1211.07"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "504.61"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "605.54"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "100.92"
+            },
+            {
+              "Code": "401K",
+              "Amount": "504.61"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "605.54",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "100.92",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "302.77",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1032",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Kendall Young",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "8940.89",
+          "Net_Pay": "6148.04",
+          "Total_Employer_Cost": "894.09",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "8940.89",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1072.91"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "447.04"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "536.45"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "89.41"
+            },
+            {
+              "Code": "401K",
+              "Amount": "447.04"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "536.45",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "89.41",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "268.23",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1033",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Lennon Allen",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "8421.27",
+          "Net_Pay": "5779.11",
+          "Total_Employer_Cost": "842.13",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "8421.27",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1010.55"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "421.06"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "505.28"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "84.21"
+            },
+            {
+              "Code": "401K",
+              "Amount": "421.06"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "505.28",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "84.21",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "252.64",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1034",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Marlowe King",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "8465.93",
+          "Net_Pay": "5810.80",
+          "Total_Employer_Cost": "846.60",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "8465.93",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1015.91"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "423.30"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "507.96"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "84.66"
+            },
+            {
+              "Code": "401K",
+              "Amount": "423.30"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "507.96",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "84.66",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "253.98",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1035",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Nico Wright",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "6520.50",
+          "Net_Pay": "4429.57",
+          "Total_Employer_Cost": "652.05",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "6520.50",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "782.46"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "326.02"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "391.23"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "65.20"
+            },
+            {
+              "Code": "401K",
+              "Amount": "326.02"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "391.23",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "65.20",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "195.62",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1036",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Oakley Scott",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "6813.64",
+          "Net_Pay": "4637.68",
+          "Total_Employer_Cost": "681.37",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "6813.64",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "817.64"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "340.68"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "408.82"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "68.14"
+            },
+            {
+              "Code": "401K",
+              "Amount": "340.68"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "408.82",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "68.14",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "204.41",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1037",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Peyton Torres",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-2000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "8336.44",
+          "Net_Pay": "5718.88",
+          "Total_Employer_Cost": "833.64",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "8336.44",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1000.37"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "416.82"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "500.19"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "83.36"
+            },
+            {
+              "Code": "401K",
+              "Amount": "416.82"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "500.19",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "83.36",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "250.09",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1038",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Quincy Nguyen",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "5719.91",
+          "Net_Pay": "3861.13",
+          "Total_Employer_Cost": "571.99",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "5719.91",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "686.39"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "286.00"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "343.19"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "57.20"
+            },
+            {
+              "Code": "401K",
+              "Amount": "286.00"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "343.19",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "57.20",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "171.60",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1039",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Remy Hill",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "7164.53",
+          "Net_Pay": "4886.81",
+          "Total_Employer_Cost": "716.46",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "7164.53",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "859.74"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "358.23"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "429.87"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "71.65"
+            },
+            {
+              "Code": "401K",
+              "Amount": "358.23"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "429.87",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "71.65",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "214.94",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1040",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Sasha Flores",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "9526.31",
+          "Net_Pay": "6563.67",
+          "Total_Employer_Cost": "952.63",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "9526.31",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1143.16"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "476.32"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "571.58"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "95.26"
+            },
+            {
+              "Code": "401K",
+              "Amount": "476.32"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "571.58",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "95.26",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "285.79",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1041",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Sutton Green",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "9763.65",
+          "Net_Pay": "6732.19",
+          "Total_Employer_Cost": "976.37",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "9763.65",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1171.64"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "488.18"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "585.82"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "97.64"
+            },
+            {
+              "Code": "401K",
+              "Amount": "488.18"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "585.82",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "97.64",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "292.91",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1042",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Tatum Adams",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "9626.61",
+          "Net_Pay": "6634.89",
+          "Total_Employer_Cost": "962.67",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "9626.61",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1155.19"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "481.33"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "577.60"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "96.27"
+            },
+            {
+              "Code": "401K",
+              "Amount": "481.33"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "577.60",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "96.27",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "288.80",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1043",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Adrian Nelson",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "5035.52",
+          "Net_Pay": "3375.21",
+          "Total_Employer_Cost": "503.56",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "5035.52",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "604.26"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "251.78"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "302.13"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "50.36"
+            },
+            {
+              "Code": "401K",
+              "Amount": "251.78"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "302.13",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "50.36",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "151.07",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1044",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Bailey Baker",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "9262.34",
+          "Net_Pay": "6376.26",
+          "Total_Employer_Cost": "926.23",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "9262.34",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1111.48"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "463.12"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "555.74"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "92.62"
+            },
+            {
+              "Code": "401K",
+              "Amount": "463.12"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "555.74",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "92.62",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "277.87",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1045",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Briar Hall",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Terminated",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "5",
+          "Gross_Pay": "4253.02",
+          "Net_Pay": "2919.65",
+          "Total_Employer_Cost": "425.30",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "40",
+              "Amount": "4253.02",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "510.36"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "212.65"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "255.18"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "42.53"
+            },
+            {
+              "Code": "401K",
+              "Amount": "212.65"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "100.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "255.18",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "42.53",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "127.59",
+              "GL_Account": "50220000"
+            }
+          ],
+          "Termination_Date": "2026-05-04"
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1046",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Easton Rivera",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "6336.08",
+          "Net_Pay": "4298.63",
+          "Total_Employer_Cost": "633.60",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "6336.08",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "760.33"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "316.80"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "380.16"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "63.36"
+            },
+            {
+              "Code": "401K",
+              "Amount": "316.80"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "380.16",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "63.36",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "190.08",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1047",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Eden Campbell",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "7966.95",
+          "Net_Pay": "5456.53",
+          "Total_Employer_Cost": "796.70",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "7966.95",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "956.03"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "398.35"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "478.02"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "79.67"
+            },
+            {
+              "Code": "401K",
+              "Amount": "398.35"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "478.02",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "79.67",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "239.01",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1048",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Fallon Mitchell",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "6524.61",
+          "Net_Pay": "4432.47",
+          "Total_Employer_Cost": "652.47",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "6524.61",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "782.95"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "326.23"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "391.48"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "65.25"
+            },
+            {
+              "Code": "401K",
+              "Amount": "326.23"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "391.48",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "65.25",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "195.74",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1049",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Gray Carter",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "11440.43",
+          "Net_Pay": "7922.71",
+          "Total_Employer_Cost": "1144.04",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "11440.43",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1372.85"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "572.02"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "686.43"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "114.40"
+            },
+            {
+              "Code": "401K",
+              "Amount": "572.02"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "686.43",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "114.40",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "343.21",
+              "GL_Account": "50220000"
+            }
+          ]
+        },
+        {
+          "Worker_Reference": {
+            "ID": "EMP-1050",
+            "Type": "Employee_ID"
+          },
+          "Worker_Name": "Harley Roberts",
+          "Worker_Type": "Salaried",
+          "Worker_Status": "Active",
+          "Pay_Group_Reference": {
+            "ID": "BIWEEKLY-US-CORP"
+          },
+          "Pay_Period_Start_Date": "2026-04-27",
+          "Pay_Period_End_Date": "2026-05-10",
+          "Pay_Date": "2026-05-15",
+          "Cost_Center_Reference": {
+            "ID": "CC-3000"
+          },
+          "Currency": "USD",
+          "Days_Worked": "10",
+          "Gross_Pay": "9661.21",
+          "Net_Pay": "6659.46",
+          "Total_Employer_Cost": "966.12",
+          "Earnings": [
+            {
+              "Code": "REGULAR",
+              "Hours": "80",
+              "Amount": "9661.21",
+              "GL_Account": "50100000"
+            }
+          ],
+          "Deductions": [
+            {
+              "Code": "TAX_FED",
+              "Amount": "1159.35"
+            },
+            {
+              "Code": "TAX_STATE",
+              "Amount": "483.06"
+            },
+            {
+              "Code": "FICA",
+              "Amount": "579.67"
+            },
+            {
+              "Code": "MEDICARE",
+              "Amount": "96.61"
+            },
+            {
+              "Code": "401K",
+              "Amount": "483.06"
+            },
+            {
+              "Code": "MEDICAL",
+              "Amount": "200.00"
+            }
+          ],
+          "Employer_Costs": [
+            {
+              "Code": "FICA_ER",
+              "Amount": "579.67",
+              "GL_Account": "50200000"
+            },
+            {
+              "Code": "MEDICARE_ER",
+              "Amount": "96.61",
+              "GL_Account": "50210000"
+            },
+            {
+              "Code": "401K_MATCH",
+              "Amount": "289.84",
+              "GL_Account": "50220000"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.venv/
+.mypy_cache/
+.pytest_cache/
+
+# Never ship local secrets. pydantic-settings reads .env at runtime, which
+# would override anything pushed via `vercel env add`.
+.env
+.env.local
+.env.*.local
+
+# Next.js frontend is deployed as a separate Vercel project.
+web/
+
+# Tests: exclude test code but keep fixtures (MOCK_MODE loads from tests/fixtures/).
+tests/test_*.py
+tests/__init__.py
+tests/__pycache__/
+
+# Fly.io / Docker artifacts — not used on Vercel.
+Dockerfile
+.dockerignore
+fly.toml
+
+# Local databases / state.
+*.db
+*.db-journal

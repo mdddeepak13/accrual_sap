@@ -1,0 +1,43 @@
+# Env + secrets
+.env
+.env.local
+
+# Local SQLite databases
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Testing / type checking
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Next.js / Node
+web/node_modules/
+web/.next/
+web/out/
+web/.env.local
+web/next-env.d.ts
+.vercel

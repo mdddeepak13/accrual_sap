@@ -1,0 +1,82 @@
+{
+  "d": {
+    "__count": "3",
+    "results": [
+      {
+        "__metadata": {
+          "id": "API_PURCHASEORDER_PROCESS_SRV/A_PurchaseOrderItem(PurchaseOrder='4500000001',PurchaseOrderItem='10')",
+          "type": "API_PURCHASEORDER_PROCESS_SRV.A_PurchaseOrderItemType"
+        },
+        "PurchaseOrder": "4500000001",
+        "PurchaseOrderItem": "10",
+        "PurchaseOrderType": "NB",
+        "PurchasingDocumentDate": "2026-03-01",
+        "Supplier": "V-100",
+        "SupplierName": "Acme Industrial Supplies GmbH",
+        "Material": "MAT-0001",
+        "PurchaseOrderItemText": "Bearings, 6203-2RS (qty 1000)",
+        "OrderQuantity": "1000.000",
+        "OrderPriceUnit": "PC",
+        "NetPriceAmount": "5.00",
+        "DocumentCurrency": "EUR",
+        "AccountAssignmentCategory": "K",
+        "CostCenter": "CC-1000",
+        "GLAccount": "4010000",
+        "LatestGoodsReceiptDate": "2026-04-05",
+        "InvoicedQuantity": "0.000",
+        "IsFullyDelivered": true,
+        "IsFullyInvoiced": false
+      },
+      {
+        "__metadata": {
+          "id": "API_PURCHASEORDER_PROCESS_SRV/A_PurchaseOrderItem(PurchaseOrder='4500000002',PurchaseOrderItem='20')",
+          "type": "API_PURCHASEORDER_PROCESS_SRV.A_PurchaseOrderItemType"
+        },
+        "PurchaseOrder": "4500000002",
+        "PurchaseOrderItem": "20",
+        "PurchaseOrderType": "NB",
+        "PurchasingDocumentDate": "2026-03-15",
+        "Supplier": "V-200",
+        "SupplierName": "Brightside Marketing Services LLC",
+        "Material": null,
+        "PurchaseOrderItemText": "Q2 digital campaign — social + search",
+        "OrderQuantity": "1.000",
+        "OrderPriceUnit": "AU",
+        "NetPriceAmount": "12500.00",
+        "DocumentCurrency": "USD",
+        "AccountAssignmentCategory": "K",
+        "CostCenter": "CC-2000",
+        "GLAccount": "6100000",
+        "LatestGoodsReceiptDate": "2026-04-12",
+        "InvoicedQuantity": "0.000",
+        "IsFullyDelivered": true,
+        "IsFullyInvoiced": false
+      },
+      {
+        "__metadata": {
+          "id": "API_PURCHASEORDER_PROCESS_SRV/A_PurchaseOrderItem(PurchaseOrder='4500000003',PurchaseOrderItem='10')",
+          "type": "API_PURCHASEORDER_PROCESS_SRV.A_PurchaseOrderItemType"
+        },
+        "PurchaseOrder": "4500000003",
+        "PurchaseOrderItem": "10",
+        "PurchaseOrderType": "FO",
+        "PurchasingDocumentDate": "2025-12-20",
+        "Supplier": "V-400",
+        "SupplierName": "Delta Consulting Partners",
+        "Material": null,
+        "PurchaseOrderItemText": "Systems integration consulting - Dec 2025",
+        "OrderQuantity": "40.000",
+        "OrderPriceUnit": "HR",
+        "NetPriceAmount": "80.00",
+        "DocumentCurrency": "EUR",
+        "AccountAssignmentCategory": "K",
+        "CostCenter": "CC-1000",
+        "GLAccount": "6200000",
+        "LatestGoodsReceiptDate": "2026-01-01",
+        "InvoicedQuantity": "0.000",
+        "IsFullyDelivered": false,
+        "IsFullyInvoiced": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "d": {
+    "__count": "3",
+    "results": [
+      {
+        "__metadata": {
+          "id": "API_COSTCENTER_SRV/A_CostCenter(ControllingArea='A000',CostCenter='CC-1000',ValidityEndDate=datetime'9999-12-31T00:00:00')",
+          "type": "API_COSTCENTER_SRV.A_CostCenterType"
+        },
+        "ControllingArea": "A000",
+        "CostCenter": "CC-1000",
+        "ValidityStartDate": "2020-01-01",
+        "ValidityEndDate": "9999-12-31",
+        "CostCenterName": "Production Operations",
+        "Department": "Manufacturing",
+        "PersonResponsibleName": "Johanna Schmidt",
+        "CompanyCode": "1000",
+        "CostCenterCategory": "1",
+        "CostCenterStandardHierArea": "H-MFG"
+      },
+      {
+        "__metadata": {
+          "id": "API_COSTCENTER_SRV/A_CostCenter(ControllingArea='A000',CostCenter='CC-2000',ValidityEndDate=datetime'9999-12-31T00:00:00')",
+          "type": "API_COSTCENTER_SRV.A_CostCenterType"
+        },
+        "ControllingArea": "A000",
+        "CostCenter": "CC-2000",
+        "ValidityStartDate": "2020-01-01",
+        "ValidityEndDate": "9999-12-31",
+        "CostCenterName": "Marketing",
+        "Department": "Marketing & Communications",
+        "PersonResponsibleName": "Matthias Weber",
+        "CompanyCode": "1000",
+        "CostCenterCategory": "1",
+        "CostCenterStandardHierArea": "H-MKT"
+      },
+      {
+        "__metadata": {
+          "id": "API_COSTCENTER_SRV/A_CostCenter(ControllingArea='A000',CostCenter='CC-3000',ValidityEndDate=datetime'9999-12-31T00:00:00')",
+          "type": "API_COSTCENTER_SRV.A_CostCenterType"
+        },
+        "ControllingArea": "A000",
+        "CostCenter": "CC-3000",
+        "ValidityStartDate": "2020-01-01",
+        "ValidityEndDate": "9999-12-31",
+        "CostCenterName": "IT Services",
+        "Department": "Information Technology",
+        "PersonResponsibleName": "Arjun Kumar",
+        "CompanyCode": "1000",
+        "CostCenterCategory": "1",
+        "CostCenterStandardHierArea": "H-IT"
+      }
+    ]
+  }
+}
