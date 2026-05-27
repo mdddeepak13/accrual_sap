@@ -1,5 +1,3 @@
-import { TcsLogo } from "@/components/tcs-logo";
-
 export function AppFooter() {
   return (
     <footer className="shrink-0 border-t border-border bg-card">
@@ -16,10 +14,6 @@ export function AppFooter() {
         </div>
 
         <div className="flex items-center gap-4">
-          <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-            Powered by
-          </span>
-          <TcsLogo size={72} />
           <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
             Demo
           </span>

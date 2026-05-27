@@ -10,9 +10,7 @@ style: |
 
   section {
     font-family: 'Inter', sans-serif;
-    background:
-      url('/TCS-logo-white.svg') no-repeat bottom 18px right 24px / 84px auto,
-      #0f172a;
+    background: #0f172a;
     color: #e2e8f0;
     padding: 56px 72px 64px 72px;
     font-size: 20px;
@@ -222,9 +220,7 @@ style: |
   header, footer { display: none; }
 
   section.title-slide {
-    background:
-      url('/TCS-logo-white.svg') no-repeat bottom 18px right 24px / 84px auto,
-      linear-gradient(135deg, #0f172a 0%, #0c1a2e 50%, #0f172a 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #0c1a2e 50%, #0f172a 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
