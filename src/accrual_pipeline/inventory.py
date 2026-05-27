@@ -97,17 +97,30 @@ async def fetch_batches(
     *,
     limit: int = 100,
 ) -> list[BatchRecord]:
-    """Fetch batch records from SAP (or fixture in MOCK_MODE)."""
+    """Fetch batch records from SAP BTP CAP (or fixture in MOCK_MODE).
+
+    Falls back to the fixture if the BTP service is unreachable (e.g. trial
+    tenant expired) so the endpoint stays functional.
+    """
     settings = get_settings()
     if settings.mock_mode:
         log.info("inventory.mock_mode", fixture=str(BATCH_FIXTURE.name))
         payload = json.loads(BATCH_FIXTURE.read_text(encoding="utf-8"))
     else:
         log.info("inventory.fetch", path=BATCH_PATH, limit=limit)
-        response = await get_with_retry(
-            client, BATCH_PATH, params={"$format": "json", "$top": str(limit)}
-        )
-        payload = response.json()
+        try:
+            response = await get_with_retry(
+                client, BATCH_PATH, params={"$format": "json", "$top": str(limit)}
+            )
+            payload = response.json()
+        except Exception as exc:
+            log.warning(
+                "inventory.btp_unavailable",
+                error=type(exc).__name__,
+                detail=str(exc),
+                fallback="fixture",
+            )
+            payload = json.loads(BATCH_FIXTURE.read_text(encoding="utf-8"))
     records = unwrap_odata(payload)
     return [BatchRecord.model_validate(_remap(r)) for r in records]
 

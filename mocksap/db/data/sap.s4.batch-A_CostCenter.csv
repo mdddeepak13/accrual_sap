@@ -1,0 +1,6 @@
+ControllingArea,CostCenter,ValidityEndDate,ValidityStartDate,CostCenterName,Department,PersonResponsibleName,CompanyCode,CostCenterCategory,CostCenterStandardHierArea
+A000,CC-1000,9999-12-31,2020-01-01,Production Operations,Manufacturing,Johanna Schmidt,1000,1,H-MFG
+A000,CC-2000,9999-12-31,2020-01-01,Marketing,Marketing & Communications,Matthias Weber,1000,1,H-MKT
+A000,CC-3000,9999-12-31,2020-01-01,IT Services,Information Technology,Arjun Kumar,1000,1,H-IT
+A000,CC-4000,9999-12-31,2020-01-01,Supply Chain,Logistics & Warehousing,Sandra Müller,1000,1,H-SCM
+A000,CC-1100,9999-12-31,2020-01-01,Admin & Finance,Finance & Controlling,Peter Hoffmann,1000,1,H-FIN

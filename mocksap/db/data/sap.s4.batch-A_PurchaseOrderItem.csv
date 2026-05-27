@@ -1,0 +1,9 @@
+PurchaseOrder,PurchaseOrderItem,PurchaseOrderType,PurchasingDocumentDate,Supplier,SupplierName,Material,PurchaseOrderItemText,OrderQuantity,OrderPriceUnit,NetPriceAmount,DocumentCurrency,AccountAssignmentCategory,CostCenter,GLAccount,LatestGoodsReceiptDate,InvoicedQuantity,IsFullyDelivered,IsFullyInvoiced
+4500000001,10,NB,2026-03-01,V-100,Pinegate Realty Partners,,Office rent HQ - Q2 2026,3.000,MO,5000.00,EUR,K,CC-1000,22000000,2026-04-05,0.000,false,false
+4500000002,20,NB,2026-03-15,V-200,Brightside Marketing Services LLC,,Q2 digital campaign - social + search,1.000,AU,12500.00,USD,K,CC-2000,22000000,2026-04-12,0.000,false,false
+4500000003,10,FO,2025-12-20,V-400,Delta Consulting Partners,,Systems integration consulting - Dec 2025,40.000,HR,80.00,EUR,K,CC-1000,22000000,2026-01-01,0.000,false,false
+4500000004,10,NB,2026-02-10,V-500,Nexus Cloud Solutions AG,,Annual SaaS platform licence - 2026,1.000,AU,18000.00,USD,K,CC-3000,22000000,2026-03-01,0.000,false,false
+4500000005,10,NB,2026-01-05,V-600,Apex Logistics GmbH,,Freight & warehousing services Q1 2026,1.000,AU,8750.00,EUR,K,CC-4000,22000000,2026-02-15,0.000,false,false
+4500000006,10,FO,2025-10-01,V-700,Meridian Engineering Ltd,,Plant maintenance contract - Oct 2025,1.000,AU,22000.00,EUR,K,CC-1000,22000000,2025-11-01,0.000,false,false
+4500000007,10,FO,2025-09-15,V-800,Orion Staffing Solutions,,Temporary labour - production line Q4 2025,500.000,HR,45.00,EUR,K,CC-1000,22000000,2025-10-31,0.000,false,false
+4500000008,10,NB,2026-04-01,V-900,Vertex Analytics Inc,,Data analytics consulting - Apr 2026,20.000,HR,150.00,USD,K,CC-3000,22000000,2026-04-20,0.000,false,false

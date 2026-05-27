@@ -11,6 +11,7 @@ import structlog
 
 from accrual_pipeline.config import get_settings
 from accrual_pipeline.fetchers.base import (
+    _decode_response,
     get_with_retry,
     load_fixture,
     unwrap_odata,
@@ -43,6 +44,6 @@ async def fetch_cost_centers(
                 "$top": str(limit),
             },
         )
-        payload = response.json()
+        payload = _decode_response(response)
     records = unwrap_odata(payload)
     return [COCostCenter.model_validate(r) for r in records]

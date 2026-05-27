@@ -107,17 +107,95 @@ class ApprovedItem(Base):
     run: Mapped[RunMetadata] = relationship(back_populates="approved_items")
 
 
+class Posting(Base):
+    """One row per posting workflow instance.
+
+    A Posting is created when a user (or chat agent) decides to push an
+    approved accrual / payroll reconciliation through to downstream systems
+    (BlackLine + SAP BTP CAP). The actual orchestration runs in the Next.js
+    Vercel Workflow DevKit runtime — this row is the source of truth for
+    UI display and audit logging.
+    """
+
+    __tablename__ = "postings"
+
+    id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    source_type: Mapped[str] = mapped_column(String(16))  # "accrual" | "payroll"
+    source_id: Mapped[str] = mapped_column(String(128))
+    source_run_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    title: Mapped[str] = mapped_column(String(256))
+    payload_json: Mapped[str] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(32))
+    # status lifecycle: draft -> awaiting_approval -> approved | rejected
+    #   approved -> posting_blackline -> posting_cap -> completed
+    #   any -> failed
+    workflow_run_id: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    approval_token: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    blackline_receipt_json: Mapped[str | None] = mapped_column(Text, nullable=True)
+    cap_receipt_json: Mapped[str | None] = mapped_column(Text, nullable=True)
+    error_message: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime)
+    updated_at: Mapped[datetime] = mapped_column(DateTime)
+
+    events: Mapped[list["PostingEvent"]] = relationship(
+        back_populates="posting", cascade="all, delete-orphan",
+        order_by="PostingEvent.id",
+    )
+
+
+class PostingEvent(Base):
+    """One row per state transition or workflow milestone on a Posting.
+
+    Drives the workflow stepper on the UI — each row is a step the user
+    sees, with payload carrying details (e.g. mock receipt IDs from
+    BlackLine / CAP, approver name on the approval transition).
+    """
+
+    __tablename__ = "posting_events"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    posting_id: Mapped[str] = mapped_column(
+        String(64), ForeignKey("postings.id", ondelete="CASCADE")
+    )
+    step: Mapped[str] = mapped_column(String(64))
+    payload_json: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime)
+
+    posting: Mapped[Posting] = relationship(back_populates="events")
+
+
 # --- Engine / session management ---
 
 _engine: Engine | None = None
 _session_factory: sessionmaker[Session] | None = None
 
 
+def _normalize_db_url(url: str) -> str:
+    """Coerce common Postgres URL flavours to the form SQLAlchemy expects.
+
+    Neon (via the Vercel Marketplace) sets DATABASE_URL to
+    ``postgres://user:pass@host/db?sslmode=require``. SQLAlchemy 2.0 prefers
+    the explicit dialect+driver form ``postgresql+psycopg2://...``. Both
+    schemes work, but the explicit form picks the driver deterministically.
+    """
+    if url.startswith("postgres://"):
+        return "postgresql+psycopg2://" + url[len("postgres://"):]
+    if url.startswith("postgresql://"):
+        return "postgresql+psycopg2://" + url[len("postgresql://"):]
+    return url
+
+
 def init_db(database_url: str | None = None) -> Engine:
     """Create the engine + tables. Safe to call multiple times."""
     global _engine, _session_factory
-    url = database_url or get_settings().database_url
-    _engine = create_engine(url, future=True)
+    url = _normalize_db_url(database_url or get_settings().database_url)
+    # pool_pre_ping survives Neon's autosuspend (idle connections get terminated).
+    is_postgres = url.startswith("postgresql")
+    engine_kwargs: dict[str, Any] = {"future": True}
+    if is_postgres:
+        engine_kwargs["pool_pre_ping"] = True
+        engine_kwargs["pool_recycle"] = 1800
+    _engine = create_engine(url, **engine_kwargs)
     _session_factory = sessionmaker(bind=_engine, expire_on_commit=False)
     Base.metadata.create_all(_engine)
     return _engine
@@ -278,6 +356,171 @@ def list_runs(limit: int = 50) -> list[dict[str, Any]]:
             }
             for r in rows
         ]
+
+
+# --- Posting workflow API ---
+
+
+_POSTING_STATUS_FOR_STEP: dict[str, str] = {
+    "draft_created": "draft",
+    "workflow_started": "awaiting_approval",
+    "awaiting_approval": "awaiting_approval",
+    "approved": "posting_blackline",
+    "rejected": "rejected",
+    "posting_blackline_started": "posting_blackline",
+    "posting_blackline_done": "posting_cap",
+    "posting_cap_started": "posting_cap",
+    "posting_cap_done": "completed",
+    "completed": "completed",
+    "failed": "failed",
+}
+
+
+def create_posting(
+    *,
+    posting_id: str,
+    source_type: str,
+    source_id: str,
+    source_run_id: str | None,
+    title: str,
+    payload: dict[str, Any],
+) -> dict[str, Any]:
+    """Create a new posting draft. Returns the row as a dict."""
+    if source_type not in ("accrual", "payroll"):
+        raise ValueError(f"Invalid source_type: {source_type!r}")
+    now = datetime.now(timezone.utc)
+    with get_session() as s:
+        if s.get(Posting, posting_id) is not None:
+            raise ValueError(f"Posting already exists: {posting_id!r}")
+        row = Posting(
+            id=posting_id,
+            source_type=source_type,
+            source_id=source_id,
+            source_run_id=source_run_id,
+            title=title,
+            payload_json=json.dumps(payload, sort_keys=True, default=str),
+            status="draft",
+            workflow_run_id=None,
+            approval_token=f"posting-approval:{posting_id}",
+            created_at=now,
+            updated_at=now,
+        )
+        s.add(row)
+        s.add(PostingEvent(
+            posting_id=posting_id,
+            step="draft_created",
+            payload_json=None,
+            created_at=now,
+        ))
+        s.flush()
+        s.refresh(row)
+        return _posting_to_dict(row, row.events)
+
+
+def attach_workflow_run(posting_id: str, workflow_run_id: str) -> None:
+    """Record the Workflow DevKit run_id once start() returns."""
+    with get_session() as s:
+        row = s.get(Posting, posting_id)
+        if row is None:
+            raise ValueError(f"Unknown posting_id: {posting_id!r}")
+        row.workflow_run_id = workflow_run_id
+        row.updated_at = datetime.now(timezone.utc)
+
+
+def record_posting_event(
+    *,
+    posting_id: str,
+    step: str,
+    payload: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Append a PostingEvent and update the parent Posting's derived status.
+
+    Some steps also persist their payload onto the Posting row itself for
+    fast UI rendering (BlackLine + CAP receipts, error messages).
+    """
+    now = datetime.now(timezone.utc)
+    with get_session() as s:
+        row = s.get(Posting, posting_id)
+        if row is None:
+            raise ValueError(f"Unknown posting_id: {posting_id!r}")
+        s.add(PostingEvent(
+            posting_id=posting_id,
+            step=step,
+            payload_json=(
+                json.dumps(payload, sort_keys=True, default=str)
+                if payload is not None else None
+            ),
+            created_at=now,
+        ))
+        if step in _POSTING_STATUS_FOR_STEP:
+            row.status = _POSTING_STATUS_FOR_STEP[step]
+        if step == "posting_blackline_done" and payload is not None:
+            row.blackline_receipt_json = json.dumps(payload, sort_keys=True, default=str)
+        if step == "posting_cap_done" and payload is not None:
+            row.cap_receipt_json = json.dumps(payload, sort_keys=True, default=str)
+        if step == "failed" and payload is not None:
+            row.error_message = str(payload.get("message", payload))
+        row.updated_at = now
+        s.flush()
+        s.refresh(row)
+        return _posting_to_dict(row, row.events)
+
+
+def list_postings(limit: int = 50) -> list[dict[str, Any]]:
+    """Return recent postings ordered newest first."""
+    with get_session() as s:
+        rows = list(s.scalars(
+            select(Posting).order_by(Posting.created_at.desc()).limit(limit)
+        ))
+        return [_posting_to_dict(r, r.events, include_payload=False) for r in rows]
+
+
+def get_posting(posting_id: str) -> dict[str, Any] | None:
+    """Return one posting with full event history. None if not found."""
+    with get_session() as s:
+        row = s.get(Posting, posting_id)
+        if row is None:
+            return None
+        return _posting_to_dict(row, row.events)
+
+
+def _posting_to_dict(
+    row: Posting,
+    events: list[PostingEvent],
+    *,
+    include_payload: bool = True,
+) -> dict[str, Any]:
+    return {
+        "id": row.id,
+        "source_type": row.source_type,
+        "source_id": row.source_id,
+        "source_run_id": row.source_run_id,
+        "title": row.title,
+        "status": row.status,
+        "workflow_run_id": row.workflow_run_id,
+        "approval_token": row.approval_token,
+        "payload": json.loads(row.payload_json) if include_payload else None,
+        "blackline_receipt": (
+            json.loads(row.blackline_receipt_json)
+            if row.blackline_receipt_json else None
+        ),
+        "cap_receipt": (
+            json.loads(row.cap_receipt_json)
+            if row.cap_receipt_json else None
+        ),
+        "error_message": row.error_message,
+        "created_at": row.created_at.isoformat(),
+        "updated_at": row.updated_at.isoformat(),
+        "events": [
+            {
+                "id": e.id,
+                "step": e.step,
+                "payload": json.loads(e.payload_json) if e.payload_json else None,
+                "created_at": e.created_at.isoformat(),
+            }
+            for e in events
+        ],
+    }
 
 
 def get_run_summary(run_id: str) -> dict[str, Any] | None:

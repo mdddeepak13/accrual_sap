@@ -47,12 +47,12 @@ export function ChatApp() {
   };
 
   return (
-    <div className="flex h-dvh flex-col">
+    <div className="flex h-dvh flex-col bg-background text-foreground">
       <AppHeader onOpenMenu={() => setDrawerOpen(true)} />
 
       <div className="flex min-h-0 flex-1">
-        {/* Desktop sidebar */}
-        <aside className="hidden w-72 shrink-0 border-r bg-muted/30 md:flex md:flex-col">
+        {/* Desktop sidebar — white rail, subtle right border */}
+        <aside className="hidden w-72 shrink-0 border-r border-border bg-sidebar md:flex md:flex-col">
           <SuggestionsList
             onPick={handlePick}
             onNewChat={handleNewChat}
@@ -61,7 +61,7 @@ export function ChatApp() {
         </aside>
 
         {/* Main chat region */}
-        <main className="min-w-0 flex-1">
+        <main className="min-w-0 flex-1 bg-background">
           <ChatPanel
             messages={messages}
             input={input}

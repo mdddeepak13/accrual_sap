@@ -122,20 +122,23 @@ class MMPurchaseOrder(_SAPRecord):
 
     Source: Purchase Order API (A_PurchaseOrderItem). Line-level is what
     accrual reconciliation needs — SES / invoice data hang off the item.
+
+    All fields are optional — the SAP sandbox returns sparse records and
+    omits fields that are blank in the demo dataset.
     """
 
     PurchaseOrder: str
     PurchaseOrderItem: str
     PurchaseOrderType: str | None = None
     PurchasingDocumentDate: ODataDate | None = None
-    Supplier: str
+    Supplier: str | None = None
     SupplierName: str | None = None
     Material: str | None = None
     PurchaseOrderItemText: str | None = None
-    OrderQuantity: Decimal
+    OrderQuantity: Decimal | None = None
     OrderPriceUnit: str | None = None
-    NetPriceAmount: Decimal
-    DocumentCurrency: str
+    NetPriceAmount: Decimal | None = None
+    DocumentCurrency: str | None = None
     AccountAssignmentCategory: str | None = None
     CostCenter: str | None = None
     GLAccount: str | None = None
@@ -149,13 +152,14 @@ class COCostCenter(_SAPRecord):
     """Cost center master record.
 
     Source: Cost Center API (API_COSTCENTER_SRV / A_CostCenter).
+    All fields beyond the key are optional — sandbox returns sparse records.
     """
 
     ControllingArea: str
     CostCenter: str
-    ValidityStartDate: ODataDate
-    ValidityEndDate: ODataDate
-    CostCenterName: str
+    ValidityStartDate: ODataDate | None = None
+    ValidityEndDate: ODataDate | None = None
+    CostCenterName: str | None = None
     Department: str | None = None
     PersonResponsibleName: str | None = None
     CompanyCode: str | None = None
@@ -267,6 +271,18 @@ class PayrollAccrualReconciliation(BaseModel):
     fi_document_count: int = 0
     fi_line_count: int = 0
     fi_document_numbers: list[str] = []
+
+    # --- Per-period accrual view ---
+    # For a bi-weekly pay group, each row covers one (worker, pay_period_end)
+    # slice. The field name kept its historical "_monthly_" suffix for API
+    # compatibility; logically it's the per-period total (Workday gross +
+    # employer cost for THIS period). A row whose pay_date is in the past
+    # should have variance ≈ 0; a row whose pay_date is in the future is the
+    # unposted period, where variance equals the full per-period cost — that
+    # IS the accrual to book.
+    workday_monthly_total_cost: Decimal = Decimal("0")
+    sap_actuals_posted: Decimal = Decimal("0")
+    accrual_variance_to_post: Decimal = Decimal("0")
 
 
 class AccrualObject(BaseModel):

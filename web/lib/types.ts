@@ -109,6 +109,9 @@ export interface PayrollAccrualReconciliation {
   fi_document_count: number;
   fi_line_count: number;
   fi_document_numbers: string[];
+  workday_monthly_total_cost: string;
+  sap_actuals_posted: string;
+  accrual_variance_to_post: string;
 }
 
 export interface PayrollResultsResponse {
@@ -141,4 +144,54 @@ export interface RunDetail {
 export interface StartRunResponse {
   run_id: string;
   status_url: string;
+}
+
+// --- Posting workflow ---
+
+export type PostingStatus =
+  | "draft"
+  | "awaiting_approval"
+  | "posting_blackline"
+  | "posting_cap"
+  | "completed"
+  | "rejected"
+  | "failed";
+
+export type PostingStep =
+  | "draft_created"
+  | "workflow_started"
+  | "awaiting_approval"
+  | "approved"
+  | "rejected"
+  | "posting_blackline_started"
+  | "posting_blackline_done"
+  | "posting_cap_started"
+  | "posting_cap_done"
+  | "completed"
+  | "failed";
+
+export interface PostingEvent {
+  id: number;
+  step: PostingStep;
+  payload: Record<string, unknown> | null;
+  created_at: string;
+}
+
+export interface PostingSummary {
+  id: string;
+  source_type: "accrual" | "payroll";
+  source_id: string;
+  source_run_id: string | null;
+  title: string;
+  status: PostingStatus;
+  workflow_run_id: string | null;
+  approval_token: string | null;
+  blackline_receipt: Record<string, unknown> | null;
+  cap_receipt: Record<string, unknown> | null;
+  error_message: string | null;
+  created_at: string;
+  updated_at: string;
+  events: PostingEvent[];
+  // `payload` is null on the list endpoint (we don't ship full payloads in bulk).
+  payload: Record<string, unknown> | null;
 }

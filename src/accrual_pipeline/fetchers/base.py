@@ -13,6 +13,7 @@ the per-resource shape (endpoint path, filter params, target model).
 from __future__ import annotations
 
 import asyncio
+import gzip
 import json
 from pathlib import Path
 from typing import Any
@@ -33,9 +34,9 @@ class SAPClientError(Exception):
 
 
 def create_sap_client(settings: Settings | None = None) -> httpx.AsyncClient:
-    """Return an httpx.AsyncClient pre-configured for the SAP sandbox.
+    """Return an httpx.AsyncClient pre-configured for the SAP Business Accelerator Hub.
 
-    Injects the APIKey header on every request and sets sensible timeouts.
+    Used by FI/MM/CO fetchers (accruals, purchase orders, cost centers).
     Caller owns the `async with` lifetime.
     """
     resolved = settings or get_settings()
@@ -44,9 +45,69 @@ def create_sap_client(settings: Settings | None = None) -> httpx.AsyncClient:
         headers={
             "APIKey": resolved.sap_api_key.get_secret_value(),
             "Accept": "application/json",
+            # SAP sandbox always returns gzip. httpx decompresses automatically
+            # when Accept-Encoding is declared — without it the raw bytes land
+            # in response.text and json() crashes.
+            "Accept-Encoding": "gzip, deflate",
         },
         timeout=httpx.Timeout(30.0, connect=10.0),
     )
+
+
+def create_btp_client(settings: Settings | None = None) -> httpx.AsyncClient:
+    """Return an httpx.AsyncClient pre-configured for the SAP BTP CAP service.
+
+    Used by inventory/batch/writedown fetchers (pharma distressed inventory).
+    The BTP CAP service uses the same SAP API key for auth.
+    Caller owns the `async with` lifetime.
+    """
+    resolved = settings or get_settings()
+    return httpx.AsyncClient(
+        base_url=resolved.sap_btp_base_url,
+        headers={
+            "APIKey": resolved.sap_api_key.get_secret_value(),
+            "Accept": "application/json",
+        },
+        timeout=httpx.Timeout(30.0, connect=10.0),
+    )
+
+
+def _build_odata_url(path: str, params: dict[str, Any] | None) -> str:
+    """Construct an OData URL with `%20`-encoded spaces.
+
+    SAP CAP's OData parser rejects `+` as a space encoding (it requires `%20`).
+    httpx's default param encoder uses `quote_plus` which produces `+`, so we
+    pre-build the URL ourselves using `quote()`.
+    """
+    if not params:
+        return path
+    from urllib.parse import quote
+    qs = "&".join(
+        f"{quote(str(k), safe='$')}={quote(str(v), safe='')}"
+        for k, v in params.items()
+        if v is not None
+    )
+    return f"{path}?{qs}" if qs else path
+
+
+def _decode_response(response: httpx.Response) -> dict[str, Any]:
+    """Decode an httpx response to a JSON dict, handling gzip manually.
+
+    The SAP Business Accelerator Hub always returns Content-Encoding: gzip.
+    httpx decompresses automatically when it sends Accept-Encoding, but on
+    some serverless runtimes the header gets stripped. This function falls
+    back to manual gzip decompression so the response always parses cleanly.
+    """
+    content = response.content
+    # Try manual gzip decompression first if the content looks compressed
+    # (magic bytes 1f 8b) or the header says so.
+    encoding = response.headers.get("content-encoding", "").lower()
+    if encoding == "gzip" or (len(content) >= 2 and content[:2] == b"\x1f\x8b"):
+        try:
+            content = gzip.decompress(content)
+        except Exception:
+            pass  # already decompressed by httpx — use as-is
+    return json.loads(content.decode("utf-8"))
 
 
 async def get_with_retry(
@@ -62,10 +123,11 @@ async def get_with_retry(
       - httpx.HTTPStatusError on a 4xx (no retry).
       - SAPClientError if all retry attempts fail.
     """
+    url = _build_odata_url(path, params)
     last_exc: Exception | None = None
     for attempt in range(1, max_attempts + 1):
         try:
-            response = await client.get(path, params=params)
+            response = await client.get(url)
         except (httpx.TransportError, httpx.TimeoutException) as exc:
             last_exc = exc
             log.warning(

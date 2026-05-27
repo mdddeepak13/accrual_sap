@@ -320,6 +320,10 @@ def _build_payroll_reconciliation(
             cost_centers_seen.add(ln.CostCenter)
         doc_numbers.add(ln.AccountingDocument)
 
+    workday_monthly_total = wd.Gross_Pay + (wd.Total_Employer_Cost or Decimal("0"))
+    sap_actuals_posted = fi_total_earnings + fi_total_employer
+    accrual_variance = workday_monthly_total - sap_actuals_posted
+
     return PayrollAccrualReconciliation(
         payroll_id=wd.payroll_id,
         worker_id=wd.Worker_Reference,
@@ -345,6 +349,9 @@ def _build_payroll_reconciliation(
         fi_document_count=len(doc_numbers),
         fi_line_count=len(fi_lines),
         fi_document_numbers=sorted(doc_numbers),
+        workday_monthly_total_cost=workday_monthly_total,
+        sap_actuals_posted=sap_actuals_posted,
+        accrual_variance_to_post=accrual_variance,
     )
 
 

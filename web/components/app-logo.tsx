@@ -16,7 +16,7 @@ export function AppLogo({ size = "md" }: Props) {
         <Receipt size={iconSize} strokeWidth={2} />
       </span>
       <span className={`font-semibold tracking-tight ${textSize}`}>
-        Accrual Agent
+        Accrual Engine
       </span>
     </div>
   );

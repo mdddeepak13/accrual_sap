@@ -44,7 +44,7 @@ def _mock_claude_client() -> MagicMock:
 
     Two prompts go through this client per run:
       1. Accrual prompt — covers the 5 FI fixture accruals
-      2. Payroll prompt — covers the 50 Workday reconciliations
+      2. Payroll prompt — covers the 40 Workday reconciliations (20 workers × 2 bi-weekly periods)
 
     The mock dispatches by sniffing the system prompt; that's coarser than
     a real Claude call but stable across prompt edits.
@@ -89,85 +89,73 @@ def _mock_claude_client() -> MagicMock:
         SimpleNamespace(
             type="tool_use", id="p1", name="flag_payroll_accrual_mismatch",
             input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1007",
-                "worker_id": "EMP-1007",
-                "mismatch_type": "amount_mismatch",
+                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-17/EMP-1005",
+                "worker_id": "EMP-1005",
+                "mismatch_type": "wrong_cost_center",
                 "severity": "medium",
-                "workday_amount": "2341.40",
-                "fi_amount": "2036.00",
-                "reason": "Workday Gross_Pay $2341.40 includes 8 OT hours ($305.40); FI 50100000 only posted $2036 regular. Missing OT line at GL 50110000.",
+                "workday_amount": "",
+                "fi_amount": "",
+                "reason": "Workday assigns CC-1000; P1 FI posting routed to CC-9999.",
             },
         ),
         SimpleNamespace(
             type="tool_use", id="p2", name="flag_payroll_accrual_mismatch",
             input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1014",
-                "worker_id": "EMP-1014",
-                "mismatch_type": "wrong_cost_center",
+                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-17/EMP-1007",
+                "worker_id": "EMP-1007",
+                "mismatch_type": "wrong_gl_account",
                 "severity": "medium",
-                "workday_amount": "",
-                "fi_amount": "",
-                "reason": "Workday assigns CC-1000; FI posted to CC-9999.",
+                "workday_amount": "4042.99",
+                "fi_amount": "0",
+                "reason": "Regular earnings posted to GL 50130000 (suspense) instead of 50100000.",
             },
         ),
         SimpleNamespace(
             type="tool_use", id="p3", name="flag_payroll_accrual_mismatch",
             input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1022",
-                "worker_id": "EMP-1022",
+                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-17/EMP-1012",
+                "worker_id": "EMP-1012",
                 "mismatch_type": "missing_in_fi",
                 "severity": "high",
-                "workday_amount": "2551.20",
+                "workday_amount": "6383.65",
                 "fi_amount": "0",
-                "reason": "PECI never delivered EMP-1022; no FI documents found for this pay period.",
+                "reason": "PECI never delivered EMP-1012 for P1; no FI documents found.",
             },
         ),
         SimpleNamespace(
             type="tool_use", id="p4", name="flag_payroll_accrual_mismatch",
             input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1031",
-                "worker_id": "EMP-1031",
-                "mismatch_type": "wrong_gl_account",
-                "severity": "medium",
-                "workday_amount": "2000.00",
-                "fi_amount": "0",
-                "reason": "Workday BONUS $2000 expected at GL 50130000; FI lumped it into 50100000 (regular salary).",
+                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-17/EMP-1017",
+                "worker_id": "EMP-1017",
+                "mismatch_type": "duplicate_fi_posting",
+                "severity": "high",
+                "workday_amount": "5447.38",
+                "fi_amount": "10894.76",
+                "reason": "FI has 2 PECI documents for EMP-1017 in P1; expected exactly 1.",
             },
         ),
         SimpleNamespace(
             type="tool_use", id="p5", name="flag_payroll_accrual_mismatch",
             input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1039",
-                "worker_id": "EMP-1039",
+                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-17/EMP-1019",
+                "worker_id": "EMP-1019",
                 "mismatch_type": "amount_mismatch",
                 "severity": "low",
-                "workday_amount": "429.87",
-                "fi_amount": "379.87",
-                "reason": "Employer FICA expense $50 short at GL 50200000.",
+                "workday_amount": "7660.38",
+                "fi_amount": "7585.38",
+                "reason": "Employer FICA expense $75 short at GL 50200000 in P1.",
             },
         ),
         SimpleNamespace(
             type="tool_use", id="p6", name="flag_payroll_accrual_mismatch",
             input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1045",
-                "worker_id": "EMP-1045",
-                "mismatch_type": "termination_not_prorated",
-                "severity": "high",
-                "workday_amount": "4253.02",
-                "fi_amount": "8506.04",
-                "reason": "Worker terminated 2026-05-04 (5 days worked); Workday prorated gross to $4253; FI posted full $8506.",
-            },
-        ),
-        SimpleNamespace(
-            type="tool_use", id="p7", name="flag_payroll_accrual_mismatch",
-            input={
-                "payroll_id": "WD/BIWEEKLY-US-CORP/2026-05-10/EMP-1050",
-                "worker_id": "EMP-1050",
-                "mismatch_type": "duplicate_fi_posting",
-                "severity": "high",
-                "workday_amount": "9661.21",
-                "fi_amount": "19322.42",
-                "reason": "FI has 2 PECI documents for EMP-1050; expected exactly 1.",
+                "payroll_id": "",
+                "worker_id": "EMP-9999",
+                "mismatch_type": "missing_in_workday",
+                "severity": "medium",
+                "workday_amount": "0",
+                "fi_amount": "3500.00",
+                "reason": "Phantom worker in FI with no Workday counterpart for the pay period.",
             },
         ),
     ]
@@ -185,23 +173,28 @@ def _mock_claude_client() -> MagicMock:
 # ------------------------ direct pipeline ------------------------
 
 async def test_pipeline_end_to_end_produces_expected_summary() -> None:
-    await run_pipeline("run-e2e-direct", anthropic_client=_mock_claude_client())
+    with patch(
+        "accrual_pipeline.pipeline.post_blackline_je_batch",
+        new_callable=AsyncMock,
+        return_value={"sap_document": "4900000001/2026/1000"},
+    ):
+        await run_pipeline("run-e2e-direct", anthropic_client=_mock_claude_client())
 
     summary = persistence.get_run_summary("run-e2e-direct")
     assert summary is not None
     assert summary["status"] == "completed"
-    # 5 FI accruals + 50 Workday payroll reconciliations.
-    assert summary["accrual_count"] == 55
+    # 5 FI accruals + 40 Workday payroll reconciliations (20 workers × 2 bi-weekly periods).
+    assert summary["accrual_count"] == 45
     assert summary["finished_at"] is not None
 
     # FI: 2 flagged from duplicate + 1 from stale PO.
-    # Payroll: 7 mismatch flags (one per seeded mismatch scenario).
-    assert len(summary["flagged"]) == 10
+    # Payroll: 6 mismatch flags (5 P1 anomalies + 1 orphan).
+    assert len(summary["flagged"]) == 9
 
     tools = [r["tool_name"] for r in summary["flagged"]]
     assert tools.count("flag_duplicate_accrual") == 2
     assert tools.count("flag_stale_po_accrual") == 1
-    assert tools.count("flag_payroll_accrual_mismatch") == 7
+    assert tools.count("flag_payroll_accrual_mismatch") == 6
 
     stale = next(r for r in summary["flagged"] if r["tool_name"] == "flag_stale_po_accrual")
     assert stale["severity"] == "medium"
@@ -217,8 +210,8 @@ async def test_pipeline_end_to_end_produces_expected_summary() -> None:
         "wrong_cost_center",
         "missing_in_fi",
         "wrong_gl_account",
-        "termination_not_prorated",
         "duplicate_fi_posting",
+        "missing_in_workday",
     }
 
 
@@ -226,8 +219,13 @@ async def test_pipeline_marks_status_failed_on_error() -> None:
     broken = MagicMock()
     broken.messages.create = AsyncMock(side_effect=RuntimeError("Claude exploded"))
 
-    with pytest.raises(RuntimeError):
-        await run_pipeline("run-e2e-fail", anthropic_client=broken)
+    with patch(
+        "accrual_pipeline.pipeline.post_blackline_je_batch",
+        new_callable=AsyncMock,
+        return_value=None,
+    ):
+        with pytest.raises(RuntimeError):
+            await run_pipeline("run-e2e-fail", anthropic_client=broken)
 
     summary = persistence.get_run_summary("run-e2e-fail")
     assert summary is not None
@@ -253,7 +251,12 @@ def test_get_unknown_run_returns_404() -> None:
 
 def test_get_known_run_returns_summary_after_pipeline_completes() -> None:
     # Run the pipeline directly first so a row exists.
-    asyncio.run(run_pipeline("run-api-test", anthropic_client=_mock_claude_client()))
+    with patch(
+        "accrual_pipeline.pipeline.post_blackline_je_batch",
+        new_callable=AsyncMock,
+        return_value={"sap_document": "4900000001/2026/1000"},
+    ):
+        asyncio.run(run_pipeline("run-api-test", anthropic_client=_mock_claude_client()))
 
     client = TestClient(app)
     response = client.get("/runs/run-api-test")
@@ -261,8 +264,8 @@ def test_get_known_run_returns_summary_after_pipeline_completes() -> None:
     body = response.json()
     assert body["run_id"] == "run-api-test"
     assert body["status"] == "completed"
-    # 3 FI flags + 7 payroll mismatch flags.
-    assert len(body["flagged"]) == 10
+    # 3 FI flags + 6 payroll mismatch flags.
+    assert len(body["flagged"]) == 9
 
 
 def test_post_runs_returns_run_id_and_status_url() -> None:
@@ -270,6 +273,10 @@ def test_post_runs_returns_run_id_and_status_url() -> None:
     with patch(
         "accrual_pipeline.pipeline.create_anthropic_client",
         return_value=_mock_claude_client(),
+    ), patch(
+        "accrual_pipeline.pipeline.post_blackline_je_batch",
+        new_callable=AsyncMock,
+        return_value={"sap_document": "4900000001/2026/1000"},
     ):
         client = TestClient(app)
         response = client.post("/runs")

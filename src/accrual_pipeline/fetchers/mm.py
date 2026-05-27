@@ -11,6 +11,7 @@ import structlog
 
 from accrual_pipeline.config import get_settings
 from accrual_pipeline.fetchers.base import (
+    _decode_response,
     get_with_retry,
     load_fixture,
     unwrap_odata,
@@ -44,9 +45,8 @@ async def fetch_purchase_orders(
             params={
                 "$format": "json",
                 "$top": str(limit),
-                "$filter": "IsFullyInvoiced eq false",
             },
         )
-        payload = response.json()
+        payload = _decode_response(response)
     records = unwrap_odata(payload)
     return [MMPurchaseOrder.model_validate(r) for r in records]

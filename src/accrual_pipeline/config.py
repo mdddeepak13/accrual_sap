@@ -46,7 +46,13 @@ class Settings(BaseSettings):
         default=True,
         description="When true, fetchers return fixtures instead of calling sandbox",
     )
+    # SAP Business Accelerator Hub — used by FI/MM/CO fetchers (accruals, POs)
     sap_sandbox_base_url: str = Field(default="https://sandbox.api.sap.com")
+    # SAP BTP CAP mock service — used by inventory/writedown/batch fetchers
+    sap_btp_base_url: str = Field(
+        default="https://af3d148dtrial-dev-mocksap-srv.cfapps.us10-001.hana.ondemand.com",
+        description="SAP BTP CAP service URL for pharma inventory/batch/writedown endpoints",
+    )
 
     # --- Workday Global Payroll Cloud ---
     # In MOCK_MODE the payroll fetcher reads tests/fixtures/ and never touches

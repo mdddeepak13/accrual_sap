@@ -1,0 +1,126 @@
+Batch,Material,MaterialDescription,TherapeuticCategory,BatchIdentifyingPlant,PlantName,ShelfLifeExpirationDate,ManufactureDate,LastGoodsReceiptDate,BatchIsMarkedForDeletion,MatlBatchIsInRstrcdUseStock,Supplier,SupplierName,CountryOfOrigin,Quantity,BaseUnit
+B0001020,PH-CTR-100,Ceftriaxone 1g injection,ANTIBIOTIC,2010,Bangalore DC,2028-08-05,2026-04-03,2026-04-10,false,false,V-P004,Sun Pharmaceutical Industries,IN,1000,EA
+B0001009,PH-ATV-20,Atorvastatin 20mg tablets,CHRONIC,1710,New Jersey DC,2026-06-11,2026-03-13,2026-03-20,false,false,V-P003,Dr. Reddy's Laboratories,CH,10000,EA
+B0001013,PH-EPI-03,Epinephrine auto-injector 0.3mg,INJECTABLE,1010,Frankfurt DC,2027-02-02,2026-03-21,2026-03-28,false,true,V-P002,Teva Pharmaceutical Industries,US,2500,EA
+B0001011,PH-LEV-50,Levothyroxine 50mcg tablets,CHRONIC,2010,Bangalore DC,2027-01-21,2025-12-05,2025-12-12,true,false,V-P006,Pfizer Global Biologics,DE,500,EA
+B0001015,PH-ONC-GLC,Glucarpidase 1000u vial,ONCOLOGY,2010,Bangalore DC,2028-04-24,2025-02-05,2025-02-12,false,false,V-P006,Pfizer Global Biologics,IN,5000,EA
+B0001021,PH-DEX-4,Dexamethasone 4mg tablets,CHRONIC,2010,Bangalore DC,2028-11-18,2026-03-09,2026-03-16,false,false,V-P002,Teva Pharmaceutical Industries,IE,1000,EA
+B0001018,PH-VAC-FLU,Influenza vaccine quad 0.5ml,VACCINE,1010,Frankfurt DC,2027-05-26,2026-03-23,2026-03-30,false,false,V-P001,Sandoz AG,US,2500,EA
+B0001007,PH-OMP-20,Omeprazole 20mg capsules,OTC,2010,Bangalore DC,2026-07-02,2026-02-03,2026-02-10,false,false,V-P002,Teva Pharmaceutical Industries,IN,1000,EA
+B0001002,PH-AZI-250,Azithromycin 250mg tablets,ANTIBIOTIC,1010,Frankfurt DC,2025-11-26,2025-12-18,2025-12-25,false,false,V-P006,Pfizer Global Biologics,IE,100,EA
+B0001006,PH-LOR-10,Loratadine 10mg tablets,OTC,1010,Frankfurt DC,2026-07-05,2026-01-02,2026-01-09,false,false,V-P004,Sun Pharmaceutical Industries,DE,1000,EA
+B0001004,PH-IBU-200,Ibuprofen 200mg tablets,OTC,1010,Frankfurt DC,2026-02-14,2025-06-21,2025-06-28,false,false,V-P002,Teva Pharmaceutical Industries,IE,5000,EA
+B0001001,PH-AMX-250,Amoxicillin 250mg oral susp.,ANTIBIOTIC,1010,Frankfurt DC,2026-02-16,2026-01-17,2026-01-24,false,false,V-P002,Teva Pharmaceutical Industries,DE,500,EA
+B0001005,PH-ACE-325,Acetaminophen 325mg tablets,OTC,2010,Bangalore DC,2026-06-03,2025-12-25,2026-01-01,false,false,V-P001,Sandoz AG,IE,10000,EA
+B0001010,PH-LIS-10,Lisinopril 10mg tablets,CHRONIC,1010,Frankfurt DC,2027-01-25,2026-02-06,2026-02-13,true,false,V-P005,Mylan / Viatris,US,5000,EA
+B0001023,PH-ASP-81,Aspirin 81mg tablets,OTC,1710,New Jersey DC,2027-07-26,2026-04-09,2026-04-16,false,false,V-P005,Mylan / Viatris,IN,100,EA
+B0001022,PH-PRE-20,Prednisone 20mg tablets,CHRONIC,2010,Bangalore DC,2028-06-05,2026-03-20,2026-03-27,false,false,V-P004,Sun Pharmaceutical Industries,IN,500,EA
+B0001003,PH-CIP-500,Ciprofloxacin 500mg tablets,ANTIBIOTIC,1010,Frankfurt DC,2026-04-06,2025-09-29,2025-10-06,false,false,V-P004,Sun Pharmaceutical Industries,DE,100,EA
+B0001000,PH-AMX-500,Amoxicillin 500mg capsules,ANTIBIOTIC,1010,Frankfurt DC,2026-03-17,2026-02-16,2026-02-23,false,false,V-P006,Pfizer Global Biologics,US,100,EA
+B0001017,PH-VAC-MMR,MMR vaccine 0.5ml dose,VACCINE,2010,Bangalore DC,2028-05-15,2024-06-01,2024-06-08,false,false,V-P003,Dr. Reddy's Laboratories,US,500,EA
+B0001008,PH-MET-500,Metformin 500mg tablets,CHRONIC,1710,New Jersey DC,2026-05-22,2026-03-07,2026-03-14,false,false,V-P002,Teva Pharmaceutical Industries,DE,2500,EA
+B0001016,PH-ONC-TRZ,Trastuzumab 150mg vial,ONCOLOGY,2010,Bangalore DC,2027-10-01,2024-12-20,2024-12-27,false,false,V-P005,Mylan / Viatris,CH,2500,EA
+B0001014,PH-MOR-10,Morphine sulfate 10mg/ml,CONTROLLED,1710,New Jersey DC,2027-01-20,2026-03-25,2026-04-01,false,true,V-P002,Teva Pharmaceutical Industries,US,10000,EA
+B0001019,PH-ALB-100,Albumin 25% 100ml IV,BIOLOGIC,1010,Frankfurt DC,2028-11-24,2026-03-23,2026-03-30,false,false,V-P001,Sandoz AG,CH,500,EA
+B0001024,PH-WAR-5,Warfarin 5mg tablets,CHRONIC,1010,Frankfurt DC,2029-03-20,2026-03-16,2026-03-23,false,false,V-P006,Pfizer Global Biologics,DE,5000,EA
+B0001012,PH-INS-100,Insulin Glargine 100u/ml vial,INJECTABLE,2010,Bangalore DC,2026-11-16,2026-02-17,2026-02-24,false,true,V-P001,Sandoz AG,DE,1000,EA
+B0001025,PH-CTR-100,Ceftriaxone 1g injection,ANTIBIOTIC,1010,Frankfurt DC,2026-06-25,2025-01-01,2025-01-06,false,false,V-P001,Sandoz AG,CH,500,EA
+B0001026,PH-ATV-20,Atorvastatin 20mg tablets,CHRONIC,1710,New Jersey DC,2025-10-07,2023-02-20,2023-03-05,false,false,V-P002,Teva Pharmaceutical Industries,IL,5000,EA
+B0001027,PH-LEV-50,Levothyroxine 50mcg tablets,CHRONIC,2010,Bangalore DC,2027-06-09,2026-02-14,2026-02-26,false,true,V-P003,Dr. Reddy's Laboratories,US,500,EA
+B0001028,PH-DEX-4,Dexamethasone 4mg tablets,CHRONIC,3010,Sao Paulo DC,2029-01-30,2025-12-15,2025-12-26,true,false,V-P004,Sun Pharmaceutical Industries,US,2500,EA
+B0001029,PH-OMP-20,Omeprazole 20mg capsules,OTC,4010,Singapore DC,2025-09-30,2024-03-09,2024-03-18,false,false,V-P005,Mylan / Viatris,IE,5000,EA
+B0001030,PH-AZI-250,Azithromycin 250mg tablets,ANTIBIOTIC,1010,Frankfurt DC,2026-06-03,2023-10-17,2023-10-30,false,false,V-P006,Pfizer Global Biologics,DE,1000,EA
+B0001031,PH-LOR-10,Loratadine 10mg tablets,OTC,1710,New Jersey DC,2029-12-12,2025-02-06,2025-02-17,false,false,V-P007,Novartis AG,US,1000,EA
+B0001032,PH-IBU-200,Ibuprofen 200mg tablets,OTC,2010,Bangalore DC,2025-12-05,2023-10-17,2023-10-29,false,false,V-P008,GlaxoSmithKline,US,100,EA
+B0001033,PH-AMX-250,Amoxicillin 250mg oral susp.,ANTIBIOTIC,3010,Sao Paulo DC,2026-04-01,2023-09-14,2023-09-21,false,false,V-P009,Sanofi,US,100,EA
+B0001034,PH-ACE-325,Acetaminophen 325mg tablets,OTC,4010,Singapore DC,2027-03-11,2026-04-21,2026-05-03,true,false,V-P010,Cipla Limited,ZA,100,EA
+B0001035,PH-LIS-10,Lisinopril 10mg tablets,CHRONIC,1010,Frankfurt DC,2028-09-06,2025-03-26,2025-04-09,false,false,V-P001,Sandoz AG,AT,2500,EA
+B0001036,PH-ASP-81,Aspirin 81mg tablets,OTC,1710,New Jersey DC,2028-08-13,2026-04-10,2026-04-23,false,true,V-P002,Teva Pharmaceutical Industries,IL,100,EA
+B0001037,PH-PRE-20,Prednisone 20mg tablets,CHRONIC,2010,Bangalore DC,2025-11-08,2023-06-22,2023-06-29,false,false,V-P003,Dr. Reddy's Laboratories,US,5000,EA
+B0001038,PH-CIP-500,Ciprofloxacin 500mg tablets,ANTIBIOTIC,3010,Sao Paulo DC,2025-12-01,2022-12-17,2022-12-31,false,false,V-P004,Sun Pharmaceutical Industries,IN,500,EA
+B0001039,PH-AMX-500,Amoxicillin 500mg capsules,ANTIBIOTIC,4010,Singapore DC,2028-09-10,2025-02-28,2025-03-13,false,false,V-P005,Mylan / Viatris,IN,5000,EA
+B0001040,PH-MET-500,Metformin 500mg tablets,CHRONIC,1010,Frankfurt DC,2026-04-17,2023-07-02,2023-07-11,false,false,V-P006,Pfizer Global Biologics,DE,2500,EA
+B0001041,PH-WAR-5,Warfarin 5mg tablets,CHRONIC,1710,New Jersey DC,2026-08-15,2024-09-24,2024-10-01,false,false,V-P007,Novartis AG,CH,1000,EA
+B0001042,PH-INS-100,Insulin Glargine 100u/ml vial,INJECTABLE,2010,Bangalore DC,2028-01-25,2024-10-12,2024-10-23,false,false,V-P008,GlaxoSmithKline,US,2500,EA
+B0001043,PH-EPI-03,Epinephrine auto-injector 0.3mg,INJECTABLE,3010,Sao Paulo DC,2029-04-17,2025-05-08,2025-05-14,false,false,V-P009,Sanofi,FR,1000,EA
+B0001044,PH-MOR-10,Morphine sulfate 10mg/ml,CONTROLLED,4010,Singapore DC,2026-07-05,2024-02-16,2024-02-21,false,false,V-P010,Cipla Limited,IN,100,EA
+B0001045,PH-VAC-FLU,Influenza vaccine quad 0.5ml,VACCINE,1010,Frankfurt DC,2026-01-19,2023-10-02,2023-10-11,false,false,V-P001,Sandoz AG,CH,2500,EA
+B0001046,PH-VAC-MMR,MMR vaccine 0.5ml dose,VACCINE,1710,New Jersey DC,2026-06-06,2023-09-20,2023-10-02,false,false,V-P002,Teva Pharmaceutical Industries,IE,500,EA
+B0001047,PH-VAC-HPV,HPV9 vaccine 0.5ml dose,VACCINE,2010,Bangalore DC,2027-12-22,2024-07-10,2024-07-23,false,false,V-P003,Dr. Reddy's Laboratories,IN,250,EA
+B0001048,PH-VAC-COV,COVID-19 mRNA booster 0.3ml,VACCINE,3010,Sao Paulo DC,2026-02-23,2023-07-09,2023-07-23,false,false,V-P004,Sun Pharmaceutical Industries,US,2500,EA
+B0001049,PH-ONC-TRZ,Trastuzumab 150mg vial,ONCOLOGY,4010,Singapore DC,2025-11-20,2024-03-30,2024-04-12,false,false,V-P005,Mylan / Viatris,US,5000,EA
+B0001050,PH-ONC-GLC,Glucarpidase 1000u vial,ONCOLOGY,1010,Frankfurt DC,2026-06-16,2024-07-26,2024-07-31,false,false,V-P006,Pfizer Global Biologics,DE,100,EA
+B0001051,PH-ONC-PEM,Pembrolizumab 100mg vial,ONCOLOGY,1710,New Jersey DC,2026-08-12,2024-08-22,2024-09-03,false,false,V-P007,Novartis AG,CH,1000,EA
+B0001052,PH-ONC-RTX,Rituximab 500mg vial,ONCOLOGY,2010,Bangalore DC,2027-11-24,2024-06-12,2024-06-25,false,false,V-P008,GlaxoSmithKline,GB,250,EA
+B0001053,PH-ALB-100,Albumin 25% 100ml IV,BIOLOGIC,3010,Sao Paulo DC,2026-08-14,2024-09-23,2024-10-04,false,false,V-P009,Sanofi,FR,250,EA
+B0001054,PH-IGG-5,IVIG 5g/100ml IV,BIOLOGIC,4010,Singapore DC,2026-07-29,2024-01-11,2024-01-17,false,false,V-P010,Cipla Limited,ZA,1000,EA
+B0001055,PH-FXA-500,Factor VIII 500iu vial,BIOLOGIC,1010,Frankfurt DC,2027-06-16,2026-01-23,2026-01-30,true,false,V-P001,Sandoz AG,DE,500,EA
+B0001056,PH-OXY-5,Oxycodone 5mg tablets,CONTROLLED,1710,New Jersey DC,2028-04-09,2026-01-05,2026-01-14,false,true,V-P002,Teva Pharmaceutical Industries,IE,1000,EA
+B0001057,PH-FNT-50,Fentanyl 50mcg/ml ampoule,CONTROLLED,2010,Bangalore DC,2027-10-16,2025-12-10,2025-12-22,false,true,V-P003,Dr. Reddy's Laboratories,US,250,EA
+B0001058,PH-MID-2,Midazolam 2mg/ml ampoule,CONTROLLED,3010,Sao Paulo DC,2026-01-06,2023-03-23,2023-04-01,false,false,V-P004,Sun Pharmaceutical Industries,US,100,EA
+B0001059,PH-DIA-10,Diazepam 10mg/2ml ampoule,CONTROLLED,4010,Singapore DC,2026-06-18,2024-05-29,2024-06-03,false,false,V-P005,Mylan / Viatris,US,10000,EA
+B0001060,PH-ENO-40,Enoxaparin 40mg syringe,INJECTABLE,1010,Frankfurt DC,2028-06-24,2024-06-15,2024-06-25,false,false,V-P006,Pfizer Global Biologics,US,1000,EA
+B0001061,PH-HEP-25,"Heparin 25,000u vial",INJECTABLE,1710,New Jersey DC,2028-09-25,2024-11-15,2024-11-22,false,false,V-P007,Novartis AG,CH,100,EA
+B0001062,PH-EPO-4K,Erythropoietin 4000u syringe,INJECTABLE,2010,Bangalore DC,2028-11-05,2024-06-29,2024-07-08,false,false,V-P008,GlaxoSmithKline,GB,100,EA
+B0001063,PH-GCS-300,Filgrastim 300mcg syringe,INJECTABLE,3010,Sao Paulo DC,2026-06-28,2023-07-14,2023-07-23,false,false,V-P009,Sanofi,FR,2500,EA
+B0001064,PH-SAL-100,Salbutamol 100mcg inhaler,RESPIRATORY,4010,Singapore DC,2025-11-01,2023-09-13,2023-09-19,false,false,V-P010,Cipla Limited,IN,100,EA
+B0001065,PH-FLT-250,Fluticasone 250mcg inhaler,RESPIRATORY,1010,Frankfurt DC,2026-06-04,2024-11-11,2024-11-21,false,false,V-P001,Sandoz AG,DE,250,EA
+B0001066,PH-MTX-25,Methotrexate 25mg/ml vial,ONCOLOGY,1710,New Jersey DC,2027-05-25,2026-03-25,2026-04-07,false,true,V-P002,Teva Pharmaceutical Industries,DE,10000,EA
+B0001067,PH-CSP-100,Cyclosporine 100mg capsules,IMMUNO,2010,Bangalore DC,2026-08-05,2024-12-13,2024-12-22,false,false,V-P003,Dr. Reddy's Laboratories,US,500,EA
+B0001068,PH-TAC-1,Tacrolimus 1mg capsules,IMMUNO,3010,Sao Paulo DC,2026-03-15,2024-01-25,2024-01-31,false,false,V-P004,Sun Pharmaceutical Industries,US,250,EA
+B0001069,PH-MMF-500,Mycophenolate 500mg tablets,IMMUNO,4010,Singapore DC,2025-10-11,2023-08-23,2023-09-03,false,false,V-P005,Mylan / Viatris,US,1000,EA
+B0001070,PH-SOF-400,Sofosbuvir 400mg tablets,ANTIVIRAL,1010,Frankfurt DC,2026-04-26,2024-04-06,2024-04-11,false,false,V-P006,Pfizer Global Biologics,US,100,EA
+B0001071,PH-OSL-75,Oseltamivir 75mg capsules,ANTIVIRAL,1710,New Jersey DC,2026-06-03,2023-07-19,2023-08-02,false,false,V-P007,Novartis AG,US,100,EA
+B0001072,PH-RBV-200,Ribavirin 200mg capsules,ANTIVIRAL,2010,Bangalore DC,2029-02-12,2025-12-26,2026-01-09,true,false,V-P008,GlaxoSmithKline,US,500,EA
+B0001073,PH-AMP-1G,Ampicillin 1g IV vial,ANTIBIOTIC,3010,Sao Paulo DC,2026-03-01,2024-03-11,2024-03-25,false,false,V-P009,Sanofi,FR,1000,EA
+B0001074,PH-VAN-500,Vancomycin 500mg IV vial,ANTIBIOTIC,4010,Singapore DC,2029-02-07,2024-06-03,2024-06-09,false,false,V-P010,Cipla Limited,ZA,1000,EA
+B0001075,PH-CTR-100,Ceftriaxone 1g injection,ANTIBIOTIC,1010,Frankfurt DC,2028-08-08,2024-08-29,2024-09-07,false,false,V-P001,Sandoz AG,DE,10000,EA
+B0001076,PH-ATV-20,Atorvastatin 20mg tablets,CHRONIC,1710,New Jersey DC,2026-02-18,2024-07-28,2024-08-08,false,false,V-P002,Teva Pharmaceutical Industries,IE,10000,EA
+B0001077,PH-LEV-50,Levothyroxine 50mcg tablets,CHRONIC,2010,Bangalore DC,2028-10-28,2026-01-27,2026-02-05,false,true,V-P003,Dr. Reddy's Laboratories,IN,500,EA
+B0001078,PH-DEX-4,Dexamethasone 4mg tablets,CHRONIC,3010,Sao Paulo DC,2026-07-14,2024-03-26,2024-04-09,false,false,V-P004,Sun Pharmaceutical Industries,IN,500,EA
+B0001079,PH-OMP-20,Omeprazole 20mg capsules,OTC,4010,Singapore DC,2029-08-12,2026-01-24,2026-02-01,true,false,V-P005,Mylan / Viatris,US,2500,EA
+B0001080,PH-AZI-250,Azithromycin 250mg tablets,ANTIBIOTIC,1010,Frankfurt DC,2026-06-05,2024-07-15,2024-07-29,false,false,V-P006,Pfizer Global Biologics,IE,100,EA
+B0001081,PH-LOR-10,Loratadine 10mg tablets,OTC,1710,New Jersey DC,2029-08-02,2025-04-25,2025-05-02,false,false,V-P007,Novartis AG,CH,100,EA
+B0001082,PH-IBU-200,Ibuprofen 200mg tablets,OTC,2010,Bangalore DC,2028-09-30,2025-11-05,2025-11-14,true,false,V-P008,GlaxoSmithKline,US,2500,EA
+B0001083,PH-AMX-250,Amoxicillin 250mg oral susp.,ANTIBIOTIC,3010,Sao Paulo DC,2025-12-23,2024-03-03,2024-03-13,false,false,V-P009,Sanofi,FR,1000,EA
+B0001084,PH-ACE-325,Acetaminophen 325mg tablets,OTC,4010,Singapore DC,2027-12-28,2026-02-19,2026-03-02,true,false,V-P010,Cipla Limited,ZA,1000,EA
+B0001085,PH-LIS-10,Lisinopril 10mg tablets,CHRONIC,1010,Frankfurt DC,2025-11-03,2024-01-13,2024-01-20,false,false,V-P001,Sandoz AG,AT,250,EA
+B0001086,PH-ASP-81,Aspirin 81mg tablets,OTC,1710,New Jersey DC,2026-08-14,2023-09-29,2023-10-12,false,false,V-P002,Teva Pharmaceutical Industries,DE,100,EA
+B0001087,PH-PRE-20,Prednisone 20mg tablets,CHRONIC,2010,Bangalore DC,2026-06-09,2024-05-20,2024-05-25,false,false,V-P003,Dr. Reddy's Laboratories,US,500,EA
+B0001088,PH-CIP-500,Ciprofloxacin 500mg tablets,ANTIBIOTIC,3010,Sao Paulo DC,2026-01-02,2023-04-18,2023-04-29,false,false,V-P004,Sun Pharmaceutical Industries,IN,500,EA
+B0001089,PH-AMX-500,Amoxicillin 500mg capsules,ANTIBIOTIC,4010,Singapore DC,2026-06-08,2023-06-24,2023-06-30,false,false,V-P005,Mylan / Viatris,IN,500,EA
+B0001090,PH-MET-500,Metformin 500mg tablets,CHRONIC,1010,Frankfurt DC,2026-05-11,2023-07-26,2023-08-04,false,false,V-P006,Pfizer Global Biologics,US,2500,EA
+B0001091,PH-WAR-5,Warfarin 5mg tablets,CHRONIC,1710,New Jersey DC,2027-09-02,2024-08-18,2024-08-28,false,false,V-P007,Novartis AG,US,5000,EA
+B0001092,PH-INS-100,Insulin Glargine 100u/ml vial,INJECTABLE,2010,Bangalore DC,2026-06-22,2023-10-06,2023-10-11,false,false,V-P008,GlaxoSmithKline,GB,5000,EA
+B0001093,PH-EPI-03,Epinephrine auto-injector 0.3mg,INJECTABLE,3010,Sao Paulo DC,2026-07-26,2024-10-04,2024-10-15,false,false,V-P009,Sanofi,FR,5000,EA
+B0001094,PH-MOR-10,Morphine sulfate 10mg/ml,CONTROLLED,4010,Singapore DC,2026-06-20,2023-08-05,2023-08-14,false,false,V-P010,Cipla Limited,ZA,10000,EA
+B0001095,PH-VAC-FLU,Influenza vaccine quad 0.5ml,VACCINE,1010,Frankfurt DC,2026-06-16,2024-01-28,2024-02-07,false,false,V-P001,Sandoz AG,DE,10000,EA
+B0001096,PH-VAC-MMR,MMR vaccine 0.5ml dose,VACCINE,1710,New Jersey DC,2026-07-19,2023-09-03,2023-09-15,false,false,V-P002,Teva Pharmaceutical Industries,IE,5000,EA
+B0001097,PH-VAC-HPV,HPV9 vaccine 0.5ml dose,VACCINE,2010,Bangalore DC,2026-04-10,2023-09-23,2023-09-30,false,false,V-P003,Dr. Reddy's Laboratories,US,250,EA
+B0001098,PH-VAC-COV,COVID-19 mRNA booster 0.3ml,VACCINE,3010,Sao Paulo DC,2029-08-14,2024-11-08,2024-11-21,false,false,V-P004,Sun Pharmaceutical Industries,US,100,EA
+B0001099,PH-ONC-TRZ,Trastuzumab 150mg vial,ONCOLOGY,4010,Singapore DC,2028-06-08,2025-04-25,2025-05-02,false,false,V-P005,Mylan / Viatris,IN,10000,EA
+B0001100,PH-ONC-GLC,Glucarpidase 1000u vial,ONCOLOGY,1010,Frankfurt DC,2026-01-01,2023-11-13,2023-11-20,false,false,V-P006,Pfizer Global Biologics,DE,500,EA
+B0001101,PH-ONC-PEM,Pembrolizumab 100mg vial,ONCOLOGY,1710,New Jersey DC,2026-07-29,2024-08-08,2024-08-22,false,false,V-P007,Novartis AG,CH,100,EA
+B0001102,PH-ONC-RTX,Rituximab 500mg vial,ONCOLOGY,2010,Bangalore DC,2026-05-09,2023-11-21,2023-12-02,false,false,V-P008,GlaxoSmithKline,US,2500,EA
+B0001103,PH-ALB-100,Albumin 25% 100ml IV,BIOLOGIC,3010,Sao Paulo DC,2026-06-04,2024-10-12,2024-10-19,false,false,V-P009,Sanofi,FR,2500,EA
+B0001104,PH-IGG-5,IVIG 5g/100ml IV,BIOLOGIC,4010,Singapore DC,2025-12-31,2023-11-12,2023-11-21,false,false,V-P010,Cipla Limited,ZA,500,EA
+B0001105,PH-FXA-500,Factor VIII 500iu vial,BIOLOGIC,1010,Frankfurt DC,2025-12-20,2023-12-31,2024-01-07,false,false,V-P001,Sandoz AG,CH,5000,EA
+B0001106,PH-OXY-5,Oxycodone 5mg tablets,CONTROLLED,1710,New Jersey DC,2028-05-24,2026-02-07,2026-02-17,false,true,V-P002,Teva Pharmaceutical Industries,IE,500,EA
+B0001107,PH-FNT-50,Fentanyl 50mcg/ml ampoule,CONTROLLED,2010,Bangalore DC,2026-04-02,2024-10-09,2024-10-23,false,false,V-P003,Dr. Reddy's Laboratories,IN,1000,EA
+B0001108,PH-MID-2,Midazolam 2mg/ml ampoule,CONTROLLED,3010,Sao Paulo DC,2026-07-06,2023-08-21,2023-08-28,false,false,V-P004,Sun Pharmaceutical Industries,US,1000,EA
+B0001109,PH-DIA-10,Diazepam 10mg/2ml ampoule,CONTROLLED,4010,Singapore DC,2026-05-25,2024-07-04,2024-07-14,false,false,V-P005,Mylan / Viatris,IE,2500,EA
+B0001110,PH-ENO-40,Enoxaparin 40mg syringe,INJECTABLE,1010,Frankfurt DC,2027-05-03,2026-04-14,2026-04-20,false,true,V-P006,Pfizer Global Biologics,IE,250,EA
+B0001111,PH-HEP-25,"Heparin 25,000u vial",INJECTABLE,1710,New Jersey DC,2027-12-25,2026-04-05,2026-04-15,true,false,V-P007,Novartis AG,CH,10000,EA
+B0001112,PH-EPO-4K,Erythropoietin 4000u syringe,INJECTABLE,2010,Bangalore DC,2028-06-03,2026-03-13,2026-03-27,true,false,V-P008,GlaxoSmithKline,US,250,EA
+B0001113,PH-GCS-300,Filgrastim 300mcg syringe,INJECTABLE,3010,Sao Paulo DC,2027-03-05,2026-01-28,2026-02-09,false,true,V-P009,Sanofi,FR,250,EA
+B0001114,PH-SAL-100,Salbutamol 100mcg inhaler,RESPIRATORY,4010,Singapore DC,2026-05-31,2023-12-13,2023-12-22,false,false,V-P010,Cipla Limited,IN,10000,EA
+B0001115,PH-FLT-250,Fluticasone 250mcg inhaler,RESPIRATORY,1010,Frankfurt DC,2028-09-30,2026-03-22,2026-04-01,true,false,V-P001,Sandoz AG,AT,500,EA
+B0001116,PH-MTX-25,Methotrexate 25mg/ml vial,ONCOLOGY,1710,New Jersey DC,2027-03-20,2025-11-30,2025-12-13,false,true,V-P002,Teva Pharmaceutical Industries,IE,1000,EA
+B0001117,PH-CSP-100,Cyclosporine 100mg capsules,IMMUNO,2010,Bangalore DC,2027-11-19,2025-12-26,2026-01-09,false,true,V-P003,Dr. Reddy's Laboratories,IN,10000,EA
+B0001118,PH-TAC-1,Tacrolimus 1mg capsules,IMMUNO,3010,Sao Paulo DC,2026-05-03,2024-09-10,2024-09-22,false,false,V-P004,Sun Pharmaceutical Industries,US,100,EA
+B0001119,PH-MMF-500,Mycophenolate 500mg tablets,IMMUNO,4010,Singapore DC,2025-11-09,2023-10-21,2023-10-28,false,false,V-P005,Mylan / Viatris,IN,500,EA
+B0001120,PH-SOF-400,Sofosbuvir 400mg tablets,ANTIVIRAL,1010,Frankfurt DC,2028-04-18,2025-11-29,2025-12-09,false,true,V-P006,Pfizer Global Biologics,DE,1000,EA
+B0001121,PH-OSL-75,Oseltamivir 75mg capsules,ANTIVIRAL,1710,New Jersey DC,2028-10-09,2025-12-16,2025-12-27,true,false,V-P007,Novartis AG,US,5000,EA
+B0001122,PH-RBV-200,Ribavirin 200mg capsules,ANTIVIRAL,2010,Bangalore DC,2027-06-26,2025-09-27,2025-10-09,true,false,V-P008,GlaxoSmithKline,US,250,EA
+B0001123,PH-AMP-1G,Ampicillin 1g IV vial,ANTIBIOTIC,3010,Sao Paulo DC,2026-08-18,2024-03-31,2024-04-10,false,false,V-P009,Sanofi,FR,10000,EA
+B0001124,PH-VAN-500,Vancomycin 500mg IV vial,ANTIBIOTIC,4010,Singapore DC,2025-10-27,2022-11-12,2022-11-23,false,false,V-P010,Cipla Limited,ZA,10000,EA

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="API_COSTCENTERPLAN_SRV" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="A_CostCenterPlan" EntityType="API_COSTCENTERPLAN_SRV.A_CostCenterPlan"/>
+      </EntityContainer>
+      <EntityType Name="A_CostCenterPlan">
+        <Key>
+          <PropertyRef Name="CompanyCode"/>
+          <PropertyRef Name="FiscalYear"/>
+          <PropertyRef Name="FiscalPeriod"/>
+          <PropertyRef Name="CostCenter"/>
+          <PropertyRef Name="GLAccount"/>
+        </Key>
+        <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="FiscalYear" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="FiscalPeriod" Type="Edm.String" MaxLength="3" Nullable="false"/>
+        <Property Name="CostCenter" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="GLAccount" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="CostCenterName" Type="Edm.String" MaxLength="50"/>
+        <Property Name="GLAccountName" Type="Edm.String" MaxLength="80"/>
+        <Property Name="PlannedAmountInGlobalCurrency" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="Currency" Type="Edm.String" MaxLength="3"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

@@ -3,471 +3,948 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
-header: "Accrual Engine · AI-Powered Finance Operations"
-footer: "Python + Claude + SAP APIs · Deployed on Vercel + Fly.io"
 style: |
-  section { font-size: 22px; }
-  h1 { font-size: 40px; }
-  h2 { font-size: 30px; }
-  table { font-size: 16px; }
-  code { font-size: 16px; }
-  pre { font-size: 14px; }
-  .small { font-size: 16px; color: #666; }
-  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+  * { box-sizing: border-box; }
+
+  section {
+    font-family: 'Inter', sans-serif;
+    background:
+      url('/TCS-logo-white.svg') no-repeat bottom 18px right 24px / 84px auto,
+      #0f172a;
+    color: #e2e8f0;
+    padding: 56px 72px 64px 72px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    color: #f8fafc;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 10px;
+  }
+
+  p { color: #cbd5e1; margin-bottom: 12px; }
+
+  strong { color: #f8fafc; font-weight: 600; }
+
+  em { color: #38bdf8; font-style: normal; font-weight: 600; }
+
+  a { color: #38bdf8; text-decoration: none; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  th {
+    background: #1e293b;
+    color: #38bdf8;
+    font-weight: 600;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid #334155;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #1e293b;
+    color: #cbd5e1;
+    vertical-align: top;
+    background: transparent;
+  }
+
+  /* Override Marp's default light zebra-striping so dark theme stays legible. */
+  tbody tr { background: transparent; }
+  tbody tr:nth-child(even) td { background: rgba(30, 41, 59, 0.55); }
+  tbody tr:nth-child(odd)  td { background: transparent; }
+  tbody tr:hover td { background: #1e293b; color: #f8fafc; }
+
+  code {
+    background: #1e293b;
+    color: #7dd3fc;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  pre {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: #e2e8f0;
+  }
+
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; color: #cbd5e1; }
+  li::marker { color: #38bdf8; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+  .card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .card-accent {
+    background: linear-gradient(135deg, #0f2744 0%, #1e293b 100%);
+    border: 1px solid #38bdf8;
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .pill {
+    display: inline-block;
+    background: #0c4a6e;
+    color: #38bdf8;
+    border: 1px solid #0369a1;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 3px;
+  }
+
+  .pill-green {
+    background: #052e16;
+    color: #4ade80;
+    border-color: #166534;
+  }
+
+  .pill-amber {
+    background: #451a03;
+    color: #fb923c;
+    border-color: #7c2d12;
+  }
+
+  .pill-purple {
+    background: #2e1065;
+    color: #c084fc;
+    border-color: #6b21a8;
+  }
+
+  .stat {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+  }
+
+  .stat-number {
+    font-size: 42px;
+    font-weight: 900;
+    color: #38bdf8;
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    display: block;
+  }
+
+  .flow-step {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 16px 20px;
+    position: relative;
+  }
+
+  .flow-num {
+    display: inline-block;
+    background: #0369a1;
+    color: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #0c4a6e22, #0f172a);
+    border-left: 4px solid #38bdf8;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+
+  .tag-row { margin-bottom: 12px; }
+
+  header, footer { display: none; }
+
+  section.title-slide {
+    background:
+      url('/TCS-logo-white.svg') no-repeat bottom 18px right 24px / 84px auto,
+      linear-gradient(135deg, #0f172a 0%, #0c1a2e 50%, #0f172a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    border-radius: 2px;
+    margin: 16px 0 24px 0;
+  }
+
+  /* --- Slide entrance animations --- */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 14px, 0); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translate3d(-18px, 0, 0); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+    50%      { box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.18); }
+  }
+
+  /* Animate when the slide becomes active (Bespoke.js adds bespoke-active) */
+  section.bespoke-active h2,
+  section.bespoke-active h3,
+  section.bespoke-active p,
+  section.bespoke-active ul,
+  section.bespoke-active .highlight-box {
+    animation: fadeInUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  section.bespoke-active h2 { animation-delay: 0.05s; }
+  section.bespoke-active h3 { animation-delay: 0.15s; }
+  section.bespoke-active p,
+  section.bespoke-active ul,
+  section.bespoke-active .highlight-box { animation-delay: 0.22s; }
+
+  section.bespoke-active .flow-step,
+  section.bespoke-active .card,
+  section.bespoke-active .card-accent,
+  section.bespoke-active .stat {
+    animation: slideInRight 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  section.bespoke-active .flow-step:nth-of-type(1),
+  section.bespoke-active .card:nth-of-type(1),
+  section.bespoke-active .stat:nth-of-type(1) { animation-delay: 0.18s; }
+  section.bespoke-active .flow-step:nth-of-type(2),
+  section.bespoke-active .card:nth-of-type(2),
+  section.bespoke-active .stat:nth-of-type(2) { animation-delay: 0.28s; }
+  section.bespoke-active .flow-step:nth-of-type(3),
+  section.bespoke-active .card:nth-of-type(3),
+  section.bespoke-active .stat:nth-of-type(3) { animation-delay: 0.38s; }
+  section.bespoke-active .flow-step:nth-of-type(4) { animation-delay: 0.48s; }
+  section.bespoke-active .flow-step:nth-of-type(5) { animation-delay: 0.58s; }
+
+  /* Hover lift + glow on flow steps */
+  .flow-step {
+    transition: transform 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+  }
+  .flow-step:hover {
+    transform: translateY(-2px);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 24px -12px rgba(56, 189, 248, 0.45);
+  }
+  .flow-step:hover .flow-num {
+    background: linear-gradient(135deg, #38bdf8, #0369a1);
+    animation: glowPulse 1.6s ease-out infinite;
+  }
+
+  /* Pull the highlight-box gradient out a touch */
+  .highlight-box {
+    transition: border-left-width 0.18s ease-out;
+  }
+  .highlight-box:hover { border-left-width: 6px; }
+
+  /* Bigger, friendlier flow-step variant for the dedicated capabilities slide */
+  .flow-step.flow-step-lg {
+    padding: 20px 24px;
+    font-size: 19px;
+  }
+  .flow-step.flow-step-lg .flow-num {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 15px;
+    margin-right: 14px;
+  }
+  .flow-step.flow-step-lg .flow-desc {
+    display: block;
+    margin-top: 4px;
+    margin-left: 48px;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* --- PowerPoint-style flow diagram (boxes + solid arrows) --- */
+  .ppt-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 4px;
+  }
+  .ppt-flow-row {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+    width: 100%;
+    justify-content: center;
+  }
+  .ppt-box {
+    background: #1e293b;
+    border: 1.5px solid #334155;
+    border-radius: 8px;
+    padding: 10px 14px;
+    text-align: center;
+    color: #f8fafc;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 130px;
+    box-shadow: 0 4px 14px -8px rgba(0, 0, 0, 0.6);
+  }
+  .ppt-box .ppt-sub {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #94a3b8;
+    line-height: 1.35;
+  }
+  .ppt-box.ppt-src      { border-color: #38bdf8; }
+  .ppt-box.ppt-engine   { background: linear-gradient(135deg, #0c4a6e, #0369a1); border-color: #38bdf8; padding: 10px 16px; font-size: 14px; }
+  .ppt-box.ppt-data     { background: #052e16; border-color: #4ade80; color: #4ade80; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .ppt-box.ppt-claude   { background: linear-gradient(135deg, #2e1065, #6b21a8); border-color: #c084fc; padding: 10px 16px; }
+
+  .ppt-arrow-down {
+    width: 3px;
+    background: #38bdf8;
+    position: relative;
+    margin: 2px 0 8px 0;
+    flex: 0 0 16px;
+    align-self: center;
+  }
+  .ppt-arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #38bdf8;
+  }
+
+  /* Wide horizontal "tier" box for stacked architecture layers. */
+  .ppt-box.ppt-tier {
+    text-align: left;
+    padding: 8px 16px;
+    font-size: 14px;
+    background: linear-gradient(180deg, #1e293b 0%, #172033 100%);
+  }
+  .ppt-box.ppt-tier strong { color: #38bdf8; font-size: 15px; }
+  .ppt-box.ppt-tier .ppt-sub {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #cbd5e1;
+    line-height: 1.35;
+  }
+  /* Branching arrows: a single trunk drops from the parent, fans out into a
+     horizontal bar, and two arrows descend into the child boxes. Kept
+     intentionally compact so the slide fits the bottom summary row too. */
+  .ppt-branch {
+    position: relative;
+    width: 70%;
+    height: 32px;
+    align-self: center;
+    margin: 6px 0 2px 0;
+  }
+  .ppt-branch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    background: #38bdf8;
+  }
+  .ppt-branch::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background: #38bdf8;
+  }
+  .ppt-branch-left,
+  .ppt-branch-right {
+    position: absolute;
+    top: 10px;
+    width: 3px;
+    height: 22px;
+    background: #38bdf8;
+  }
+  .ppt-branch-left  { left: 25%; }
+  .ppt-branch-right { right: 25%; }
+  .ppt-branch-left::after,
+  .ppt-branch-right::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #38bdf8;
+  }
 ---
 
-# Accrual Engine
-## AI-Powered Finance Operations on SAP
+<!-- _class: title-slide -->
 
-A chat-first agent that handles the month-end accrual and inventory-review
-workload finance teams currently do by hand.
+<div style="margin-bottom: 8px;">
+  <span class="pill">Enterprise Finance Automation</span>
+  <span class="pill pill-purple">AI-Powered</span>
+</div>
 
-Live: <https://accuralsap.vercel.app> · Backend: <https://accrualagent.fly.dev>
+# Intelligent Accrual Engine
+## Automating Month-End Close with Claude AI + SAP BTP
+
+<div class="divider"></div>
+
+<p style="font-size: 22px; color: #94a3b8; max-width: 700px;">
+An AI agent that replaces manual accrual extraction, anomaly detection, and posting workflows — connected to live SAP data.
+</p>
+
+<div style="margin-top: 40px; display: flex; gap: 48px;">
+  <div><span class="stat-number" style="font-size: 28px;">14</span><span class="stat-label">Live Accruals from BTP</span></div>
+  <div><span class="stat-number" style="font-size: 28px;">118</span><span class="stat-label">Pharma Batches Tracked</span></div>
+  <div><span class="stat-number" style="font-size: 28px;">$12.8M</span><span class="stat-label">Writedown Exposure</span></div>
+  <div><span class="stat-number" style="font-size: 28px;">~22s</span><span class="stat-label">End-to-End Pipeline</span></div>
+</div>
 
 ---
 
-## The Problem
+## Introduction
 
-Finance teams spend significant time **manually extracting, classifying, and posting** accrual data from multiple sources.
+### What is this?
 
-- Pulling data from FI / MM / CO across periods
-- Identifying duplicates, stale POs, stalled commitments
-- Comparing actuals vs plan for variance analysis
-- Flagging distressed pharma inventory (expired / quarantined / slow-moving)
-- Posting approved accruals back to S/4
+An **AI-powered finance operations platform** that connects directly to SAP S/4HANA data sources and uses Claude to automate the most labor-intensive parts of month-end close.
 
-**Cost:** labor-intensive, error-prone, a bottleneck at month-end close,
-growing compliance risk.
+<div class="highlight-box">
+Finance teams interact in <strong>plain English</strong>. The agent queries SAP in real time, reasons over the data, and returns structured, auditable answers.
+</div>
+
+### Who is it for?
+
+<div class="cols3" style="margin-top: 18px;">
+  <div class="card">
+    <h3 style="margin-bottom: 6px; font-size: 18px;">Controllers & Finance Managers</h3>
+    <p style="margin: 0; font-size: 15px; color: #94a3b8;">Month-end close acceleration, fewer manual touchpoints.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom: 6px; font-size: 18px;">Auditors</h3>
+    <p style="margin: 0; font-size: 15px; color: #94a3b8;">Full traceability from answer → data → API call.</p>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom: 6px; font-size: 18px;">SAP Architects</h3>
+    <p style="margin: 0; font-size: 15px; color: #94a3b8;">Reference implementation for AI + BTP integration.</p>
+  </div>
+</div>
 
 ---
 
-## The Solution
+## Capabilities at a Glance
 
-An agent that automates extraction, classification, and posting using
-real-time SAP data and LLM reasoning.
+<p style="color: #94a3b8; font-size: 17px; max-width: 780px; margin-bottom: 28px;">
+Five connected stages take a finance question all the way to a posted, auditable journal entry — without a controller leaving the chat.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px;">
+  <div class="flow-step flow-step-lg">
+    <span class="flow-num">1</span> <strong>Query</strong>
+    <span class="flow-desc">Ask about accruals, POs, inventory in plain English.</span>
+  </div>
+  <div class="flow-step flow-step-lg">
+    <span class="flow-num">2</span> <strong>Detect</strong>
+    <span class="flow-desc">AI flags stale POs, duplicates, and anomalies automatically.</span>
+  </div>
+  <div class="flow-step flow-step-lg">
+    <span class="flow-num">3</span> <strong>Review</strong>
+    <span class="flow-desc">Finance team reviews flagged items with full context.</span>
+  </div>
+  <div class="flow-step flow-step-lg">
+    <span class="flow-num">4</span> <strong>Post</strong>
+    <span class="flow-desc">Approved accruals batched into a single BlackLine JE → SAP.</span>
+  </div>
+  <div class="flow-step flow-step-lg" style="grid-column: span 2;">
+    <span class="flow-num">5</span> <strong>Audit</strong>
+    <span class="flow-desc">Every decision persisted with snapshot for compliance — every step replayable.</span>
+  </div>
+</div>
+
+---
+
+## How Close Works Today
+
+<div class="cols3" style="margin-bottom: 28px;">
+<div class="stat">
+  <span class="stat-number">3–5</span>
+  <span class="stat-label">Days lost per month-end close</span>
+</div>
+<div class="stat">
+  <span class="stat-number">40%</span>
+  <span class="stat-label">Of accruals require manual rework</span>
+</div>
+<div class="stat">
+  <span class="stat-number">$12.8M</span>
+  <span class="stat-label">Pharma writedown exposure undetected</span>
+</div>
+</div>
+
+<h3 style="margin-top: 12px;">The manual process today</h3>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; margin-top: 12px;">
+  <div class="flow-step">
+    <span class="flow-num">1</span> <strong>Extract</strong> FI journal entries, MM purchase orders, CO cost centers from separate SAP transactions
+  </div>
+  <div class="flow-step">
+    <span class="flow-num">2</span> <strong>Cross-reference</strong> PO status — is the GR done? Is it invoiced? Is the accrual stale?
+  </div>
+  <div class="flow-step">
+    <span class="flow-num">3</span> <strong>Identify duplicates</strong> — same vendor, same amount, same CC posted twice
+  </div>
+  <div class="flow-step">
+    <span class="flow-num">4</span> <strong>Review pharma inventory</strong> — expired batches, quarantined lots, slow-moving SKUs across 5 plants
+  </div>
+  <div class="flow-step" style="grid-column: span 2;">
+    <span class="flow-num">5</span> <strong>Post</strong> approved accruals one-by-one to S/4 via manual journal entry
+  </div>
+</div>
+
+---
+
+## Why This Breaks at Scale
+
+<p style="color: #94a3b8; font-size: 17px; max-width: 800px; margin-bottom: 24px;">
+The manual process limps along at small scale, but three failure modes get more expensive every period — and they're the ones auditors find first.
+</p>
+
+<div class="cols3">
+  <div class="card" style="border-color: #fb923c; background: linear-gradient(135deg, #1f1108 0%, #1e293b 100%);">
+    <h3 style="color: #fb923c; font-size: 18px; margin-bottom: 8px;">Stale PO accruals</h3>
+    <p style="margin: 0; font-size: 15px; color: #cbd5e1;">PO goods receipt happened months ago, invoice never arrived. The accrual sits on the books indefinitely, distorting expense recognition.</p>
+  </div>
+  <div class="card" style="border-color: #fb923c; background: linear-gradient(135deg, #1f1108 0%, #1e293b 100%);">
+    <h3 style="color: #fb923c; font-size: 18px; margin-bottom: 8px;">Duplicate postings</h3>
+    <p style="margin: 0; font-size: 15px; color: #cbd5e1;">Same vendor + amount + cost center posted twice in the same period. Caught only at reconciliation — well after the close window.</p>
+  </div>
+  <div class="card" style="border-color: #fb923c; background: linear-gradient(135deg, #1f1108 0%, #1e293b 100%);">
+    <h3 style="color: #fb923c; font-size: 18px; margin-bottom: 8px;">Pharma compliance risk</h3>
+    <p style="margin: 0; font-size: 15px; color: #cbd5e1;">Expired or quarantined inventory not written down in time creates regulatory exposure across all five plants.</p>
+  </div>
+</div>
+
+<div class="highlight-box" style="margin-top: 28px; border-color: #38bdf8;">
+<strong>The result:</strong> close runs late, audit findings pile up, and finance teams patch the same issues every period because no system is built to detect them upfront.
+</div>
+
+---
+
+## Architecture — Data Sources
 
 <div class="cols">
+<div>
 
-**For the user**
-- Ask a question in plain English
-- Agent queries SAP in real time
-- Claude reasons over the data
-- Gets a structured, auditable answer
+### Where the data comes from
 
-**For the auditor**
-- Every answer shows *how* it was derived
-- Full underlying data returned as a table
-- Tool-call inputs + outputs inspectable and downloadable
+<div class="card-accent" style="margin-bottom: 12px; padding: 14px 18px;">
+  <h3 style="margin-bottom: 4px; font-size: 20px;">☁️ SAP BTP CAP Service</h3>
+  <p style="margin: 0; font-size: 14px; color: #94a3b8;">af3d148dtrial.cfapps.us10-001.hana.ondemand.com</p>
+  <p style="margin: 8px 0 4px 0; font-size: 14px; color: #cbd5e1;"><strong style="color: #38bdf8;">FI / MM / CO:</strong> <code style="font-size: 13px; padding: 1px 5px;">OPLACCTGDOCITEMCUBE</code> · <code style="font-size: 13px; padding: 1px 5px;">PURCHASEORDER_PROCESS</code> · <code style="font-size: 13px; padding: 1px 5px;">COSTCENTER</code></p>
+  <p style="margin: 4px 0; font-size: 14px; color: #cbd5e1;"><strong style="color: #4ade80;">Inventory:</strong> <code style="font-size: 13px; padding: 1px 5px;">BATCH</code> · <code style="font-size: 13px; padding: 1px 5px;">STOCK_OVERVIEW</code> · <code style="font-size: 13px; padding: 1px 5px;">MATERIAL_VALUATION</code></p>
+  <p style="margin: 6px 0 0 0; font-size: 13px; color: #64748b;">6 OData v2 services in one CAP app · 125 pharma batches · 5 plants</p>
+</div>
 
+<div class="card-accent" style="margin-bottom: 12px; padding: 14px 18px;">
+  <h3 style="margin-bottom: 4px; font-size: 20px;">🏢 Workday Global Payroll</h3>
+  <p style="margin: 0; font-size: 14px; color: #94a3b8;">SOAP · WS-Security UsernameToken</p>
+  <p style="margin: 8px 0 4px 0; font-size: 14px; color: #cbd5e1;"><strong style="color: #c084fc;">Operations:</strong> <code style="font-size: 13px; padding: 1px 5px;">Get_Payroll_Results</code> · <code style="font-size: 13px; padding: 1px 5px;">PECI FI lines</code></p>
+  <p style="margin: 6px 0 0 0; font-size: 13px; color: #64748b;">Live path stubbed → demo fixtures (no Workday tenant)</p>
+</div>
+
+<p style="font-size: 13px; color: #64748b; margin-top: 6px;">
+<strong style="color: #94a3b8;">Alt:</strong> sandbox.api.sap.com is a drop-in for the CAP source via <code style="font-size: 12px; padding: 1px 5px;">SAP_SANDBOX_BASE_URL</code>.
+</p>
+
+</div>
+<div>
+
+### Data flow
+
+<div class="ppt-flow">
+  <div class="ppt-flow-row">
+    <div class="ppt-box ppt-src">SAP BTP CAP<span class="ppt-sub">FI · MM · CO ·<br>Batch · Stock · Valuation</span></div>
+    <div class="ppt-box ppt-src">Workday SOAP<span class="ppt-sub">Get_Payroll_Results<br>PECI FI lines</span></div>
+  </div>
+  <div class="ppt-arrow-down"></div>
+  <div class="ppt-box ppt-engine">FastAPI Backend<span class="ppt-sub" style="color: #bae6fd;">async fetchers · normalize() · join FI + MM + CO</span></div>
+  <div class="ppt-arrow-down"></div>
+  <div class="ppt-flow-row">
+    <div class="ppt-box ppt-data">AccrualObject[]</div>
+    <div class="ppt-box ppt-data">PayrollReconciliation[]</div>
+  </div>
+  <div class="ppt-arrow-down"></div>
+  <div class="ppt-box ppt-claude">Claude AI Analysis<span class="ppt-sub" style="color: #e9d5ff;">tool-use → flag / approve / post</span></div>
+</div>
+
+</div>
+</div>
+
+---
+
+## Technical Architecture
+
+<div class="ppt-flow" style="gap: 0;">
+
+  <div class="ppt-box ppt-tier" style="width: 78%;">
+    <strong>Browser</strong> — React 19 · Next.js client
+    <span class="ppt-sub">Chat UI · Streaming SSE · Tool-call badges · Posting workflow stepper</span>
+  </div>
+
+  <div class="ppt-arrow-down"></div>
+
+  <div class="ppt-box ppt-tier" style="width: 78%;">
+    <strong>Vercel Functions</strong> — Next.js 16 App Router
+    <span class="ppt-sub">AI SDK v6 ToolLoopAgent · Server Actions · Vercel Workflow DevKit · LRU response cache (30 min) · Anthropic prompt-cache breakpoint (~90% token discount)</span>
+  </div>
+
+  <div class="ppt-branch">
+    <div class="ppt-branch-left"></div>
+    <div class="ppt-branch-right"></div>
+  </div>
+
+  <div class="ppt-flow-row" style="align-items: stretch; gap: 18px; width: 70%;">
+    <div class="ppt-box ppt-claude" style="flex: 1 1 0;">
+      <strong>Anthropic API</strong>
+      <span class="ppt-sub" style="color: #e9d5ff;">Claude Sonnet 4.6 · tool-use<br>getAccruals · getBatches · detectIrregularities<br>createPosting · listPostings · postApprovedAccruals</span>
+    </div>
+    <div class="ppt-box ppt-engine" style="flex: 1 1 0;">
+      <strong>Vercel Functions</strong> — FastAPI · Python 3.12
+      <span class="ppt-sub" style="color: #bae6fd;">/accruals · /inventory/batches · /runs · /postings · /postback/* · /blackline/* · /payroll/results · /plan<br>httpx.AsyncClient · asyncio.gather · Pydantic v2 · SQLAlchemy 2.0 · structlog · Jinja2</span>
+    </div>
+  </div>
+
+  <div class="ppt-arrow-down"></div>
+
+  <div class="ppt-flow-row" style="gap: 18px;">
+    <div class="ppt-box ppt-src">
+      <strong>SAP BTP CAP</strong>
+      <span class="ppt-sub">af3d148dtrial.cfapps.us10-001.hana.ondemand.com<br>FI · MM · CO · Batch · Stock · Valuation (6 OData v2 services)</span>
+    </div>
+    <div class="ppt-box ppt-src" style="border-color: #c084fc;">
+      <strong style="color: #f8fafc;">Workday SOAP</strong>
+      <span class="ppt-sub">Get_Payroll_Results · PECI FI lines<br>Stubbed → demo fixtures</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="cols3" style="margin-top: 12px;">
+  <div class="card" style="padding: 8px 12px;">
+    <strong style="font-size: 14px;">50 tests passing</strong>
+    <span style="display: block; color: #64748b; font-size: 11px; margin-top: 2px;">pytest · mypy strict · TypeScript strict</span>
+  </div>
+  <div class="card" style="padding: 8px 12px;">
+    <strong style="font-size: 14px;">2-layer caching</strong>
+    <span style="display: block; color: #64748b; font-size: 11px; margin-top: 2px;">Anthropic prompt cache + Next.js LRU (30 min)</span>
+  </div>
+  <div class="card" style="padding: 8px 12px;">
+    <strong style="font-size: 14px;">Durable workflows</strong>
+    <span style="display: block; color: #64748b; font-size: 11px; margin-top: 2px;">Workflow DevKit · approval hook · BlackLine + CAP postback</span>
+  </div>
+</div>
+
+---
+
+## Pharma Reserve Workflow — Inventory Write-Down to SAP
+
+<div class="cols">
+<div>
+
+### The problem
+
+Pharma companies hold **$12.8M+** in distressed inventory across 5 distribution centers. Without automation, write-downs are identified manually at quarter-end — too late for accurate period reporting.
+
+### Distress signals tracked
+
+| Signal | Threshold | Write-down % |
+|---|---|---|
+| **Expired** | SLED < today | 100% |
+| **Marked for deletion** | SAP flag set | 100% |
+| **Quarantine** | Restricted use | 50% |
+| **Near expiry** | SLED < 90 days | 25% |
+| **Slow-moving** | No GR in 365d | 30% |
+
+</div>
+<div>
+
+### Automated workflow
+
+<div class="flow-step" style="margin-bottom: 8px;">
+  <span class="flow-num">1</span> <strong>Extract</strong> — Agent calls <code>getWritedownExtract</code> → joins MB52 + MBEW from BTP CAP
+</div>
+<div class="flow-step" style="margin-bottom: 8px;">
+  <span class="flow-num">2</span> <strong>Draft JE</strong> — <code>draftWriteoffJE(reason="expired")</code> builds BlackLine-format JE: DR Inventory Write-off Expense / CR Accrued Inventory Write-off
+</div>
+<div class="flow-step" style="margin-bottom: 8px;">
+  <span class="flow-num">3</span> <strong>Review</strong> — Agent shows full JE table (lines + per-plant breakdown + batch detail). Finance team approves in chat.
+</div>
+<div class="flow-step" style="margin-bottom: 8px;">
+  <span class="flow-num">4</span> <strong>Post</strong> — <code>POST /blackline/post</code> → validates balance → simulates <code>BAPI_ACC_DOCUMENT_POST</code> → returns SAP document number
+</div>
+<div class="flow-step">
+  <span class="flow-num">5</span> <strong>Audit</strong> — SAP doc number + per-batch supporting detail stored for compliance
+</div>
+
+<div class="highlight-box" style="margin-top: 12px;">
+One <strong>single balanced JE file</strong> sent to BlackLine — not 118 individual postings
+</div>
+
+</div>
+</div>
+
+---
+
+## Workday & PO Expense Accruals — Sending to SAP
+
+<div class="cols">
+<div>
+
+### Purchase Order Accruals
+
+**14 live accruals from BTP CAP · 12 PO-backed**
+
+The pipeline runs Claude over FI + MM + CO data to detect:
+
+<div class="card" style="margin-bottom: 10px; padding: 14px;">
+  <span class="pill pill-amber">Stale PO</span>
+  <p style="margin: 8px 0 0 0; font-size: 15px;">PO 4500000006 — Meridian Engineering, GR Nov 2025 (>180 days), not invoiced. €22,000 sitting on books.</p>
+</div>
+
+<div class="card" style="margin-bottom: 10px; padding: 14px;">
+  <span class="pill pill-amber">Duplicate</span>
+  <p style="margin: 8px 0 0 0; font-size: 15px;">Docs 0100000002 + 0100000003 — Brightside Marketing, $12,500 USD, same CC, 1 day apart.</p>
+</div>
+
+<div class="card" style="padding: 14px;">
+  <span class="pill pill-green">Approved</span>
+  <p style="margin: 8px 0 0 0; font-size: 15px;">Clean accruals batched into one BlackLine JE → single POST to SAP.</p>
+</div>
+
+</div>
+<div>
+
+### Workday Payroll Accruals
+
+**40 reconciliation rows · 6 anomalies seeded**
+
+Workday PECI delivers payroll into SAP FI. The agent reconciles both sides:
+
+| Anomaly | Employee | Severity |
+|---|---|---|
+| Wrong cost center | EMP-1005 | Medium |
+| Wrong GL account | EMP-1007 | Medium |
+| Missing FI posting | EMP-1012 | **High** |
+| Duplicate FI posting | EMP-1017 | **High** |
+| FICA under-posted $75 | EMP-1019 | Low |
+| Phantom worker in FI | EMP-9999 | Medium |
+
+<div class="highlight-box" style="margin-top: 12px;">
+Period 2 (pay date Jun 5) is <strong>unposted</strong> — <code>accrual_variance_to_post</code> per row = the accrual the close team books
+</div>
+
+</div>
 </div>
 
 ---
 
 ## What the Agent Can Answer
 
-- **Current-period accruals** — what's ready to post, what's flagged
-- **Anomaly detection** — duplicate accruals, stale POs not fully invoiced
-- **Actuals vs plan** — variance analysis with budget context
-- **Period comparisons** — Jan 2025 vs Jan 2024, YoY by GL range
-- **Cost-center drill-downs** — "which cost centers over budget?"
-- **Pharma distressed inventory** — expired batches, quarantined lots, slow-moving SKUs
-- **Post to S/4** — triggers the mock postback behind a confirmation gate
-
----
-
-## Concept — Accruals
-
-Accruals are **expenses recognized before the invoice arrives**.
-
 <div class="cols">
+<div>
 
-**Examples (GL 22xxxxxx):**
-- Office rent (April 2026) — service received, invoice pending
-- Q2 digital marketing campaign — vendor work done, not billed
-- Internet / communications — monthly recurring
-- Professional services — consulting engagements
-- Travel & entertainment
+### Example Queries
 
-**Key fields the engine tracks (13 business attributes):**
-Company code, Posting Date, Document Date, GL Account #, GL Description, Vendor #, Vendor Name, Short Text, Long Text, Accrual From Period, Accrual To Period, Amount (USD)
+<div class="flow-step" style="margin-bottom: 6px; padding: 8px 12px;">
+  <strong style="font-size: 14px;">💬 "Show me current PO-backed accruals"</strong>
+  <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">getAccruals</code> → FI+MM+CO join → 13-column table</p>
+</div>
+<div class="flow-step" style="margin-bottom: 6px; padding: 8px 12px;">
+  <strong style="font-size: 14px;">💬 "Find duplicate or stale accruals"</strong>
+  <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">detectIrregularities</code> → Claude flags + persisted run</p>
+</div>
+<div class="flow-step" style="margin-bottom: 6px; padding: 8px 12px;">
+  <strong style="font-size: 14px;">💬 "Compare Apr 2026 actuals vs plan for IT"</strong>
+  <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">getAccruals</code> + <code style="font-size: 11px;">getPlan</code> → variance inline</p>
+</div>
+<div class="flow-step" style="margin-bottom: 6px; padding: 8px 12px;">
+  <strong style="font-size: 14px;">💬 "Show distressed pharma inventory"</strong>
+  <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">getWritedownExtract</code> → MB52+MBEW · $12.8M total</p>
+</div>
+<div class="flow-step" style="margin-bottom: 6px; padding: 8px 12px;">
+  <strong style="font-size: 14px;">💬 "Initiate write-off for expired batches"</strong>
+  <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">draftWriteoffJE</code> → approve → <code style="font-size: 11px;">postWriteoffJE</code></p>
+</div>
+<div class="flow-step" style="padding: 8px 12px;">
+  <strong style="font-size: 14px;">💬 "Did EMP-1010 get prorated correctly?"</strong>
+  <p style="margin: 2px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">getPayrollResults(worker_id=&quot;EMP-1010&quot;)</code></p>
+</div>
 
+</div>
+<div>
+
+### Response format — always 3 sections
+
+<div class="card-accent" style="margin-bottom: 8px; padding: 10px 14px;">
+  <h3 style="margin-bottom: 2px; font-size: 14px;">## How I answered this</h3>
+  <p style="margin: 0; font-size: 12px; color: #94a3b8;">Which tools called, what filters, why, how many records returned — auditable without raw output.</p>
+</div>
+
+<div class="card-accent" style="margin-bottom: 8px; padding: 10px 14px;">
+  <h3 style="margin-bottom: 2px; font-size: 14px;">## Data</h3>
+  <p style="margin: 0; font-size: 12px; color: #94a3b8;">Full Markdown table · no silent truncation · all key IDs included. Expandable tool-call badges show raw JSON.</p>
+</div>
+
+<div class="card-accent" style="padding: 10px 14px;">
+  <h3 style="margin-bottom: 2px; font-size: 14px;">## Findings / Recommendation</h3>
+  <p style="margin: 0; font-size: 12px; color: #94a3b8;">Analysis citing specific rows by ID, ending with a concrete next action for the finance team.</p>
+</div>
+
+<div class="highlight-box" style="margin-top: 10px; padding: 10px 14px; font-size: 12px;">
+Every claim → data → tool call → SAP API request. Fully traceable end-to-end.
+</div>
+
+</div>
 </div>
 
 ---
 
-## Concept — Distressed Inventory (Pharma)
-
-Inventory that **shouldn't be sold** or needs **immediate review**. Pharma
-is the canonical case because regulatory and safety stakes are highest.
-
-| Signal | Business meaning | SAP field |
-|---|---|---|
-| **Expired** | SLED already past | `ShelfLifeExpirationDate` < today |
-| **Near expiry** | SLED within 90 days | `ShelfLifeExpirationDate` < today + 90d |
-| **Quarantine** | Blocked pending quality release | `MatlBatchIsInRstrcdUseStock` = true |
-| **Marked for deletion** | Flagged for write-off | `BatchIsMarkedForDeletion` = true |
-| **Slow-moving** | No movement in 365+ days | `LastGoodsReceiptDate` < today - 365d |
-
-Demo dataset: 25 pharma SKUs across Frankfurt / New Jersey / Bangalore plants.
-
----
-
-## Technical Architecture
-
-```mermaid
-graph LR
-  U["Browser<br/>React 19 chat UI"]
-  V["Vercel Functions<br/>Next.js 16 + AI SDK v6<br/>response cache"]
-  C["Anthropic API<br/>Claude Sonnet 4.6"]
-  F["Fly.io<br/>FastAPI + httpx<br/>Python 3.11"]
-  DB[("SQLite<br/>runs + flagged + approved")]
-  S["SAP Business Accelerator Hub<br/>sandbox APIs<br/>(FI / MM / CO / Batch)"]
-
-  U -- "HTTPS · SSE" --> V
-  V -- "tool reasoning" --> C
-  V -- "HTTPS · JSON" --> F
-  F -- "OData + APIKey" --> S
-  F --- DB
-
-  classDef ui fill:#eef,stroke:#557,stroke-width:1.5px,color:#0f172a;
-  classDef edge fill:#fef,stroke:#755,stroke-width:1.5px,color:#0f172a;
-  classDef backend fill:#eff,stroke:#577,stroke-width:1.5px,color:#0f172a;
-  classDef ext fill:#ffe,stroke:#775,stroke-width:1.5px,color:#0f172a;
-  class U ui;
-  class V,C edge;
-  class F,DB backend;
-  class S ext;
-```
-
-- **Browser → Vercel**: server-side rendering, no SAP keys in client bundle
-- **Vercel → Fly**: all tools hit Fly over the public URL (no CORS required)
-- **Fly → SAP**: `APIKey` header auth, retries on 5xx, MOCK_MODE fixtures for dev
-
----
-
-## Tech Stack
+## System URLs & Infrastructure
 
 <div class="cols">
+<div>
 
-**Frontend (Vercel)**
-- Next.js 16 App Router
-- React 19 · TypeScript
-- Tailwind CSS v4
-- shadcn/ui components
-- AI SDK v6 (`@ai-sdk/react` + `@ai-sdk/anthropic`)
-- `react-markdown` + `remark-gfm` for streaming tables
-- Response cache (in-memory LRU, 30-min TTL)
+### Vercel Deployments
 
-**Backend (Fly.io)**
-- FastAPI + `uvicorn`
-- `httpx.AsyncClient` for parallel SAP fetches
-- Pydantic v2 models (strict at boundary)
-- SQLAlchemy 2.0 · SQLite
-- `structlog` for structured logs
-- Anthropic Python SDK
-- Jinja2 prompt templates
-
+<div class="card" style="margin-bottom: 8px; padding: 10px 14px;">
+  <h3 style="margin-bottom: 4px; font-size: 15px;">🌐 Frontend — Next.js 16</h3>
+  <a href="https://accuralsap.vercel.app" style="color: #38bdf8; font-size: 13px; font-weight: 600;">accuralsap.vercel.app</a>
+  <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">React 19 · AI SDK v6 · Tailwind · shadcn/ui · <code style="font-size: 11px;">accural_sap_frontend</code></p>
 </div>
 
-<span class="small">Python: 50 tests passing, mypy --strict clean on 18 source files. TypeScript: build clean, `tsc --noEmit` passes.</span>
-
----
-
-## Data Sources — SAP Business Accelerator Hub
-
-All APIs accessed via `sandbox.api.sap.com` with an `APIKey` header (free tier). No SAP tenant required.
-
-| Module | API / Entity | Purpose |
-|---|---|---|
-| **FI** | `API_OPLACCTGDOCITEMCUBE_SRV` / `A_OperationalAcctgDocItemCube` | Journal entry line items with posting date, amount, GL, cost center, PO linkage (271 fields available) |
-| **MM** | `API_PURCHASEORDER_PROCESS_SRV` / `A_PurchaseOrderItem` | PO line items with supplier, SES / goods-receipt dates, invoice status |
-| **CO** | `API_COSTCENTER_SRV` / `A_CostCenter` | Cost-center master data for tagging |
-| **Inventory** | `API_BATCH_SRV` / `Batch` | Batch master with SLED, manufacture date, quarantine flag, supplier |
-| **Inventory** | `API_MATERIAL_STOCK_SRV` / `A_MatlStkInAcctMod` | Current on-hand stock by material / plant / storage location |
-
-Plan / budget data is synthetic (720-row fixture across 2024–26 × 4 cost centers × 5 GL ranges).
-
----
-
-## Data Definitions — AccrualObject (13 fields)
-
-Business-shaped Python dataclass (Pydantic), translated from SAP's PascalCase cube schema.
-
-```python
-class AccrualObject(BaseModel):
-    accrual_id: str              # composite key: {co}/{year}/{doc}/{item}
-    company_code: str            # e.g. "1010" (BestRun DE)
-    posting_date: date | None
-    document_date: date | None
-    gl_account_number: str       # e.g. "22000000"
-    gl_description: str | None   # e.g. "Accrued expenses - rent"
-    vendor_number: str | None    # e.g. "V-200"
-    vendor_name: str | None      # e.g. "Brightside Marketing Services LLC"
-    short_text: str | None       # item-level free text
-    long_text: str | None        # header text, fallback to composed description
-    accrual_from_period: date    # derived from FiscalPeriod + FiscalYear
-    accrual_to_period: date      # first-day to last-day of fiscal month
-    amount_usd: Decimal          # from AmountInGlobalCurrency (GlobalCurrency=USD)
-    # + joined PO + CC context for Claude's anomaly reasoning
-```
-
----
-
-## Data Definitions — BatchRecord (Pharma)
-
-```python
-class BatchRecord(BaseModel):
-    batch: str                                  # SAP batch number
-    material: str                               # SKU, e.g. "PH-AMX-500"
-    material_description: str                   # "Amoxicillin 500mg capsules"
-    therapeutic_category: str                   # ANTIBIOTIC | OTC | CHRONIC | ...
-    plant: str                                  # 1010 | 1710 | 2010
-    plant_name: str                             # "Frankfurt DC"
-    shelf_life_expiration_date: date | None     # ← primary distress signal
-    manufacture_date: date | None
-    last_goods_receipt_date: date | None        # ← slow-moving signal
-    is_marked_for_deletion: bool
-    is_restricted_use: bool                     # ← quarantine signal
-    supplier: str                               # e.g. "V-P002"
-    supplier_name: str                          # "Teva Pharmaceutical Industries"
-    country_of_origin: str                      # DE, IN, US, CH, IE
-    quantity: float
-    base_unit: str
-```
-
----
-
-## Approach — LLM Agent with Tools
-
-The agent does **not** receive raw SAP data in its context. Instead, it calls tools.
-
-<div class="cols">
-
-**Agent config**
-- Model: `claude-sonnet-4-6` (prod), `claude-haiku-4-5` (dev)
-- Framework: AI SDK v6 `ToolLoopAgent`
-- Loop: up to 15 steps
-- Prompt cache breakpoint on last tool → 90% input-token discount
-
-**Tools available**
-- `getAccruals(filters…)` → `GET /accruals`
-- `getPlan(filters…)` → `GET /plan`
-- `getBatches(distress_signal…)` → `GET /inventory/batches`
-- `detectIrregularities()` → `POST /runs` + poll
-- `postApprovedAccruals({confirmed})` → gated postback
-
+<div class="card" style="margin-bottom: 8px; padding: 10px 14px;">
+  <h3 style="margin-bottom: 4px; font-size: 15px;">⚙️ Backend — FastAPI Python</h3>
+  <a href="https://accrualsap.vercel.app" style="color: #38bdf8; font-size: 13px; font-weight: 600;">accrualsap.vercel.app</a>
+  <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">Python 3.12 · FastAPI · SQLAlchemy 2.0 · structlog · <code style="font-size: 11px;">accrual_sap_backend</code></p>
 </div>
 
-Each tool is a thin HTTP wrapper around a Fly endpoint. Claude chooses which, with what parameters.
+<div class="card" style="padding: 10px 14px;">
+  <h3 style="margin-bottom: 4px; font-size: 15px;">☁️ SAP BTP CAP — Mock SAP Services</h3>
+  <p style="margin: 0; font-size: 12px; color: #38bdf8; word-break: break-all;">af3d148dtrial-dev-mocksap-srv.cfapps.us10-001.hana.ondemand.com</p>
+  <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">All 6 OData services · 125 pharma batches · MB52 · MBEW · Batch SRV</p>
+</div>
 
----
+</div>
+<div>
 
-## Approach — Structured, Auditable Responses
+### SAP & AI Services
 
-Every answer follows a mandatory three-section format enforced by the system prompt:
+<div class="card" style="margin-bottom: 8px; padding: 10px 14px;">
+  <h3 style="margin-bottom: 4px; font-size: 15px;">🔌 SAP Business Accelerator Hub</h3>
+  <a href="https://sandbox.api.sap.com" style="color: #38bdf8; font-size: 13px;">sandbox.api.sap.com</a>
+  <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">Free tier · APIKey auth · drop-in alt for FI / MM / CO via <code style="font-size: 11px;">SAP_SANDBOX_BASE_URL</code></p>
+</div>
 
-**`## How I answered this`** — methodology note: which tool(s) called, what filters, why, how many records.
+<div class="card" style="margin-bottom: 8px; padding: 10px 14px;">
+  <h3 style="margin-bottom: 4px; font-size: 15px;">🤖 Anthropic — Claude Sonnet 4.6</h3>
+  <a href="https://console.anthropic.com" style="color: #38bdf8; font-size: 13px;">console.anthropic.com</a>
+  <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;"><code style="font-size: 11px;">claude-sonnet-4-6</code> · max-tokens 4096 / 16384 · prompt-cache breakpoint (~90% discount)</p>
+</div>
 
-**`## Data`** — full Markdown table of the underlying records. No silent truncation. Includes key identifier columns for cross-checking.
+<div class="card" style="padding: 10px 14px;">
+  <h3 style="margin-bottom: 4px; font-size: 15px;">🗄️ Local Persistence — SQLite</h3>
+  <p style="margin: 0; font-size: 12px; color: #64748b;">SQLAlchemy 2.0 · 5 tables: <code style="font-size: 11px;">run_metadata</code> · <code style="font-size: 11px;">flagged_items</code> · <code style="font-size: 11px;">approved_items</code> · <code style="font-size: 11px;">postings</code> · <code style="font-size: 11px;">posting_events</code></p>
+  <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">Full audit snapshots frozen at decision time. Vercel: <code style="font-size: 11px;">/tmp/accrual.db</code></p>
+</div>
 
-**`## Findings / Recommendation`** — analysis with specific row references, ending with a next action.
-
-<div class="cols">
-
-**Plus UI-level validation:**
-- Tool-call badges are **expandable**
-- Shows raw parameters + raw JSON output
-- **Copy / Download** buttons per tool call
-- Record count visible next to every badge
-
-**Result:** every claim is traceable to data, and data is traceable to tool calls.
-
+</div>
 </div>
 
 ---
 
-## Approach — Caching (Two Layers)
+<!-- _class: title-slide -->
 
-<div class="cols">
-
-**Anthropic prompt caching**
-- `providerOptions: { anthropic: { cacheControl: { type: "ephemeral" } } }` on last tool
-- Caches system prompt + all 4 tool definitions
-- **90% discount** on cached input tokens
-- 5-minute ephemeral TTL
-- Applies to every call, not just repeats
-
-**Response cache (first-turn queries)**
-- Keyed on normalized user text
-- `ReadableStream.tee()` captures body while streaming to client
-- Zero added latency on MISS
-- **HIT delivers cached bytes in ~0s**
-- 30-min TTL, 100-entry LRU
-- `x-chat-cache: hit` header when served from cache
-
-</div>
-
-**Result:** pennies-per-hour Claude cost even with heavy demo usage.
-
----
-
-## Workflow — A Simple Question
-
-```mermaid
-sequenceDiagram
-  autonumber
-  participant U as Browser
-  participant V as Vercel /api/chat
-  participant C as Claude
-  participant F as Fly Backend
-  participant S as SAP Sandbox
-
-  U->>V: POST messages
-  V->>V: response cache check (MISS)
-  V->>C: streamText + tools
-  C-->>V: tool_use: getBatches
-  V->>F: GET /inventory/batches
-  F->>S: GET /A_Batch
-  S-->>F: 200 OK records
-  F-->>V: JSON batches
-  V-->>C: tool_result
-  C-->>V: text (How / Data / Findings)
-  V-->>U: stream SSE
-  V->>V: buffer bytes to cache
-```
-
-**"Show me expired pharma batches"** → `getBatches(distress_signal="expired")` → 5 records → Claude formats as "How I answered / Data / Findings" → streamed back + cached for next identical question.
-
----
-
-## Workflow — Anomaly-Detection Pipeline (the "Run")
-
-For deeper analysis, the agent calls `detectIrregularities` which triggers the full batch pipeline.
-
-```mermaid
-flowchart TD
-  A[POST /runs] --> B[record_run_start<br/>status = running]
-  B --> C{asyncio.gather}
-  C --> D1[fetch_journal_entries<br/>FI cube]
-  C --> D2[fetch_purchase_orders<br/>MM]
-  C --> D3[fetch_cost_centers<br/>CO]
-  D1 --> E[normalize<br/>join PO + CC]
-  D2 --> E
-  D3 --> E
-  E --> F[Claude analyze_accruals<br/>3 tool schemas]
-  F --> G{tool call}
-  G -- flag_stale_po_accrual --> H[persist FlaggedItem]
-  G -- flag_duplicate_accrual --> H
-  G -- approve_accrual --> I[persist ApprovedItem<br/>+ mock S/4 postback]
-  H --> J[record_run_finish<br/>status = completed]
-  I --> J
-  J --> K[GET /runs/id<br/>returns flagged + approved]
-
-  classDef start fill:#dfd,stroke:#393;
-  classDef done fill:#dfd,stroke:#393;
-  classDef io fill:#eef,stroke:#557;
-  classDef claude fill:#fef,stroke:#755;
-  class A start;
-  class J,K done;
-  class D1,D2,D3 io;
-  class F claude;
-```
-
-Agent polls `GET /runs/{id}` every 2s until `completed`. Run persists in SQLite for the audit view at `/runs/[id]`.
-
----
-
-## Design Decisions Worth Calling Out
-
-| Decision | Tradeoff accepted | Why |
-|---|---|---|
-| FastAPI on Fly (not Vercel Python) | Separate infra, two deploy targets | Faithful mirror of a CPI iFlow; keeps Python pipeline runnable standalone |
-| SQLite on single Fly machine | No HA; scale-up requires Postgres migration | SQLite is ephemeral but simple for demo; race between 2 machines caused 404s until we scaled down |
-| Synthetic plan + batch data | Not "real SAP data" | Sandbox demo tenant lacks populated SLED / plan values; synthetic fixture gives the agent enough to reason over |
-| Tool use over free-text | More prompt engineering | Deterministic routing of decisions; no fragile text-parsing on the router side |
-| Response cache per function instance | Cross-instance duplication | Fluid Compute instance reuse gives good hit rate without external DB |
-| Direct Anthropic (not AI Gateway) | No observability dashboard, no failover | Team didn't want to add a credit card to AI Gateway |
-
----
-
-## Deployment Topology
-
-<div class="cols">
-
-**Frontend — Vercel**
-- Project: `accural_sap` (Deepak team)
-- Production: `accuralsap.vercel.app`
-- Env: `BACKEND_API_URL`, `ANTHROPIC_API_KEY`
-- Deployment Protection: disabled on production alias
-- Deploy: `vercel deploy --prod --cwd web`
-
-**Backend — Fly.io**
-- App: `accrualagent` (`mddeepak13@gmail.com`)
-- Region: `iad`
-- 1 shared-CPU-1x · 512MB · auto-stop when idle
-- Secrets: `SAP_API_KEY`, `ANTHROPIC_API_KEY`
-- Deploy: `fly deploy --app accrualagent`
-
-</div>
-
-CI-friendly: both deploys are single-command. No manual infra steps.
-
----
-
-## Observability & Validation
-
-<div class="cols">
-
-**For developers**
-- Structured logs via `structlog`: `pipeline.start`, `claude.request`, `router.notify`, `postback.would_call_s4`
-- `/runs/[id]` audit view shows every pipeline run
-- FlaggedItem + ApprovedItem tables persist snapshots per run
-- Redacted secrets: `SecretStr` wrapper, never in repr
-
-**For auditors / finance**
-- "How I answered" in every response
-- Full data table cited
-- Tool-call JSON downloadable from UI
-- Run history at `/runs`
-
-</div>
-
-Everything Claude says is traceable to a tool output, which is traceable to an SAP API call (or fixture).
-
----
-
-## What's Next
-
-<div class="cols">
-
-**Short term**
-- Postgres migration → multi-machine Fly HA
-- Real pharma tenant data (live `API_BATCH_SRV` with populated SLED)
-- Extend to MM goods-movement history for aging analysis
-- Email / Slack notifications for high-severity flags
-
-**Medium term**
-- Port to SAP BTP CPI iFlow (architecture already maps 1:1)
-- Route Claude through AI Core / GenAI Hub (SAP-native)
-- Add Material Ledger variance analysis
-- Multi-tenant company-code scoping
-
-**Longer term**
-- Role-based access control
-- Approval workflows on postback
-- Materialized actuals warehouse for sub-second queries
-
-</div>
-
----
+<div style="text-align: center; padding-top: 140px;">
 
 # Questions?
 
-Live demo: <https://accuralsap.vercel.app>
+<p style="font-size: 24px; color: #94a3b8; margin-top: 28px;">
+Thank you for your time
+</p>
 
-Source: Python backend in `src/accrual_pipeline/`, Next.js UI in `web/`, architecture doc in `docs/ARCHITECTURE.md`, presentation in `docs/presentation.md`.
-
-**Metrics at time of writing:**
-- 50 Python tests passing · mypy strict clean · TypeScript strict clean
-- 4 agent tools · 13-field accrual model · 16-field batch model
-- 5 deployed endpoints · 2-layer caching · ~22s end-to-end pipeline run
+</div>

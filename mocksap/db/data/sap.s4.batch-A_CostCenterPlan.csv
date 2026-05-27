@@ -1,0 +1,721 @@
+CompanyCode,FiscalYear,FiscalPeriod,CostCenter,GLAccount,CostCenterName,GLAccountName,PlannedAmountInGlobalCurrency,Currency
+1010,2024,001,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,001,CC-1000,62000000,Production Operations,Travel & entertainment,560.00,USD
+1010,2024,001,CC-1000,63000000,Production Operations,Professional services,1080.00,USD
+1010,2024,001,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,001,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2024,001,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,001,CC-2000,62000000,Marketing,Travel & entertainment,3150.00,USD
+1010,2024,001,CC-2000,63000000,Marketing,Professional services,8100.00,USD
+1010,2024,001,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,001,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2024,001,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,001,CC-3000,62000000,IT Services,Travel & entertainment,1050.00,USD
+1010,2024,001,CC-3000,63000000,IT Services,Professional services,2880.00,USD
+1010,2024,001,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,001,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2024,001,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,001,CC-1100,62000000,Admin & Finance,Travel & entertainment,840.00,USD
+1010,2024,001,CC-1100,63000000,Admin & Finance,Professional services,2250.00,USD
+1010,2024,001,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,001,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2024,002,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,002,CC-1000,62000000,Production Operations,Travel & entertainment,720.00,USD
+1010,2024,002,CC-1000,63000000,Production Operations,Professional services,1200.00,USD
+1010,2024,002,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,002,CC-1000,65000000,Production Operations,Office supplies,360.00,USD
+1010,2024,002,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,002,CC-2000,62000000,Marketing,Travel & entertainment,4050.00,USD
+1010,2024,002,CC-2000,63000000,Marketing,Professional services,9000.00,USD
+1010,2024,002,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,002,CC-2000,65000000,Marketing,Office supplies,225.00,USD
+1010,2024,002,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,002,CC-3000,62000000,IT Services,Travel & entertainment,1350.00,USD
+1010,2024,002,CC-3000,63000000,IT Services,Professional services,3200.00,USD
+1010,2024,002,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,002,CC-3000,65000000,IT Services,Office supplies,315.00,USD
+1010,2024,002,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,002,CC-1100,62000000,Admin & Finance,Travel & entertainment,1080.00,USD
+1010,2024,002,CC-1100,63000000,Admin & Finance,Professional services,2500.00,USD
+1010,2024,002,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,002,CC-1100,65000000,Admin & Finance,Office supplies,810.00,USD
+1010,2024,003,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,003,CC-1000,62000000,Production Operations,Travel & entertainment,800.00,USD
+1010,2024,003,CC-1000,63000000,Production Operations,Professional services,1320.00,USD
+1010,2024,003,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,003,CC-1000,65000000,Production Operations,Office supplies,400.00,USD
+1010,2024,003,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,003,CC-2000,62000000,Marketing,Travel & entertainment,4500.00,USD
+1010,2024,003,CC-2000,63000000,Marketing,Professional services,9900.00,USD
+1010,2024,003,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,003,CC-2000,65000000,Marketing,Office supplies,250.00,USD
+1010,2024,003,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,003,CC-3000,62000000,IT Services,Travel & entertainment,1500.00,USD
+1010,2024,003,CC-3000,63000000,IT Services,Professional services,3520.00,USD
+1010,2024,003,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,003,CC-3000,65000000,IT Services,Office supplies,350.00,USD
+1010,2024,003,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,003,CC-1100,62000000,Admin & Finance,Travel & entertainment,1200.00,USD
+1010,2024,003,CC-1100,63000000,Admin & Finance,Professional services,2750.00,USD
+1010,2024,003,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,003,CC-1100,65000000,Admin & Finance,Office supplies,900.00,USD
+1010,2024,004,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,004,CC-1000,62000000,Production Operations,Travel & entertainment,960.00,USD
+1010,2024,004,CC-1000,63000000,Production Operations,Professional services,1440.00,USD
+1010,2024,004,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2024,004,CC-1000,65000000,Production Operations,Office supplies,400.00,USD
+1010,2024,004,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,004,CC-2000,62000000,Marketing,Travel & entertainment,5400.00,USD
+1010,2024,004,CC-2000,63000000,Marketing,Professional services,10800.00,USD
+1010,2024,004,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2024,004,CC-2000,65000000,Marketing,Office supplies,250.00,USD
+1010,2024,004,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,004,CC-3000,62000000,IT Services,Travel & entertainment,1800.00,USD
+1010,2024,004,CC-3000,63000000,IT Services,Professional services,3840.00,USD
+1010,2024,004,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2024,004,CC-3000,65000000,IT Services,Office supplies,350.00,USD
+1010,2024,004,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,004,CC-1100,62000000,Admin & Finance,Travel & entertainment,1440.00,USD
+1010,2024,004,CC-1100,63000000,Admin & Finance,Professional services,3000.00,USD
+1010,2024,004,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2024,004,CC-1100,65000000,Admin & Finance,Office supplies,900.00,USD
+1010,2024,005,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,005,CC-1000,62000000,Production Operations,Travel & entertainment,880.00,USD
+1010,2024,005,CC-1000,63000000,Production Operations,Professional services,1320.00,USD
+1010,2024,005,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,005,CC-1000,65000000,Production Operations,Office supplies,400.00,USD
+1010,2024,005,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,005,CC-2000,62000000,Marketing,Travel & entertainment,4950.00,USD
+1010,2024,005,CC-2000,63000000,Marketing,Professional services,9900.00,USD
+1010,2024,005,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,005,CC-2000,65000000,Marketing,Office supplies,250.00,USD
+1010,2024,005,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,005,CC-3000,62000000,IT Services,Travel & entertainment,1650.00,USD
+1010,2024,005,CC-3000,63000000,IT Services,Professional services,3520.00,USD
+1010,2024,005,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,005,CC-3000,65000000,IT Services,Office supplies,350.00,USD
+1010,2024,005,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,005,CC-1100,62000000,Admin & Finance,Travel & entertainment,1320.00,USD
+1010,2024,005,CC-1100,63000000,Admin & Finance,Professional services,2750.00,USD
+1010,2024,005,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,005,CC-1100,65000000,Admin & Finance,Office supplies,900.00,USD
+1010,2024,006,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,006,CC-1000,62000000,Production Operations,Travel & entertainment,1040.00,USD
+1010,2024,006,CC-1000,63000000,Production Operations,Professional services,1200.00,USD
+1010,2024,006,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,006,CC-1000,65000000,Production Operations,Office supplies,400.00,USD
+1010,2024,006,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,006,CC-2000,62000000,Marketing,Travel & entertainment,5850.00,USD
+1010,2024,006,CC-2000,63000000,Marketing,Professional services,9000.00,USD
+1010,2024,006,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,006,CC-2000,65000000,Marketing,Office supplies,250.00,USD
+1010,2024,006,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,006,CC-3000,62000000,IT Services,Travel & entertainment,1950.00,USD
+1010,2024,006,CC-3000,63000000,IT Services,Professional services,3200.00,USD
+1010,2024,006,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,006,CC-3000,65000000,IT Services,Office supplies,350.00,USD
+1010,2024,006,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,006,CC-1100,62000000,Admin & Finance,Travel & entertainment,1560.00,USD
+1010,2024,006,CC-1100,63000000,Admin & Finance,Professional services,2500.00,USD
+1010,2024,006,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,006,CC-1100,65000000,Admin & Finance,Office supplies,900.00,USD
+1010,2024,007,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,007,CC-1000,62000000,Production Operations,Travel & entertainment,480.00,USD
+1010,2024,007,CC-1000,63000000,Production Operations,Professional services,960.00,USD
+1010,2024,007,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,007,CC-1000,65000000,Production Operations,Office supplies,320.00,USD
+1010,2024,007,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,007,CC-2000,62000000,Marketing,Travel & entertainment,2700.00,USD
+1010,2024,007,CC-2000,63000000,Marketing,Professional services,7200.00,USD
+1010,2024,007,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,007,CC-2000,65000000,Marketing,Office supplies,200.00,USD
+1010,2024,007,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,007,CC-3000,62000000,IT Services,Travel & entertainment,900.00,USD
+1010,2024,007,CC-3000,63000000,IT Services,Professional services,2560.00,USD
+1010,2024,007,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,007,CC-3000,65000000,IT Services,Office supplies,280.00,USD
+1010,2024,007,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,007,CC-1100,62000000,Admin & Finance,Travel & entertainment,720.00,USD
+1010,2024,007,CC-1100,63000000,Admin & Finance,Professional services,2000.00,USD
+1010,2024,007,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,007,CC-1100,65000000,Admin & Finance,Office supplies,720.00,USD
+1010,2024,008,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,008,CC-1000,62000000,Production Operations,Travel & entertainment,400.00,USD
+1010,2024,008,CC-1000,63000000,Production Operations,Professional services,960.00,USD
+1010,2024,008,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,008,CC-1000,65000000,Production Operations,Office supplies,320.00,USD
+1010,2024,008,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,008,CC-2000,62000000,Marketing,Travel & entertainment,2250.00,USD
+1010,2024,008,CC-2000,63000000,Marketing,Professional services,7200.00,USD
+1010,2024,008,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,008,CC-2000,65000000,Marketing,Office supplies,200.00,USD
+1010,2024,008,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,008,CC-3000,62000000,IT Services,Travel & entertainment,750.00,USD
+1010,2024,008,CC-3000,63000000,IT Services,Professional services,2560.00,USD
+1010,2024,008,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,008,CC-3000,65000000,IT Services,Office supplies,280.00,USD
+1010,2024,008,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,008,CC-1100,62000000,Admin & Finance,Travel & entertainment,600.00,USD
+1010,2024,008,CC-1100,63000000,Admin & Finance,Professional services,2000.00,USD
+1010,2024,008,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,008,CC-1100,65000000,Admin & Finance,Office supplies,720.00,USD
+1010,2024,009,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,009,CC-1000,62000000,Production Operations,Travel & entertainment,800.00,USD
+1010,2024,009,CC-1000,63000000,Production Operations,Professional services,1320.00,USD
+1010,2024,009,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2024,009,CC-1000,65000000,Production Operations,Office supplies,480.00,USD
+1010,2024,009,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,009,CC-2000,62000000,Marketing,Travel & entertainment,4500.00,USD
+1010,2024,009,CC-2000,63000000,Marketing,Professional services,9900.00,USD
+1010,2024,009,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2024,009,CC-2000,65000000,Marketing,Office supplies,300.00,USD
+1010,2024,009,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,009,CC-3000,62000000,IT Services,Travel & entertainment,1500.00,USD
+1010,2024,009,CC-3000,63000000,IT Services,Professional services,3520.00,USD
+1010,2024,009,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2024,009,CC-3000,65000000,IT Services,Office supplies,420.00,USD
+1010,2024,009,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,009,CC-1100,62000000,Admin & Finance,Travel & entertainment,1200.00,USD
+1010,2024,009,CC-1100,63000000,Admin & Finance,Professional services,2750.00,USD
+1010,2024,009,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2024,009,CC-1100,65000000,Admin & Finance,Office supplies,1080.00,USD
+1010,2024,010,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,010,CC-1000,62000000,Production Operations,Travel & entertainment,960.00,USD
+1010,2024,010,CC-1000,63000000,Production Operations,Professional services,1440.00,USD
+1010,2024,010,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,010,CC-1000,65000000,Production Operations,Office supplies,400.00,USD
+1010,2024,010,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,010,CC-2000,62000000,Marketing,Travel & entertainment,5400.00,USD
+1010,2024,010,CC-2000,63000000,Marketing,Professional services,10800.00,USD
+1010,2024,010,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,010,CC-2000,65000000,Marketing,Office supplies,250.00,USD
+1010,2024,010,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,010,CC-3000,62000000,IT Services,Travel & entertainment,1800.00,USD
+1010,2024,010,CC-3000,63000000,IT Services,Professional services,3840.00,USD
+1010,2024,010,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,010,CC-3000,65000000,IT Services,Office supplies,350.00,USD
+1010,2024,010,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,010,CC-1100,62000000,Admin & Finance,Travel & entertainment,1440.00,USD
+1010,2024,010,CC-1100,63000000,Admin & Finance,Professional services,3000.00,USD
+1010,2024,010,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,010,CC-1100,65000000,Admin & Finance,Office supplies,900.00,USD
+1010,2024,011,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,011,CC-1000,62000000,Production Operations,Travel & entertainment,880.00,USD
+1010,2024,011,CC-1000,63000000,Production Operations,Professional services,1320.00,USD
+1010,2024,011,CC-1000,64000000,Production Operations,IT & communications,600.00,USD
+1010,2024,011,CC-1000,65000000,Production Operations,Office supplies,400.00,USD
+1010,2024,011,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,011,CC-2000,62000000,Marketing,Travel & entertainment,4950.00,USD
+1010,2024,011,CC-2000,63000000,Marketing,Professional services,9900.00,USD
+1010,2024,011,CC-2000,64000000,Marketing,IT & communications,700.00,USD
+1010,2024,011,CC-2000,65000000,Marketing,Office supplies,250.00,USD
+1010,2024,011,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,011,CC-3000,62000000,IT Services,Travel & entertainment,1650.00,USD
+1010,2024,011,CC-3000,63000000,IT Services,Professional services,3520.00,USD
+1010,2024,011,CC-3000,64000000,IT Services,IT & communications,6800.00,USD
+1010,2024,011,CC-3000,65000000,IT Services,Office supplies,350.00,USD
+1010,2024,011,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,011,CC-1100,62000000,Admin & Finance,Travel & entertainment,1320.00,USD
+1010,2024,011,CC-1100,63000000,Admin & Finance,Professional services,2750.00,USD
+1010,2024,011,CC-1100,64000000,Admin & Finance,IT & communications,800.00,USD
+1010,2024,011,CC-1100,65000000,Admin & Finance,Office supplies,900.00,USD
+1010,2024,012,CC-1000,22000000,Production Operations,Accrued expenses - rent,5200.00,USD
+1010,2024,012,CC-1000,62000000,Production Operations,Travel & entertainment,1120.00,USD
+1010,2024,012,CC-1000,63000000,Production Operations,Professional services,840.00,USD
+1010,2024,012,CC-1000,64000000,Production Operations,IT & communications,720.00,USD
+1010,2024,012,CC-1000,65000000,Production Operations,Office supplies,480.00,USD
+1010,2024,012,CC-2000,22000000,Marketing,Accrued expenses - rent,1800.00,USD
+1010,2024,012,CC-2000,62000000,Marketing,Travel & entertainment,6300.00,USD
+1010,2024,012,CC-2000,63000000,Marketing,Professional services,6300.00,USD
+1010,2024,012,CC-2000,64000000,Marketing,IT & communications,840.00,USD
+1010,2024,012,CC-2000,65000000,Marketing,Office supplies,300.00,USD
+1010,2024,012,CC-3000,22000000,IT Services,Accrued expenses - rent,2200.00,USD
+1010,2024,012,CC-3000,62000000,IT Services,Travel & entertainment,2100.00,USD
+1010,2024,012,CC-3000,63000000,IT Services,Professional services,2240.00,USD
+1010,2024,012,CC-3000,64000000,IT Services,IT & communications,8160.00,USD
+1010,2024,012,CC-3000,65000000,IT Services,Office supplies,420.00,USD
+1010,2024,012,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3000.00,USD
+1010,2024,012,CC-1100,62000000,Admin & Finance,Travel & entertainment,1680.00,USD
+1010,2024,012,CC-1100,63000000,Admin & Finance,Professional services,1750.00,USD
+1010,2024,012,CC-1100,64000000,Admin & Finance,IT & communications,960.00,USD
+1010,2024,012,CC-1100,65000000,Admin & Finance,Office supplies,1080.00,USD
+1010,2025,001,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,001,CC-1000,62000000,Production Operations,Travel & entertainment,588.00,USD
+1010,2025,001,CC-1000,63000000,Production Operations,Professional services,1134.00,USD
+1010,2025,001,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,001,CC-1000,65000000,Production Operations,Office supplies,462.00,USD
+1010,2025,001,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,001,CC-2000,62000000,Marketing,Travel & entertainment,3307.50,USD
+1010,2025,001,CC-2000,63000000,Marketing,Professional services,8505.00,USD
+1010,2025,001,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,001,CC-2000,65000000,Marketing,Office supplies,288.75,USD
+1010,2025,001,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,001,CC-3000,62000000,IT Services,Travel & entertainment,1102.50,USD
+1010,2025,001,CC-3000,63000000,IT Services,Professional services,3024.00,USD
+1010,2025,001,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,001,CC-3000,65000000,IT Services,Office supplies,404.25,USD
+1010,2025,001,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,001,CC-1100,62000000,Admin & Finance,Travel & entertainment,882.00,USD
+1010,2025,001,CC-1100,63000000,Admin & Finance,Professional services,2362.50,USD
+1010,2025,001,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,001,CC-1100,65000000,Admin & Finance,Office supplies,1039.50,USD
+1010,2025,002,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,002,CC-1000,62000000,Production Operations,Travel & entertainment,756.00,USD
+1010,2025,002,CC-1000,63000000,Production Operations,Professional services,1260.00,USD
+1010,2025,002,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,002,CC-1000,65000000,Production Operations,Office supplies,378.00,USD
+1010,2025,002,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,002,CC-2000,62000000,Marketing,Travel & entertainment,4252.50,USD
+1010,2025,002,CC-2000,63000000,Marketing,Professional services,9450.00,USD
+1010,2025,002,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,002,CC-2000,65000000,Marketing,Office supplies,236.25,USD
+1010,2025,002,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,002,CC-3000,62000000,IT Services,Travel & entertainment,1417.50,USD
+1010,2025,002,CC-3000,63000000,IT Services,Professional services,3360.00,USD
+1010,2025,002,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,002,CC-3000,65000000,IT Services,Office supplies,330.75,USD
+1010,2025,002,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,002,CC-1100,62000000,Admin & Finance,Travel & entertainment,1134.00,USD
+1010,2025,002,CC-1100,63000000,Admin & Finance,Professional services,2625.00,USD
+1010,2025,002,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,002,CC-1100,65000000,Admin & Finance,Office supplies,850.50,USD
+1010,2025,003,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,003,CC-1000,62000000,Production Operations,Travel & entertainment,840.00,USD
+1010,2025,003,CC-1000,63000000,Production Operations,Professional services,1386.00,USD
+1010,2025,003,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,003,CC-1000,65000000,Production Operations,Office supplies,420.00,USD
+1010,2025,003,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,003,CC-2000,62000000,Marketing,Travel & entertainment,4725.00,USD
+1010,2025,003,CC-2000,63000000,Marketing,Professional services,10395.00,USD
+1010,2025,003,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,003,CC-2000,65000000,Marketing,Office supplies,262.50,USD
+1010,2025,003,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,003,CC-3000,62000000,IT Services,Travel & entertainment,1575.00,USD
+1010,2025,003,CC-3000,63000000,IT Services,Professional services,3696.00,USD
+1010,2025,003,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,003,CC-3000,65000000,IT Services,Office supplies,367.50,USD
+1010,2025,003,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,003,CC-1100,62000000,Admin & Finance,Travel & entertainment,1260.00,USD
+1010,2025,003,CC-1100,63000000,Admin & Finance,Professional services,2887.50,USD
+1010,2025,003,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,003,CC-1100,65000000,Admin & Finance,Office supplies,945.00,USD
+1010,2025,004,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,004,CC-1000,62000000,Production Operations,Travel & entertainment,1008.00,USD
+1010,2025,004,CC-1000,63000000,Production Operations,Professional services,1512.00,USD
+1010,2025,004,CC-1000,64000000,Production Operations,IT & communications,693.00,USD
+1010,2025,004,CC-1000,65000000,Production Operations,Office supplies,420.00,USD
+1010,2025,004,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,004,CC-2000,62000000,Marketing,Travel & entertainment,5670.00,USD
+1010,2025,004,CC-2000,63000000,Marketing,Professional services,11340.00,USD
+1010,2025,004,CC-2000,64000000,Marketing,IT & communications,808.50,USD
+1010,2025,004,CC-2000,65000000,Marketing,Office supplies,262.50,USD
+1010,2025,004,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,004,CC-3000,62000000,IT Services,Travel & entertainment,1890.00,USD
+1010,2025,004,CC-3000,63000000,IT Services,Professional services,4032.00,USD
+1010,2025,004,CC-3000,64000000,IT Services,IT & communications,7854.00,USD
+1010,2025,004,CC-3000,65000000,IT Services,Office supplies,367.50,USD
+1010,2025,004,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,004,CC-1100,62000000,Admin & Finance,Travel & entertainment,1512.00,USD
+1010,2025,004,CC-1100,63000000,Admin & Finance,Professional services,3150.00,USD
+1010,2025,004,CC-1100,64000000,Admin & Finance,IT & communications,924.00,USD
+1010,2025,004,CC-1100,65000000,Admin & Finance,Office supplies,945.00,USD
+1010,2025,005,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,005,CC-1000,62000000,Production Operations,Travel & entertainment,924.00,USD
+1010,2025,005,CC-1000,63000000,Production Operations,Professional services,1386.00,USD
+1010,2025,005,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,005,CC-1000,65000000,Production Operations,Office supplies,420.00,USD
+1010,2025,005,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,005,CC-2000,62000000,Marketing,Travel & entertainment,5197.50,USD
+1010,2025,005,CC-2000,63000000,Marketing,Professional services,10395.00,USD
+1010,2025,005,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,005,CC-2000,65000000,Marketing,Office supplies,262.50,USD
+1010,2025,005,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,005,CC-3000,62000000,IT Services,Travel & entertainment,1732.50,USD
+1010,2025,005,CC-3000,63000000,IT Services,Professional services,3696.00,USD
+1010,2025,005,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,005,CC-3000,65000000,IT Services,Office supplies,367.50,USD
+1010,2025,005,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,005,CC-1100,62000000,Admin & Finance,Travel & entertainment,1386.00,USD
+1010,2025,005,CC-1100,63000000,Admin & Finance,Professional services,2887.50,USD
+1010,2025,005,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,005,CC-1100,65000000,Admin & Finance,Office supplies,945.00,USD
+1010,2025,006,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,006,CC-1000,62000000,Production Operations,Travel & entertainment,1092.00,USD
+1010,2025,006,CC-1000,63000000,Production Operations,Professional services,1260.00,USD
+1010,2025,006,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,006,CC-1000,65000000,Production Operations,Office supplies,420.00,USD
+1010,2025,006,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,006,CC-2000,62000000,Marketing,Travel & entertainment,6142.50,USD
+1010,2025,006,CC-2000,63000000,Marketing,Professional services,9450.00,USD
+1010,2025,006,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,006,CC-2000,65000000,Marketing,Office supplies,262.50,USD
+1010,2025,006,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,006,CC-3000,62000000,IT Services,Travel & entertainment,2047.50,USD
+1010,2025,006,CC-3000,63000000,IT Services,Professional services,3360.00,USD
+1010,2025,006,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,006,CC-3000,65000000,IT Services,Office supplies,367.50,USD
+1010,2025,006,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,006,CC-1100,62000000,Admin & Finance,Travel & entertainment,1638.00,USD
+1010,2025,006,CC-1100,63000000,Admin & Finance,Professional services,2625.00,USD
+1010,2025,006,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,006,CC-1100,65000000,Admin & Finance,Office supplies,945.00,USD
+1010,2025,007,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,007,CC-1000,62000000,Production Operations,Travel & entertainment,504.00,USD
+1010,2025,007,CC-1000,63000000,Production Operations,Professional services,1008.00,USD
+1010,2025,007,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,007,CC-1000,65000000,Production Operations,Office supplies,336.00,USD
+1010,2025,007,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,007,CC-2000,62000000,Marketing,Travel & entertainment,2835.00,USD
+1010,2025,007,CC-2000,63000000,Marketing,Professional services,7560.00,USD
+1010,2025,007,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,007,CC-2000,65000000,Marketing,Office supplies,210.00,USD
+1010,2025,007,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,007,CC-3000,62000000,IT Services,Travel & entertainment,945.00,USD
+1010,2025,007,CC-3000,63000000,IT Services,Professional services,2688.00,USD
+1010,2025,007,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,007,CC-3000,65000000,IT Services,Office supplies,294.00,USD
+1010,2025,007,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,007,CC-1100,62000000,Admin & Finance,Travel & entertainment,756.00,USD
+1010,2025,007,CC-1100,63000000,Admin & Finance,Professional services,2100.00,USD
+1010,2025,007,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,007,CC-1100,65000000,Admin & Finance,Office supplies,756.00,USD
+1010,2025,008,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,008,CC-1000,62000000,Production Operations,Travel & entertainment,420.00,USD
+1010,2025,008,CC-1000,63000000,Production Operations,Professional services,1008.00,USD
+1010,2025,008,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,008,CC-1000,65000000,Production Operations,Office supplies,336.00,USD
+1010,2025,008,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,008,CC-2000,62000000,Marketing,Travel & entertainment,2362.50,USD
+1010,2025,008,CC-2000,63000000,Marketing,Professional services,7560.00,USD
+1010,2025,008,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,008,CC-2000,65000000,Marketing,Office supplies,210.00,USD
+1010,2025,008,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,008,CC-3000,62000000,IT Services,Travel & entertainment,787.50,USD
+1010,2025,008,CC-3000,63000000,IT Services,Professional services,2688.00,USD
+1010,2025,008,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,008,CC-3000,65000000,IT Services,Office supplies,294.00,USD
+1010,2025,008,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,008,CC-1100,62000000,Admin & Finance,Travel & entertainment,630.00,USD
+1010,2025,008,CC-1100,63000000,Admin & Finance,Professional services,2100.00,USD
+1010,2025,008,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,008,CC-1100,65000000,Admin & Finance,Office supplies,756.00,USD
+1010,2025,009,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,009,CC-1000,62000000,Production Operations,Travel & entertainment,840.00,USD
+1010,2025,009,CC-1000,63000000,Production Operations,Professional services,1386.00,USD
+1010,2025,009,CC-1000,64000000,Production Operations,IT & communications,693.00,USD
+1010,2025,009,CC-1000,65000000,Production Operations,Office supplies,504.00,USD
+1010,2025,009,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,009,CC-2000,62000000,Marketing,Travel & entertainment,4725.00,USD
+1010,2025,009,CC-2000,63000000,Marketing,Professional services,10395.00,USD
+1010,2025,009,CC-2000,64000000,Marketing,IT & communications,808.50,USD
+1010,2025,009,CC-2000,65000000,Marketing,Office supplies,315.00,USD
+1010,2025,009,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,009,CC-3000,62000000,IT Services,Travel & entertainment,1575.00,USD
+1010,2025,009,CC-3000,63000000,IT Services,Professional services,3696.00,USD
+1010,2025,009,CC-3000,64000000,IT Services,IT & communications,7854.00,USD
+1010,2025,009,CC-3000,65000000,IT Services,Office supplies,441.00,USD
+1010,2025,009,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,009,CC-1100,62000000,Admin & Finance,Travel & entertainment,1260.00,USD
+1010,2025,009,CC-1100,63000000,Admin & Finance,Professional services,2887.50,USD
+1010,2025,009,CC-1100,64000000,Admin & Finance,IT & communications,924.00,USD
+1010,2025,009,CC-1100,65000000,Admin & Finance,Office supplies,1134.00,USD
+1010,2025,010,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,010,CC-1000,62000000,Production Operations,Travel & entertainment,1008.00,USD
+1010,2025,010,CC-1000,63000000,Production Operations,Professional services,1512.00,USD
+1010,2025,010,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,010,CC-1000,65000000,Production Operations,Office supplies,420.00,USD
+1010,2025,010,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,010,CC-2000,62000000,Marketing,Travel & entertainment,5670.00,USD
+1010,2025,010,CC-2000,63000000,Marketing,Professional services,11340.00,USD
+1010,2025,010,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,010,CC-2000,65000000,Marketing,Office supplies,262.50,USD
+1010,2025,010,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,010,CC-3000,62000000,IT Services,Travel & entertainment,1890.00,USD
+1010,2025,010,CC-3000,63000000,IT Services,Professional services,4032.00,USD
+1010,2025,010,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,010,CC-3000,65000000,IT Services,Office supplies,367.50,USD
+1010,2025,010,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,010,CC-1100,62000000,Admin & Finance,Travel & entertainment,1512.00,USD
+1010,2025,010,CC-1100,63000000,Admin & Finance,Professional services,3150.00,USD
+1010,2025,010,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,010,CC-1100,65000000,Admin & Finance,Office supplies,945.00,USD
+1010,2025,011,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,011,CC-1000,62000000,Production Operations,Travel & entertainment,924.00,USD
+1010,2025,011,CC-1000,63000000,Production Operations,Professional services,1386.00,USD
+1010,2025,011,CC-1000,64000000,Production Operations,IT & communications,630.00,USD
+1010,2025,011,CC-1000,65000000,Production Operations,Office supplies,420.00,USD
+1010,2025,011,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,011,CC-2000,62000000,Marketing,Travel & entertainment,5197.50,USD
+1010,2025,011,CC-2000,63000000,Marketing,Professional services,10395.00,USD
+1010,2025,011,CC-2000,64000000,Marketing,IT & communications,735.00,USD
+1010,2025,011,CC-2000,65000000,Marketing,Office supplies,262.50,USD
+1010,2025,011,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,011,CC-3000,62000000,IT Services,Travel & entertainment,1732.50,USD
+1010,2025,011,CC-3000,63000000,IT Services,Professional services,3696.00,USD
+1010,2025,011,CC-3000,64000000,IT Services,IT & communications,7140.00,USD
+1010,2025,011,CC-3000,65000000,IT Services,Office supplies,367.50,USD
+1010,2025,011,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,011,CC-1100,62000000,Admin & Finance,Travel & entertainment,1386.00,USD
+1010,2025,011,CC-1100,63000000,Admin & Finance,Professional services,2887.50,USD
+1010,2025,011,CC-1100,64000000,Admin & Finance,IT & communications,840.00,USD
+1010,2025,011,CC-1100,65000000,Admin & Finance,Office supplies,945.00,USD
+1010,2025,012,CC-1000,22000000,Production Operations,Accrued expenses - rent,5460.00,USD
+1010,2025,012,CC-1000,62000000,Production Operations,Travel & entertainment,1176.00,USD
+1010,2025,012,CC-1000,63000000,Production Operations,Professional services,882.00,USD
+1010,2025,012,CC-1000,64000000,Production Operations,IT & communications,756.00,USD
+1010,2025,012,CC-1000,65000000,Production Operations,Office supplies,504.00,USD
+1010,2025,012,CC-2000,22000000,Marketing,Accrued expenses - rent,1890.00,USD
+1010,2025,012,CC-2000,62000000,Marketing,Travel & entertainment,6615.00,USD
+1010,2025,012,CC-2000,63000000,Marketing,Professional services,6615.00,USD
+1010,2025,012,CC-2000,64000000,Marketing,IT & communications,882.00,USD
+1010,2025,012,CC-2000,65000000,Marketing,Office supplies,315.00,USD
+1010,2025,012,CC-3000,22000000,IT Services,Accrued expenses - rent,2310.00,USD
+1010,2025,012,CC-3000,62000000,IT Services,Travel & entertainment,2205.00,USD
+1010,2025,012,CC-3000,63000000,IT Services,Professional services,2352.00,USD
+1010,2025,012,CC-3000,64000000,IT Services,IT & communications,8568.00,USD
+1010,2025,012,CC-3000,65000000,IT Services,Office supplies,441.00,USD
+1010,2025,012,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3150.00,USD
+1010,2025,012,CC-1100,62000000,Admin & Finance,Travel & entertainment,1764.00,USD
+1010,2025,012,CC-1100,63000000,Admin & Finance,Professional services,1837.50,USD
+1010,2025,012,CC-1100,64000000,Admin & Finance,IT & communications,1008.00,USD
+1010,2025,012,CC-1100,65000000,Admin & Finance,Office supplies,1134.00,USD
+1010,2026,001,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,001,CC-1000,62000000,Production Operations,Travel & entertainment,616.00,USD
+1010,2026,001,CC-1000,63000000,Production Operations,Professional services,1188.00,USD
+1010,2026,001,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,001,CC-1000,65000000,Production Operations,Office supplies,484.00,USD
+1010,2026,001,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,001,CC-2000,62000000,Marketing,Travel & entertainment,3465.00,USD
+1010,2026,001,CC-2000,63000000,Marketing,Professional services,8910.00,USD
+1010,2026,001,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,001,CC-2000,65000000,Marketing,Office supplies,302.50,USD
+1010,2026,001,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,001,CC-3000,62000000,IT Services,Travel & entertainment,1155.00,USD
+1010,2026,001,CC-3000,63000000,IT Services,Professional services,3168.00,USD
+1010,2026,001,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,001,CC-3000,65000000,IT Services,Office supplies,423.50,USD
+1010,2026,001,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,001,CC-1100,62000000,Admin & Finance,Travel & entertainment,924.00,USD
+1010,2026,001,CC-1100,63000000,Admin & Finance,Professional services,2475.00,USD
+1010,2026,001,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,001,CC-1100,65000000,Admin & Finance,Office supplies,1089.00,USD
+1010,2026,002,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,002,CC-1000,62000000,Production Operations,Travel & entertainment,792.00,USD
+1010,2026,002,CC-1000,63000000,Production Operations,Professional services,1320.00,USD
+1010,2026,002,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,002,CC-1000,65000000,Production Operations,Office supplies,396.00,USD
+1010,2026,002,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,002,CC-2000,62000000,Marketing,Travel & entertainment,4455.00,USD
+1010,2026,002,CC-2000,63000000,Marketing,Professional services,9900.00,USD
+1010,2026,002,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,002,CC-2000,65000000,Marketing,Office supplies,247.50,USD
+1010,2026,002,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,002,CC-3000,62000000,IT Services,Travel & entertainment,1485.00,USD
+1010,2026,002,CC-3000,63000000,IT Services,Professional services,3520.00,USD
+1010,2026,002,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,002,CC-3000,65000000,IT Services,Office supplies,346.50,USD
+1010,2026,002,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,002,CC-1100,62000000,Admin & Finance,Travel & entertainment,1188.00,USD
+1010,2026,002,CC-1100,63000000,Admin & Finance,Professional services,2750.00,USD
+1010,2026,002,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,002,CC-1100,65000000,Admin & Finance,Office supplies,891.00,USD
+1010,2026,003,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,003,CC-1000,62000000,Production Operations,Travel & entertainment,880.00,USD
+1010,2026,003,CC-1000,63000000,Production Operations,Professional services,1452.00,USD
+1010,2026,003,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,003,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2026,003,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,003,CC-2000,62000000,Marketing,Travel & entertainment,4950.00,USD
+1010,2026,003,CC-2000,63000000,Marketing,Professional services,10890.00,USD
+1010,2026,003,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,003,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2026,003,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,003,CC-3000,62000000,IT Services,Travel & entertainment,1650.00,USD
+1010,2026,003,CC-3000,63000000,IT Services,Professional services,3872.00,USD
+1010,2026,003,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,003,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2026,003,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,003,CC-1100,62000000,Admin & Finance,Travel & entertainment,1320.00,USD
+1010,2026,003,CC-1100,63000000,Admin & Finance,Professional services,3025.00,USD
+1010,2026,003,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,003,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2026,004,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,004,CC-1000,62000000,Production Operations,Travel & entertainment,1056.00,USD
+1010,2026,004,CC-1000,63000000,Production Operations,Professional services,1584.00,USD
+1010,2026,004,CC-1000,64000000,Production Operations,IT & communications,726.00,USD
+1010,2026,004,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2026,004,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,004,CC-2000,62000000,Marketing,Travel & entertainment,5940.00,USD
+1010,2026,004,CC-2000,63000000,Marketing,Professional services,11880.00,USD
+1010,2026,004,CC-2000,64000000,Marketing,IT & communications,847.00,USD
+1010,2026,004,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2026,004,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,004,CC-3000,62000000,IT Services,Travel & entertainment,1980.00,USD
+1010,2026,004,CC-3000,63000000,IT Services,Professional services,4224.00,USD
+1010,2026,004,CC-3000,64000000,IT Services,IT & communications,8228.00,USD
+1010,2026,004,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2026,004,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,004,CC-1100,62000000,Admin & Finance,Travel & entertainment,1584.00,USD
+1010,2026,004,CC-1100,63000000,Admin & Finance,Professional services,3300.00,USD
+1010,2026,004,CC-1100,64000000,Admin & Finance,IT & communications,968.00,USD
+1010,2026,004,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2026,005,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,005,CC-1000,62000000,Production Operations,Travel & entertainment,968.00,USD
+1010,2026,005,CC-1000,63000000,Production Operations,Professional services,1452.00,USD
+1010,2026,005,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,005,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2026,005,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,005,CC-2000,62000000,Marketing,Travel & entertainment,5445.00,USD
+1010,2026,005,CC-2000,63000000,Marketing,Professional services,10890.00,USD
+1010,2026,005,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,005,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2026,005,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,005,CC-3000,62000000,IT Services,Travel & entertainment,1815.00,USD
+1010,2026,005,CC-3000,63000000,IT Services,Professional services,3872.00,USD
+1010,2026,005,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,005,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2026,005,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,005,CC-1100,62000000,Admin & Finance,Travel & entertainment,1452.00,USD
+1010,2026,005,CC-1100,63000000,Admin & Finance,Professional services,3025.00,USD
+1010,2026,005,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,005,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2026,006,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,006,CC-1000,62000000,Production Operations,Travel & entertainment,1144.00,USD
+1010,2026,006,CC-1000,63000000,Production Operations,Professional services,1320.00,USD
+1010,2026,006,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,006,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2026,006,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,006,CC-2000,62000000,Marketing,Travel & entertainment,6435.00,USD
+1010,2026,006,CC-2000,63000000,Marketing,Professional services,9900.00,USD
+1010,2026,006,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,006,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2026,006,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,006,CC-3000,62000000,IT Services,Travel & entertainment,2145.00,USD
+1010,2026,006,CC-3000,63000000,IT Services,Professional services,3520.00,USD
+1010,2026,006,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,006,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2026,006,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,006,CC-1100,62000000,Admin & Finance,Travel & entertainment,1716.00,USD
+1010,2026,006,CC-1100,63000000,Admin & Finance,Professional services,2750.00,USD
+1010,2026,006,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,006,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2026,007,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,007,CC-1000,62000000,Production Operations,Travel & entertainment,528.00,USD
+1010,2026,007,CC-1000,63000000,Production Operations,Professional services,1056.00,USD
+1010,2026,007,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,007,CC-1000,65000000,Production Operations,Office supplies,352.00,USD
+1010,2026,007,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,007,CC-2000,62000000,Marketing,Travel & entertainment,2970.00,USD
+1010,2026,007,CC-2000,63000000,Marketing,Professional services,7920.00,USD
+1010,2026,007,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,007,CC-2000,65000000,Marketing,Office supplies,220.00,USD
+1010,2026,007,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,007,CC-3000,62000000,IT Services,Travel & entertainment,990.00,USD
+1010,2026,007,CC-3000,63000000,IT Services,Professional services,2816.00,USD
+1010,2026,007,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,007,CC-3000,65000000,IT Services,Office supplies,308.00,USD
+1010,2026,007,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,007,CC-1100,62000000,Admin & Finance,Travel & entertainment,792.00,USD
+1010,2026,007,CC-1100,63000000,Admin & Finance,Professional services,2200.00,USD
+1010,2026,007,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,007,CC-1100,65000000,Admin & Finance,Office supplies,792.00,USD
+1010,2026,008,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,008,CC-1000,62000000,Production Operations,Travel & entertainment,440.00,USD
+1010,2026,008,CC-1000,63000000,Production Operations,Professional services,1056.00,USD
+1010,2026,008,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,008,CC-1000,65000000,Production Operations,Office supplies,352.00,USD
+1010,2026,008,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,008,CC-2000,62000000,Marketing,Travel & entertainment,2475.00,USD
+1010,2026,008,CC-2000,63000000,Marketing,Professional services,7920.00,USD
+1010,2026,008,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,008,CC-2000,65000000,Marketing,Office supplies,220.00,USD
+1010,2026,008,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,008,CC-3000,62000000,IT Services,Travel & entertainment,825.00,USD
+1010,2026,008,CC-3000,63000000,IT Services,Professional services,2816.00,USD
+1010,2026,008,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,008,CC-3000,65000000,IT Services,Office supplies,308.00,USD
+1010,2026,008,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,008,CC-1100,62000000,Admin & Finance,Travel & entertainment,660.00,USD
+1010,2026,008,CC-1100,63000000,Admin & Finance,Professional services,2200.00,USD
+1010,2026,008,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,008,CC-1100,65000000,Admin & Finance,Office supplies,792.00,USD
+1010,2026,009,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,009,CC-1000,62000000,Production Operations,Travel & entertainment,880.00,USD
+1010,2026,009,CC-1000,63000000,Production Operations,Professional services,1452.00,USD
+1010,2026,009,CC-1000,64000000,Production Operations,IT & communications,726.00,USD
+1010,2026,009,CC-1000,65000000,Production Operations,Office supplies,528.00,USD
+1010,2026,009,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,009,CC-2000,62000000,Marketing,Travel & entertainment,4950.00,USD
+1010,2026,009,CC-2000,63000000,Marketing,Professional services,10890.00,USD
+1010,2026,009,CC-2000,64000000,Marketing,IT & communications,847.00,USD
+1010,2026,009,CC-2000,65000000,Marketing,Office supplies,330.00,USD
+1010,2026,009,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,009,CC-3000,62000000,IT Services,Travel & entertainment,1650.00,USD
+1010,2026,009,CC-3000,63000000,IT Services,Professional services,3872.00,USD
+1010,2026,009,CC-3000,64000000,IT Services,IT & communications,8228.00,USD
+1010,2026,009,CC-3000,65000000,IT Services,Office supplies,462.00,USD
+1010,2026,009,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,009,CC-1100,62000000,Admin & Finance,Travel & entertainment,1320.00,USD
+1010,2026,009,CC-1100,63000000,Admin & Finance,Professional services,3025.00,USD
+1010,2026,009,CC-1100,64000000,Admin & Finance,IT & communications,968.00,USD
+1010,2026,009,CC-1100,65000000,Admin & Finance,Office supplies,1188.00,USD
+1010,2026,010,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,010,CC-1000,62000000,Production Operations,Travel & entertainment,1056.00,USD
+1010,2026,010,CC-1000,63000000,Production Operations,Professional services,1584.00,USD
+1010,2026,010,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,010,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2026,010,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,010,CC-2000,62000000,Marketing,Travel & entertainment,5940.00,USD
+1010,2026,010,CC-2000,63000000,Marketing,Professional services,11880.00,USD
+1010,2026,010,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,010,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2026,010,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,010,CC-3000,62000000,IT Services,Travel & entertainment,1980.00,USD
+1010,2026,010,CC-3000,63000000,IT Services,Professional services,4224.00,USD
+1010,2026,010,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,010,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2026,010,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,010,CC-1100,62000000,Admin & Finance,Travel & entertainment,1584.00,USD
+1010,2026,010,CC-1100,63000000,Admin & Finance,Professional services,3300.00,USD
+1010,2026,010,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,010,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2026,011,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,011,CC-1000,62000000,Production Operations,Travel & entertainment,968.00,USD
+1010,2026,011,CC-1000,63000000,Production Operations,Professional services,1452.00,USD
+1010,2026,011,CC-1000,64000000,Production Operations,IT & communications,660.00,USD
+1010,2026,011,CC-1000,65000000,Production Operations,Office supplies,440.00,USD
+1010,2026,011,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,011,CC-2000,62000000,Marketing,Travel & entertainment,5445.00,USD
+1010,2026,011,CC-2000,63000000,Marketing,Professional services,10890.00,USD
+1010,2026,011,CC-2000,64000000,Marketing,IT & communications,770.00,USD
+1010,2026,011,CC-2000,65000000,Marketing,Office supplies,275.00,USD
+1010,2026,011,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,011,CC-3000,62000000,IT Services,Travel & entertainment,1815.00,USD
+1010,2026,011,CC-3000,63000000,IT Services,Professional services,3872.00,USD
+1010,2026,011,CC-3000,64000000,IT Services,IT & communications,7480.00,USD
+1010,2026,011,CC-3000,65000000,IT Services,Office supplies,385.00,USD
+1010,2026,011,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,011,CC-1100,62000000,Admin & Finance,Travel & entertainment,1452.00,USD
+1010,2026,011,CC-1100,63000000,Admin & Finance,Professional services,3025.00,USD
+1010,2026,011,CC-1100,64000000,Admin & Finance,IT & communications,880.00,USD
+1010,2026,011,CC-1100,65000000,Admin & Finance,Office supplies,990.00,USD
+1010,2026,012,CC-1000,22000000,Production Operations,Accrued expenses - rent,5720.00,USD
+1010,2026,012,CC-1000,62000000,Production Operations,Travel & entertainment,1232.00,USD
+1010,2026,012,CC-1000,63000000,Production Operations,Professional services,924.00,USD
+1010,2026,012,CC-1000,64000000,Production Operations,IT & communications,792.00,USD
+1010,2026,012,CC-1000,65000000,Production Operations,Office supplies,528.00,USD
+1010,2026,012,CC-2000,22000000,Marketing,Accrued expenses - rent,1980.00,USD
+1010,2026,012,CC-2000,62000000,Marketing,Travel & entertainment,6930.00,USD
+1010,2026,012,CC-2000,63000000,Marketing,Professional services,6930.00,USD
+1010,2026,012,CC-2000,64000000,Marketing,IT & communications,924.00,USD
+1010,2026,012,CC-2000,65000000,Marketing,Office supplies,330.00,USD
+1010,2026,012,CC-3000,22000000,IT Services,Accrued expenses - rent,2420.00,USD
+1010,2026,012,CC-3000,62000000,IT Services,Travel & entertainment,2310.00,USD
+1010,2026,012,CC-3000,63000000,IT Services,Professional services,2464.00,USD
+1010,2026,012,CC-3000,64000000,IT Services,IT & communications,8976.00,USD
+1010,2026,012,CC-3000,65000000,IT Services,Office supplies,462.00,USD
+1010,2026,012,CC-1100,22000000,Admin & Finance,Accrued expenses - rent,3300.00,USD
+1010,2026,012,CC-1100,62000000,Admin & Finance,Travel & entertainment,1848.00,USD
+1010,2026,012,CC-1100,63000000,Admin & Finance,Professional services,1925.00,USD
+1010,2026,012,CC-1100,64000000,Admin & Finance,IT & communications,1056.00,USD
+1010,2026,012,CC-1100,65000000,Admin & Finance,Office supplies,1188.00,USD

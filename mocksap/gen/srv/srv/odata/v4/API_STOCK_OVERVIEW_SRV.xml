@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="API_STOCK_OVERVIEW_SRV" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="StockOverview" EntityType="API_STOCK_OVERVIEW_SRV.StockOverview"/>
+      </EntityContainer>
+      <EntityType Name="StockOverview">
+        <Key>
+          <PropertyRef Name="Material"/>
+          <PropertyRef Name="Plant"/>
+          <PropertyRef Name="StorageLocation"/>
+          <PropertyRef Name="Batch"/>
+        </Key>
+        <Property Name="Material" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="Plant" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="StorageLocation" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="Batch" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="UnrestrictedStock" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="QualityInspectionStock" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="BlockedStock" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="RestrictedStock" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="BaseUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="LastGoodsReceiptDate" Type="Edm.Date"/>
+        <Property Name="ShelfLifeExpiration" Type="Edm.Date"/>
+        <Property Name="Supplier" Type="Edm.String" MaxLength="10"/>
+        <Property Name="CountryOfOrigin" Type="Edm.String" MaxLength="3"/>
+        <Property Name="DistressReason" Type="Edm.String" MaxLength="30"/>
+        <Property Name="WritedownPercent" Type="Edm.Decimal" Precision="5" Scale="2"/>
+        <Property Name="WritedownAmount" Type="Edm.Decimal" Precision="15" Scale="2"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

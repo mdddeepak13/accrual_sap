@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="API_OPLACCTGDOCITEMCUBE_SRV" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="A_OperationalAcctgDocItemCube" EntityType="API_OPLACCTGDOCITEMCUBE_SRV.A_OperationalAcctgDocItemCube"/>
+      </EntityContainer>
+      <EntityType Name="A_OperationalAcctgDocItemCube">
+        <Key>
+          <PropertyRef Name="CompanyCode"/>
+          <PropertyRef Name="FiscalYear"/>
+          <PropertyRef Name="AccountingDocument"/>
+          <PropertyRef Name="AccountingDocumentItem"/>
+        </Key>
+        <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="FiscalYear" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="AccountingDocument" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="AccountingDocumentItem" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="FiscalPeriod" Type="Edm.String" MaxLength="3"/>
+        <Property Name="Ledger" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PostingDate" Type="Edm.Date"/>
+        <Property Name="DocumentDate" Type="Edm.Date"/>
+        <Property Name="AccountingDocumentType" Type="Edm.String" MaxLength="2"/>
+        <Property Name="AccountingDocumentTypeName" Type="Edm.String" MaxLength="50"/>
+        <Property Name="AccountingDocumentHeaderText" Type="Edm.String" MaxLength="80"/>
+        <Property Name="DocumentItemText" Type="Edm.String" MaxLength="80"/>
+        <Property Name="DocumentReferenceID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="ReferenceDocumentType" Type="Edm.String" MaxLength="10"/>
+        <Property Name="IsReversal" Type="Edm.Boolean" DefaultValue="false"/>
+        <Property Name="IsReversed" Type="Edm.Boolean" DefaultValue="false"/>
+        <Property Name="GLAccount" Type="Edm.String" MaxLength="10"/>
+        <Property Name="GLAccountName" Type="Edm.String" MaxLength="80"/>
+        <Property Name="AmountInTransactionCurrency" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="TransactionCurrency" Type="Edm.String" MaxLength="3"/>
+        <Property Name="AmountInCompanyCodeCurrency" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="CompanyCodeCurrency" Type="Edm.String" MaxLength="3"/>
+        <Property Name="AmountInGlobalCurrency" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="GlobalCurrency" Type="Edm.String" MaxLength="3"/>
+        <Property Name="DebitCreditCode" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurchasingDocument" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchasingDocumentItem" Type="Edm.String" MaxLength="6"/>
+        <Property Name="Material" Type="Edm.String" MaxLength="40"/>
+        <Property Name="Supplier" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SupplierName" Type="Edm.String" MaxLength="80"/>
+        <Property Name="InvoiceReference" Type="Edm.String" MaxLength="20"/>
+        <Property Name="InvoiceReferenceFiscalYear" Type="Edm.String" MaxLength="4"/>
+        <Property Name="InvoiceReceiptDate" Type="Edm.Date"/>
+        <Property Name="CostCenter" Type="Edm.String" MaxLength="10"/>
+        <Property Name="CostCenterName" Type="Edm.String" MaxLength="50"/>
+        <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

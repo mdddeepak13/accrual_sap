@@ -132,7 +132,7 @@ class TestLiveMode:
             pos = await mm_fetcher.fetch_purchase_orders(client)
         assert route.called
         query = dict(route.calls.last.request.url.params)
-        assert query["$filter"] == "IsFullyInvoiced eq false"
+        assert "$filter" not in query  # sandbox doesn't support IsFullyInvoiced filter
         assert len(pos) == 3
 
     @respx.mock

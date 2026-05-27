@@ -13,6 +13,7 @@ import structlog
 
 from accrual_pipeline.config import get_settings
 from accrual_pipeline.fetchers.base import (
+    _decode_response,
     get_with_retry,
     load_fixture,
     unwrap_odata,
@@ -59,13 +60,18 @@ async def fetch_journal_entries(
                 "$top": str(limit),
                 # Cube requires a CompanyCode filter; the GL range narrows to
                 # accrual-style liability accounts.
+                # CompanyCode + GL range narrow to accrual-style liability
+                # accounts. AccountingDocumentType ne 'PY' excludes payroll docs
+                # served from the same cube on BTP — payroll reconciliation has
+                # its own view (/payroll/results).
                 "$filter": (
                     f"CompanyCode eq '{DEFAULT_COMPANY_CODE}' "
                     f"and GLAccount ge '{ACCRUAL_GL_FROM}' "
-                    f"and GLAccount le '{ACCRUAL_GL_TO}'"
+                    f"and GLAccount le '{ACCRUAL_GL_TO}' "
+                    f"and AccountingDocumentType ne 'PY'"
                 ),
             },
         )
-        payload = response.json()
+        payload = _decode_response(response)
     records = unwrap_odata(payload)
     return [FIJournalEntry.model_validate(r) for r in records]

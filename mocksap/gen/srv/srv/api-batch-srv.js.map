@@ -1,0 +1,1 @@
+{"version":3,"file":"api-batch-srv.js","sourceRoot":"","sources":["../../../srv/api-batch-srv.ts"],"names":[],"mappings":";;;;;AAAA,mDAA2B;AAE3B,kBAAe,aAAG,CAAC,OAAO,CAAC,IAAI,CAAC;IAC9B,IAAI,CAAC,MAAM,CAAC,CAAC,QAAQ,EAAE,QAAQ,EAAE,QAAQ,CAAC,EAAE,OAAO,EAAE,GAAG,EAAE;QACxD,MAAM,IAAI,KAAK,CAAC,4BAA4B,CAAC,CAAC;IAChD,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC"}

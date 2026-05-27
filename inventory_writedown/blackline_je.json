@@ -1,0 +1,1195 @@
+{
+  "$schema": "https://blackline.com/schemas/journal-entry/v1",
+  "header": {
+    "journal_id": "BL-JE-2026-Q2-INV-WD",
+    "source_system": "BLACKLINE",
+    "target_system": "SAP",
+    "target_company_code": "1000",
+    "currency": "USD",
+    "posting_date": "2026-05-21",
+    "document_date": "2026-05-21",
+    "document_type": "SA",
+    "header_text": "Q2 2026 distressed pharma inventory write-down",
+    "reference": "INV-WD-Q2-2026",
+    "preparer": "Deepak",
+    "approver": null,
+    "status": "DRAFT",
+    "source_extract": "inventory_writedown/mb52_mbew_distressed.csv"
+  },
+  "lines": [
+    {
+      "line_number": 10,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-down Expense",
+      "company_code": "1000",
+      "cost_center": "CC-1010",
+      "profit_center": "PC-1010",
+      "plant": "1010",
+      "amount_local": 5064606.25,
+      "amount_doc": 5064606.25,
+      "currency": "USD",
+      "line_item_text": "Distressed pharma write-down \u2014 Plant 1010 Frankfurt DC",
+      "assignment": "INV-WD-2026Q2"
+    },
+    {
+      "line_number": 20,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-down Expense",
+      "company_code": "1000",
+      "cost_center": "CC-1710",
+      "profit_center": "PC-1710",
+      "plant": "1710",
+      "amount_local": 1877846.5,
+      "amount_doc": 1877846.5,
+      "currency": "USD",
+      "line_item_text": "Distressed pharma write-down \u2014 Plant 1710 New Jersey DC",
+      "assignment": "INV-WD-2026Q2"
+    },
+    {
+      "line_number": 30,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-down Expense",
+      "company_code": "1000",
+      "cost_center": "CC-2010",
+      "profit_center": "PC-2010",
+      "plant": "2010",
+      "amount_local": 2086755.0,
+      "amount_doc": 2086755.0,
+      "currency": "USD",
+      "line_item_text": "Distressed pharma write-down \u2014 Plant 2010 Bangalore DC",
+      "assignment": "INV-WD-2026Q2"
+    },
+    {
+      "line_number": 40,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-down Expense",
+      "company_code": "1000",
+      "cost_center": "CC-3010",
+      "profit_center": "PC-3010",
+      "plant": "3010",
+      "amount_local": 811975.0,
+      "amount_doc": 811975.0,
+      "currency": "USD",
+      "line_item_text": "Distressed pharma write-down \u2014 Plant 3010 Sao Paulo DC",
+      "assignment": "INV-WD-2026Q2"
+    },
+    {
+      "line_number": 50,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-down Expense",
+      "company_code": "1000",
+      "cost_center": "CC-4010",
+      "profit_center": "PC-4010",
+      "plant": "4010",
+      "amount_local": 2953492.5,
+      "amount_doc": 2953492.5,
+      "currency": "USD",
+      "line_item_text": "Distressed pharma write-down \u2014 Plant 4010 Singapore DC",
+      "assignment": "INV-WD-2026Q2"
+    },
+    {
+      "line_number": 60,
+      "posting_key": "50",
+      "debit_credit": "H",
+      "gl_account": "139900",
+      "gl_account_name": "Inventory Allowance \u2014 Obsolete Stock",
+      "company_code": "1000",
+      "cost_center": null,
+      "profit_center": null,
+      "plant": null,
+      "amount_local": 12794675.25,
+      "amount_doc": 12794675.25,
+      "currency": "USD",
+      "line_item_text": "Offset to Q2 2026 distressed inventory write-down",
+      "assignment": "INV-WD-2026Q2"
+    }
+  ],
+  "totals": {
+    "total_debit": 12794675.25,
+    "total_credit": 12794675.25,
+    "balanced": true,
+    "line_count": 6
+  },
+  "supporting_documents": [
+    {
+      "type": "MB52_MBEW_EXTRACT",
+      "path": "inventory_writedown/mb52_mbew_distressed.csv",
+      "line_count": 118,
+      "extracted_at": "2026-05-21T18:43:58Z"
+    }
+  ],
+  "supporting_detail": [
+    {
+      "material": "PH-AMX-250",
+      "batch": "B0001001",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 2250.0,
+      "stock_value_at_standard": 2250.0
+    },
+    {
+      "material": "PH-AMX-500",
+      "batch": "B0001000",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 450.0,
+      "stock_value_at_standard": 450.0
+    },
+    {
+      "material": "PH-AZI-250",
+      "batch": "B0001002",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 450.0,
+      "stock_value_at_standard": 450.0
+    },
+    {
+      "material": "PH-AZI-250",
+      "batch": "B0001030",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 1125.0,
+      "stock_value_at_standard": 4500.0
+    },
+    {
+      "material": "PH-AZI-250",
+      "batch": "B0001080",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 112.5,
+      "stock_value_at_standard": 450.0
+    },
+    {
+      "material": "PH-CIP-500",
+      "batch": "B0001003",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 450.0,
+      "stock_value_at_standard": 450.0
+    },
+    {
+      "material": "PH-CTR-100",
+      "batch": "B0001025",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 562.5,
+      "stock_value_at_standard": 2250.0
+    },
+    {
+      "material": "PH-CTR-100",
+      "batch": "B0001075",
+      "plant": "1010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 13500.0,
+      "stock_value_at_standard": 45000.0
+    },
+    {
+      "material": "PH-ENO-40",
+      "batch": "B0001060",
+      "plant": "1010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 7500.0,
+      "stock_value_at_standard": 25000.0
+    },
+    {
+      "material": "PH-ENO-40",
+      "batch": "B0001110",
+      "plant": "1010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 3125.0,
+      "stock_value_at_standard": 6250.0
+    },
+    {
+      "material": "PH-EPI-03",
+      "batch": "B0001013",
+      "plant": "1010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 31250.0,
+      "stock_value_at_standard": 62500.0
+    },
+    {
+      "material": "PH-FLT-250",
+      "batch": "B0001065",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 156.25,
+      "stock_value_at_standard": 625.0
+    },
+    {
+      "material": "PH-FLT-250",
+      "batch": "B0001115",
+      "plant": "1010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 1250.0,
+      "stock_value_at_standard": 1250.0
+    },
+    {
+      "material": "PH-FXA-500",
+      "batch": "B0001055",
+      "plant": "1010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 425000.0,
+      "stock_value_at_standard": 425000.0
+    },
+    {
+      "material": "PH-FXA-500",
+      "batch": "B0001105",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4250000.0,
+      "stock_value_at_standard": 4250000.0
+    },
+    {
+      "material": "PH-IBU-200",
+      "batch": "B0001004",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 1500.0,
+      "stock_value_at_standard": 1500.0
+    },
+    {
+      "material": "PH-LIS-10",
+      "batch": "B0001010",
+      "plant": "1010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4000.0,
+      "stock_value_at_standard": 4000.0
+    },
+    {
+      "material": "PH-LIS-10",
+      "batch": "B0001035",
+      "plant": "1010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 600.0,
+      "stock_value_at_standard": 2000.0
+    },
+    {
+      "material": "PH-LIS-10",
+      "batch": "B0001085",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 200.0,
+      "stock_value_at_standard": 200.0
+    },
+    {
+      "material": "PH-LOR-10",
+      "batch": "B0001006",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 75.0,
+      "stock_value_at_standard": 300.0
+    },
+    {
+      "material": "PH-MET-500",
+      "batch": "B0001040",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 2000.0,
+      "stock_value_at_standard": 2000.0
+    },
+    {
+      "material": "PH-MET-500",
+      "batch": "B0001090",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 2000.0,
+      "stock_value_at_standard": 2000.0
+    },
+    {
+      "material": "PH-ONC-GLC",
+      "batch": "B0001050",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 6250.0,
+      "stock_value_at_standard": 25000.0
+    },
+    {
+      "material": "PH-ONC-GLC",
+      "batch": "B0001100",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 125000.0,
+      "stock_value_at_standard": 125000.0
+    },
+    {
+      "material": "PH-SOF-400",
+      "batch": "B0001070",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 1800.0,
+      "stock_value_at_standard": 1800.0
+    },
+    {
+      "material": "PH-SOF-400",
+      "batch": "B0001120",
+      "plant": "1010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 9000.0,
+      "stock_value_at_standard": 18000.0
+    },
+    {
+      "material": "PH-VAC-FLU",
+      "batch": "B0001045",
+      "plant": "1010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 87500.0,
+      "stock_value_at_standard": 87500.0
+    },
+    {
+      "material": "PH-VAC-FLU",
+      "batch": "B0001095",
+      "plant": "1010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 87500.0,
+      "stock_value_at_standard": 350000.0
+    },
+    {
+      "material": "PH-ASP-81",
+      "batch": "B0001036",
+      "plant": "1710",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 15.0,
+      "stock_value_at_standard": 30.0
+    },
+    {
+      "material": "PH-ASP-81",
+      "batch": "B0001086",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 7.5,
+      "stock_value_at_standard": 30.0
+    },
+    {
+      "material": "PH-ATV-20",
+      "batch": "B0001009",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 2000.0,
+      "stock_value_at_standard": 8000.0
+    },
+    {
+      "material": "PH-ATV-20",
+      "batch": "B0001026",
+      "plant": "1710",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4000.0,
+      "stock_value_at_standard": 4000.0
+    },
+    {
+      "material": "PH-ATV-20",
+      "batch": "B0001076",
+      "plant": "1710",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 8000.0,
+      "stock_value_at_standard": 8000.0
+    },
+    {
+      "material": "PH-HEP-25",
+      "batch": "B0001061",
+      "plant": "1710",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 750.0,
+      "stock_value_at_standard": 2500.0
+    },
+    {
+      "material": "PH-HEP-25",
+      "batch": "B0001111",
+      "plant": "1710",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 250000.0,
+      "stock_value_at_standard": 250000.0
+    },
+    {
+      "material": "PH-LOR-10",
+      "batch": "B0001031",
+      "plant": "1710",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 90.0,
+      "stock_value_at_standard": 300.0
+    },
+    {
+      "material": "PH-LOR-10",
+      "batch": "B0001081",
+      "plant": "1710",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 9.0,
+      "stock_value_at_standard": 30.0
+    },
+    {
+      "material": "PH-MET-500",
+      "batch": "B0001008",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 500.0,
+      "stock_value_at_standard": 2000.0
+    },
+    {
+      "material": "PH-MOR-10",
+      "batch": "B0001014",
+      "plant": "1710",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 25000.0,
+      "stock_value_at_standard": 50000.0
+    },
+    {
+      "material": "PH-MTX-25",
+      "batch": "B0001066",
+      "plant": "1710",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 1250000.0,
+      "stock_value_at_standard": 2500000.0
+    },
+    {
+      "material": "PH-MTX-25",
+      "batch": "B0001116",
+      "plant": "1710",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 125000.0,
+      "stock_value_at_standard": 250000.0
+    },
+    {
+      "material": "PH-ONC-PEM",
+      "batch": "B0001051",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 62500.0,
+      "stock_value_at_standard": 250000.0
+    },
+    {
+      "material": "PH-ONC-PEM",
+      "batch": "B0001101",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 6250.0,
+      "stock_value_at_standard": 25000.0
+    },
+    {
+      "material": "PH-OSL-75",
+      "batch": "B0001071",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 450.0,
+      "stock_value_at_standard": 1800.0
+    },
+    {
+      "material": "PH-OSL-75",
+      "batch": "B0001121",
+      "plant": "1710",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 90000.0,
+      "stock_value_at_standard": 90000.0
+    },
+    {
+      "material": "PH-OXY-5",
+      "batch": "B0001056",
+      "plant": "1710",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 2500.0,
+      "stock_value_at_standard": 5000.0
+    },
+    {
+      "material": "PH-OXY-5",
+      "batch": "B0001106",
+      "plant": "1710",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 1250.0,
+      "stock_value_at_standard": 2500.0
+    },
+    {
+      "material": "PH-VAC-MMR",
+      "batch": "B0001046",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 4375.0,
+      "stock_value_at_standard": 17500.0
+    },
+    {
+      "material": "PH-VAC-MMR",
+      "batch": "B0001096",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 43750.0,
+      "stock_value_at_standard": 175000.0
+    },
+    {
+      "material": "PH-WAR-5",
+      "batch": "B0001041",
+      "plant": "1710",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 200.0,
+      "stock_value_at_standard": 800.0
+    },
+    {
+      "material": "PH-WAR-5",
+      "batch": "B0001091",
+      "plant": "1710",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 1200.0,
+      "stock_value_at_standard": 4000.0
+    },
+    {
+      "material": "PH-ACE-325",
+      "batch": "B0001005",
+      "plant": "2010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 750.0,
+      "stock_value_at_standard": 3000.0
+    },
+    {
+      "material": "PH-CSP-100",
+      "batch": "B0001067",
+      "plant": "2010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 18750.0,
+      "stock_value_at_standard": 75000.0
+    },
+    {
+      "material": "PH-CSP-100",
+      "batch": "B0001117",
+      "plant": "2010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 750000.0,
+      "stock_value_at_standard": 1500000.0
+    },
+    {
+      "material": "PH-EPO-4K",
+      "batch": "B0001062",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 750.0,
+      "stock_value_at_standard": 2500.0
+    },
+    {
+      "material": "PH-EPO-4K",
+      "batch": "B0001112",
+      "plant": "2010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 6250.0,
+      "stock_value_at_standard": 6250.0
+    },
+    {
+      "material": "PH-FNT-50",
+      "batch": "B0001057",
+      "plant": "2010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 625.0,
+      "stock_value_at_standard": 1250.0
+    },
+    {
+      "material": "PH-FNT-50",
+      "batch": "B0001107",
+      "plant": "2010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 5000.0,
+      "stock_value_at_standard": 5000.0
+    },
+    {
+      "material": "PH-IBU-200",
+      "batch": "B0001032",
+      "plant": "2010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 30.0,
+      "stock_value_at_standard": 30.0
+    },
+    {
+      "material": "PH-IBU-200",
+      "batch": "B0001082",
+      "plant": "2010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 750.0,
+      "stock_value_at_standard": 750.0
+    },
+    {
+      "material": "PH-INS-100",
+      "batch": "B0001012",
+      "plant": "2010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 12500.0,
+      "stock_value_at_standard": 25000.0
+    },
+    {
+      "material": "PH-INS-100",
+      "batch": "B0001042",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 18750.0,
+      "stock_value_at_standard": 62500.0
+    },
+    {
+      "material": "PH-INS-100",
+      "batch": "B0001092",
+      "plant": "2010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 31250.0,
+      "stock_value_at_standard": 125000.0
+    },
+    {
+      "material": "PH-LEV-50",
+      "batch": "B0001011",
+      "plant": "2010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 400.0,
+      "stock_value_at_standard": 400.0
+    },
+    {
+      "material": "PH-LEV-50",
+      "batch": "B0001027",
+      "plant": "2010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 200.0,
+      "stock_value_at_standard": 400.0
+    },
+    {
+      "material": "PH-LEV-50",
+      "batch": "B0001077",
+      "plant": "2010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 200.0,
+      "stock_value_at_standard": 400.0
+    },
+    {
+      "material": "PH-OMP-20",
+      "batch": "B0001007",
+      "plant": "2010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 75.0,
+      "stock_value_at_standard": 300.0
+    },
+    {
+      "material": "PH-ONC-GLC",
+      "batch": "B0001015",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 375000.0,
+      "stock_value_at_standard": 1250000.0
+    },
+    {
+      "material": "PH-ONC-RTX",
+      "batch": "B0001052",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 18750.0,
+      "stock_value_at_standard": 62500.0
+    },
+    {
+      "material": "PH-ONC-RTX",
+      "batch": "B0001102",
+      "plant": "2010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 625000.0,
+      "stock_value_at_standard": 625000.0
+    },
+    {
+      "material": "PH-ONC-TRZ",
+      "batch": "B0001016",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 187500.0,
+      "stock_value_at_standard": 625000.0
+    },
+    {
+      "material": "PH-PRE-20",
+      "batch": "B0001037",
+      "plant": "2010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4000.0,
+      "stock_value_at_standard": 4000.0
+    },
+    {
+      "material": "PH-PRE-20",
+      "batch": "B0001087",
+      "plant": "2010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 100.0,
+      "stock_value_at_standard": 400.0
+    },
+    {
+      "material": "PH-RBV-200",
+      "batch": "B0001072",
+      "plant": "2010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 9000.0,
+      "stock_value_at_standard": 9000.0
+    },
+    {
+      "material": "PH-RBV-200",
+      "batch": "B0001122",
+      "plant": "2010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4500.0,
+      "stock_value_at_standard": 4500.0
+    },
+    {
+      "material": "PH-VAC-HPV",
+      "batch": "B0001047",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 2625.0,
+      "stock_value_at_standard": 8750.0
+    },
+    {
+      "material": "PH-VAC-HPV",
+      "batch": "B0001097",
+      "plant": "2010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 8750.0,
+      "stock_value_at_standard": 8750.0
+    },
+    {
+      "material": "PH-VAC-MMR",
+      "batch": "B0001017",
+      "plant": "2010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 5250.0,
+      "stock_value_at_standard": 17500.0
+    },
+    {
+      "material": "PH-ALB-100",
+      "batch": "B0001053",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 53125.0,
+      "stock_value_at_standard": 212500.0
+    },
+    {
+      "material": "PH-ALB-100",
+      "batch": "B0001103",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 531250.0,
+      "stock_value_at_standard": 2125000.0
+    },
+    {
+      "material": "PH-AMP-1G",
+      "batch": "B0001073",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4500.0,
+      "stock_value_at_standard": 4500.0
+    },
+    {
+      "material": "PH-AMP-1G",
+      "batch": "B0001123",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 11250.0,
+      "stock_value_at_standard": 45000.0
+    },
+    {
+      "material": "PH-AMX-250",
+      "batch": "B0001033",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 450.0,
+      "stock_value_at_standard": 450.0
+    },
+    {
+      "material": "PH-AMX-250",
+      "batch": "B0001083",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 4500.0,
+      "stock_value_at_standard": 4500.0
+    },
+    {
+      "material": "PH-CIP-500",
+      "batch": "B0001038",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 2250.0,
+      "stock_value_at_standard": 2250.0
+    },
+    {
+      "material": "PH-CIP-500",
+      "batch": "B0001088",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 2250.0,
+      "stock_value_at_standard": 2250.0
+    },
+    {
+      "material": "PH-DEX-4",
+      "batch": "B0001028",
+      "plant": "3010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 2000.0,
+      "stock_value_at_standard": 2000.0
+    },
+    {
+      "material": "PH-DEX-4",
+      "batch": "B0001078",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 100.0,
+      "stock_value_at_standard": 400.0
+    },
+    {
+      "material": "PH-EPI-03",
+      "batch": "B0001043",
+      "plant": "3010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 7500.0,
+      "stock_value_at_standard": 25000.0
+    },
+    {
+      "material": "PH-EPI-03",
+      "batch": "B0001093",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 31250.0,
+      "stock_value_at_standard": 125000.0
+    },
+    {
+      "material": "PH-GCS-300",
+      "batch": "B0001063",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 15625.0,
+      "stock_value_at_standard": 62500.0
+    },
+    {
+      "material": "PH-GCS-300",
+      "batch": "B0001113",
+      "plant": "3010",
+      "distress_reason": "quarantine",
+      "writedown_pct": 0.5,
+      "writedown_amount": 3125.0,
+      "stock_value_at_standard": 6250.0
+    },
+    {
+      "material": "PH-MID-2",
+      "batch": "B0001058",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 500.0,
+      "stock_value_at_standard": 500.0
+    },
+    {
+      "material": "PH-MID-2",
+      "batch": "B0001108",
+      "plant": "3010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 1250.0,
+      "stock_value_at_standard": 5000.0
+    },
+    {
+      "material": "PH-TAC-1",
+      "batch": "B0001068",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 37500.0,
+      "stock_value_at_standard": 37500.0
+    },
+    {
+      "material": "PH-TAC-1",
+      "batch": "B0001118",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 15000.0,
+      "stock_value_at_standard": 15000.0
+    },
+    {
+      "material": "PH-VAC-COV",
+      "batch": "B0001048",
+      "plant": "3010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 87500.0,
+      "stock_value_at_standard": 87500.0
+    },
+    {
+      "material": "PH-VAC-COV",
+      "batch": "B0001098",
+      "plant": "3010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 1050.0,
+      "stock_value_at_standard": 3500.0
+    },
+    {
+      "material": "PH-ACE-325",
+      "batch": "B0001034",
+      "plant": "4010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 30.0,
+      "stock_value_at_standard": 30.0
+    },
+    {
+      "material": "PH-ACE-325",
+      "batch": "B0001084",
+      "plant": "4010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 300.0,
+      "stock_value_at_standard": 300.0
+    },
+    {
+      "material": "PH-AMX-500",
+      "batch": "B0001039",
+      "plant": "4010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 6750.0,
+      "stock_value_at_standard": 22500.0
+    },
+    {
+      "material": "PH-AMX-500",
+      "batch": "B0001089",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 562.5,
+      "stock_value_at_standard": 2250.0
+    },
+    {
+      "material": "PH-DIA-10",
+      "batch": "B0001059",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 12500.0,
+      "stock_value_at_standard": 50000.0
+    },
+    {
+      "material": "PH-DIA-10",
+      "batch": "B0001109",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 3125.0,
+      "stock_value_at_standard": 12500.0
+    },
+    {
+      "material": "PH-IGG-5",
+      "batch": "B0001054",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 212500.0,
+      "stock_value_at_standard": 850000.0
+    },
+    {
+      "material": "PH-IGG-5",
+      "batch": "B0001104",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 425000.0,
+      "stock_value_at_standard": 425000.0
+    },
+    {
+      "material": "PH-MMF-500",
+      "batch": "B0001069",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 150000.0,
+      "stock_value_at_standard": 150000.0
+    },
+    {
+      "material": "PH-MMF-500",
+      "batch": "B0001119",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 75000.0,
+      "stock_value_at_standard": 75000.0
+    },
+    {
+      "material": "PH-MOR-10",
+      "batch": "B0001044",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 125.0,
+      "stock_value_at_standard": 500.0
+    },
+    {
+      "material": "PH-MOR-10",
+      "batch": "B0001094",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 12500.0,
+      "stock_value_at_standard": 50000.0
+    },
+    {
+      "material": "PH-OMP-20",
+      "batch": "B0001029",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 1500.0,
+      "stock_value_at_standard": 1500.0
+    },
+    {
+      "material": "PH-OMP-20",
+      "batch": "B0001079",
+      "plant": "4010",
+      "distress_reason": "marked_for_deletion",
+      "writedown_pct": 1.0,
+      "writedown_amount": 750.0,
+      "stock_value_at_standard": 750.0
+    },
+    {
+      "material": "PH-ONC-TRZ",
+      "batch": "B0001049",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 1250000.0,
+      "stock_value_at_standard": 1250000.0
+    },
+    {
+      "material": "PH-ONC-TRZ",
+      "batch": "B0001099",
+      "plant": "4010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 750000.0,
+      "stock_value_at_standard": 2500000.0
+    },
+    {
+      "material": "PH-SAL-100",
+      "batch": "B0001064",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 250.0,
+      "stock_value_at_standard": 250.0
+    },
+    {
+      "material": "PH-SAL-100",
+      "batch": "B0001114",
+      "plant": "4010",
+      "distress_reason": "near_expiry",
+      "writedown_pct": 0.25,
+      "writedown_amount": 6250.0,
+      "stock_value_at_standard": 25000.0
+    },
+    {
+      "material": "PH-VAN-500",
+      "batch": "B0001074",
+      "plant": "4010",
+      "distress_reason": "slow_moving",
+      "writedown_pct": 0.3,
+      "writedown_amount": 1350.0,
+      "stock_value_at_standard": 4500.0
+    },
+    {
+      "material": "PH-VAN-500",
+      "batch": "B0001124",
+      "plant": "4010",
+      "distress_reason": "expired",
+      "writedown_pct": 1.0,
+      "writedown_amount": 45000.0,
+      "stock_value_at_standard": 45000.0
+    }
+  ]
+}

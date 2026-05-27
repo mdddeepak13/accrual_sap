@@ -1,0 +1,29 @@
+_schema-version: 3.3.0
+ID: mocksap
+version: 1.0.0
+description: "Mock SAP API_BATCH_SRV — fixture-backed OData for accrual demo."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+        - mkdir -p gen/srv/db/data
+        - cp -R db/data/. gen/srv/db/data/
+modules:
+  - name: mocksap-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      instances: 1
+      buildpack: nodejs_buildpack
+      memory: 256M
+      disk-quota: 512M
+    build-parameters:
+      builder: npm-ci
+    provides:
+      - name: srv-api
+        properties:
+          srv-url: ${default-url}

@@ -4,6 +4,7 @@
 import type {
   Health,
   PayrollResultsResponse,
+  PostingSummary,
   RunDetail,
   RunSummary,
   StartRunResponse,
@@ -78,4 +79,25 @@ export async function getPayrollResults(
   return jsonFetch<PayrollResultsResponse>(
     `/payroll/results${qs ? `?${qs}` : ""}`,
   );
+}
+
+// --- Posting workflow ---
+
+export async function listPostings(): Promise<PostingSummary[]> {
+  const body = await jsonFetch<{ postings: PostingSummary[] }>("/postings");
+  return body.postings;
+}
+
+export async function getPosting(
+  postingId: string,
+): Promise<PostingSummary | null> {
+  try {
+    return await jsonFetch<PostingSummary>(
+      `/postings/${encodeURIComponent(postingId)}`,
+    );
+  } catch (e) {
+    const err = e as { status?: number };
+    if (err.status === 404) return null;
+    throw e;
+  }
 }

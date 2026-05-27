@@ -1,0 +1,1214 @@
+{
+  "namespace": "sap.s4.batch",
+  "definitions": {
+    "sap.s4.batch.Batch": {
+      "kind": "entity",
+      "elements": {
+        "Batch": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "MaterialDescription": {
+          "type": "cds.String",
+          "length": 60
+        },
+        "TherapeuticCategory": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "BatchIdentifyingPlant": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "PlantName": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "ShelfLifeExpirationDate": {
+          "type": "cds.Date"
+        },
+        "ManufactureDate": {
+          "type": "cds.Date"
+        },
+        "LastGoodsReceiptDate": {
+          "type": "cds.Date"
+        },
+        "BatchIsMarkedForDeletion": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "MatlBatchIsInRstrcdUseStock": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "CountryOfOrigin": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "Quantity": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "BaseUnit": {
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.s4.batch.StockOverview": {
+      "kind": "entity",
+      "elements": {
+        "Material": {
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "Plant": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "StorageLocation": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "Batch": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "UnrestrictedStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "QualityInspectionStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "BlockedStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "RestrictedStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "BaseUnit": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "LastGoodsReceiptDate": {
+          "type": "cds.Date"
+        },
+        "ShelfLifeExpiration": {
+          "type": "cds.Date"
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "CountryOfOrigin": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "DistressReason": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "WritedownPercent": {
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 2
+        },
+        "WritedownAmount": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "sap.s4.batch.MaterialValuation": {
+      "kind": "entity",
+      "elements": {
+        "Material": {
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "ValuationArea": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "ValuationClass": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "Currency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "StandardPrice": {
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 2
+        },
+        "PriceUnit": {
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 0
+        },
+        "MovingAvgPrice": {
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 2
+        },
+        "TotalStockQty": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "TotalStockValue": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "sap.s4.batch.A_PurchaseOrderItem": {
+      "kind": "entity",
+      "elements": {
+        "PurchaseOrder": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "PurchaseOrderItem": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "PurchaseOrderType": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "PurchasingDocumentDate": {
+          "type": "cds.Date"
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "PurchaseOrderItemText": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "OrderQuantity": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "OrderPriceUnit": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "NetPriceAmount": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "DocumentCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "AccountAssignmentCategory": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CostCenter": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "GLAccount": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "LatestGoodsReceiptDate": {
+          "type": "cds.Date"
+        },
+        "InvoicedQuantity": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "IsFullyDelivered": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "IsFullyInvoiced": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        }
+      }
+    },
+    "sap.s4.batch.A_CostCenterPlan": {
+      "kind": "entity",
+      "elements": {
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalYear": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalPeriod": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "CostCenter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "GLAccount": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CostCenterName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "GLAccountName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "PlannedAmountInGlobalCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "Currency": {
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "sap.s4.batch.A_CostCenter": {
+      "kind": "entity",
+      "elements": {
+        "ControllingArea": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "CostCenter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityEndDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "ValidityStartDate": {
+          "type": "cds.Date"
+        },
+        "CostCenterName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Department": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "PersonResponsibleName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "CompanyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "CostCenterCategory": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CostCenterStandardHierArea": {
+          "type": "cds.String",
+          "length": 20
+        }
+      }
+    },
+    "sap.s4.batch.A_OperationalAcctgDocItemCube": {
+      "kind": "entity",
+      "elements": {
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalYear": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "AccountingDocument": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AccountingDocumentItem": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "FiscalPeriod": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "Ledger": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "PostingDate": {
+          "type": "cds.Date"
+        },
+        "DocumentDate": {
+          "type": "cds.Date"
+        },
+        "AccountingDocumentType": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "AccountingDocumentTypeName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "AccountingDocumentHeaderText": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "DocumentItemText": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "DocumentReferenceID": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "ReferenceDocumentType": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "IsReversal": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "IsReversed": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "GLAccount": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "GLAccountName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "AmountInTransactionCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "TransactionCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "AmountInCompanyCodeCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "CompanyCodeCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "AmountInGlobalCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "GlobalCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "DebitCreditCode": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "PurchasingDocument": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "PurchasingDocumentItem": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "InvoiceReference": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "InvoiceReferenceFiscalYear": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "InvoiceReceiptDate": {
+          "type": "cds.Date"
+        },
+        "CostCenter": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "CostCenterName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "ProfitCenter": {
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "API_BATCH_SRV": {
+      "@source": "srv/api-batch-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_BATCH_SRV"
+    },
+    "API_BATCH_SRV.Batch": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.Batch"
+          ]
+        }
+      },
+      "elements": {
+        "Batch": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "MaterialDescription": {
+          "type": "cds.String",
+          "length": 60
+        },
+        "TherapeuticCategory": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "BatchIdentifyingPlant": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "PlantName": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "ShelfLifeExpirationDate": {
+          "type": "cds.Date"
+        },
+        "ManufactureDate": {
+          "type": "cds.Date"
+        },
+        "LastGoodsReceiptDate": {
+          "type": "cds.Date"
+        },
+        "BatchIsMarkedForDeletion": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "MatlBatchIsInRstrcdUseStock": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "CountryOfOrigin": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "Quantity": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "BaseUnit": {
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "API_COSTCENTER_SRV": {
+      "@source": "srv/api-costcenter-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_COSTCENTER_SRV"
+    },
+    "API_COSTCENTER_SRV.A_CostCenter": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.A_CostCenter"
+          ]
+        }
+      },
+      "elements": {
+        "ControllingArea": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "CostCenter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ValidityEndDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "ValidityStartDate": {
+          "type": "cds.Date"
+        },
+        "CostCenterName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Department": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "PersonResponsibleName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "CompanyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "CostCenterCategory": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CostCenterStandardHierArea": {
+          "type": "cds.String",
+          "length": 20
+        }
+      }
+    },
+    "API_COSTCENTERPLAN_SRV": {
+      "@source": "srv/api-costcenterplan-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_COSTCENTERPLAN_SRV"
+    },
+    "API_COSTCENTERPLAN_SRV.A_CostCenterPlan": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.A_CostCenterPlan"
+          ]
+        }
+      },
+      "elements": {
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalYear": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalPeriod": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "CostCenter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "GLAccount": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CostCenterName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "GLAccountName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "PlannedAmountInGlobalCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "Currency": {
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "API_MATERIAL_VALUATION_SRV": {
+      "@source": "srv/api-material-valuation-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_MATERIAL_VALUATION_SRV"
+    },
+    "API_MATERIAL_VALUATION_SRV.MaterialValuation": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.MaterialValuation"
+          ]
+        }
+      },
+      "elements": {
+        "Material": {
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "ValuationArea": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "ValuationClass": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "Currency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "StandardPrice": {
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 2
+        },
+        "PriceUnit": {
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 0
+        },
+        "MovingAvgPrice": {
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 2
+        },
+        "TotalStockQty": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "TotalStockValue": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "API_OPLACCTGDOCITEMCUBE_SRV": {
+      "@source": "srv/api-opl-acctg-doc-item-cube-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_OPLACCTGDOCITEMCUBE_SRV"
+    },
+    "API_OPLACCTGDOCITEMCUBE_SRV.A_OperationalAcctgDocItemCube": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.A_OperationalAcctgDocItemCube"
+          ]
+        }
+      },
+      "elements": {
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalYear": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "AccountingDocument": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "AccountingDocumentItem": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "FiscalPeriod": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "Ledger": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "PostingDate": {
+          "type": "cds.Date"
+        },
+        "DocumentDate": {
+          "type": "cds.Date"
+        },
+        "AccountingDocumentType": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "AccountingDocumentTypeName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "AccountingDocumentHeaderText": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "DocumentItemText": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "DocumentReferenceID": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "ReferenceDocumentType": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "IsReversal": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "IsReversed": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "GLAccount": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "GLAccountName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "AmountInTransactionCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "TransactionCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "AmountInCompanyCodeCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "CompanyCodeCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "AmountInGlobalCurrency": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "GlobalCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "DebitCreditCode": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "PurchasingDocument": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "PurchasingDocumentItem": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "InvoiceReference": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "InvoiceReferenceFiscalYear": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "InvoiceReceiptDate": {
+          "type": "cds.Date"
+        },
+        "CostCenter": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "CostCenterName": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "ProfitCenter": {
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "API_PURCHASEORDER_PROCESS_SRV": {
+      "@source": "srv/api-purchaseorder-process-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_PURCHASEORDER_PROCESS_SRV"
+    },
+    "API_PURCHASEORDER_PROCESS_SRV.A_PurchaseOrderItem": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.A_PurchaseOrderItem"
+          ]
+        }
+      },
+      "elements": {
+        "PurchaseOrder": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "PurchaseOrderItem": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "PurchaseOrderType": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "PurchasingDocumentDate": {
+          "type": "cds.Date"
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "Material": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "PurchaseOrderItemText": {
+          "type": "cds.String",
+          "length": 80
+        },
+        "OrderQuantity": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "OrderPriceUnit": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "NetPriceAmount": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        },
+        "DocumentCurrency": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "AccountAssignmentCategory": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CostCenter": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "GLAccount": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "LatestGoodsReceiptDate": {
+          "type": "cds.Date"
+        },
+        "InvoicedQuantity": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "IsFullyDelivered": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        },
+        "IsFullyInvoiced": {
+          "type": "cds.Boolean",
+          "default": {
+            "val": false
+          }
+        }
+      }
+    },
+    "API_STOCK_OVERVIEW_SRV": {
+      "@source": "srv/api-stock-overview-srv.cds",
+      "kind": "service",
+      "@path": "/s4hanacloud/sap/opu/odata/sap/API_STOCK_OVERVIEW_SRV"
+    },
+    "API_STOCK_OVERVIEW_SRV.StockOverview": {
+      "kind": "entity",
+      "projection": {
+        "from": {
+          "ref": [
+            "sap.s4.batch.StockOverview"
+          ]
+        }
+      },
+      "elements": {
+        "Material": {
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "Plant": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "StorageLocation": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4
+        },
+        "Batch": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "UnrestrictedStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "QualityInspectionStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "BlockedStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "RestrictedStock": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 3
+        },
+        "BaseUnit": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "LastGoodsReceiptDate": {
+          "type": "cds.Date"
+        },
+        "ShelfLifeExpiration": {
+          "type": "cds.Date"
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "CountryOfOrigin": {
+          "type": "cds.String",
+          "length": 3
+        },
+        "DistressReason": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "WritedownPercent": {
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 2
+        },
+        "WritedownAmount": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2
+        }
+      }
+    },
+    "cds.outbox.Messages": {
+      "kind": "entity",
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "timestamp": {
+          "type": "cds.Timestamp"
+        },
+        "target": {
+          "type": "cds.String"
+        },
+        "msg": {
+          "type": "cds.LargeString"
+        },
+        "attempts": {
+          "type": "cds.Integer",
+          "default": {
+            "val": 0
+          }
+        },
+        "partition": {
+          "type": "cds.Integer",
+          "default": {
+            "val": 0
+          }
+        },
+        "lastError": {
+          "type": "cds.LargeString"
+        },
+        "lastAttemptTimestamp": {
+          "type": "cds.Timestamp"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 23
+        },
+        "task": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "appid": {
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v6.9.2",
+    "compilerVersion": "6.9.2",
+    "compilerCsnFlavor": "inferred",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

@@ -1,0 +1,448 @@
+{
+  "$schema": "https://blackline.com/schemas/journal-entry/v1",
+  "header": {
+    "journal_id": "BL-JE-2026-Q2-INV-WO-EXPIRED",
+    "source_system": "BLACKLINE",
+    "target_system": "SAP",
+    "target_company_code": "1000",
+    "currency": "USD",
+    "posting_date": "2026-05-21",
+    "document_date": "2026-05-21",
+    "document_type": "SA",
+    "header_text": "Q2 2026 expired-batch write-off accrual (35 batches)",
+    "reference": "INV-WO-EXPIRED-Q2-2026",
+    "preparer": "Deepak",
+    "approver": null,
+    "status": "DRAFT",
+    "source_extract": "expired_writeoff/expired_batches_extract.csv"
+  },
+  "lines": [
+    {
+      "line_number": 10,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-off Expense",
+      "company_code": "1000",
+      "cost_center": "CC-1010",
+      "profit_center": "PC-1010",
+      "plant": "1010",
+      "amount_local": 4473600.0,
+      "amount_doc": 4473600.0,
+      "currency": "USD",
+      "line_item_text": "Expired-batch write-off accrual \u2014 Plant 1010 Frankfurt DC",
+      "assignment": "INV-WO-EXPIRED-2026Q2"
+    },
+    {
+      "line_number": 20,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-off Expense",
+      "company_code": "1000",
+      "cost_center": "CC-1710",
+      "profit_center": "PC-1710",
+      "plant": "1710",
+      "amount_local": 12000.0,
+      "amount_doc": 12000.0,
+      "currency": "USD",
+      "line_item_text": "Expired-batch write-off accrual \u2014 Plant 1710 New Jersey DC",
+      "assignment": "INV-WO-EXPIRED-2026Q2"
+    },
+    {
+      "line_number": 30,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-off Expense",
+      "company_code": "1000",
+      "cost_center": "CC-2010",
+      "profit_center": "PC-2010",
+      "plant": "2010",
+      "amount_local": 642780.0,
+      "amount_doc": 642780.0,
+      "currency": "USD",
+      "line_item_text": "Expired-batch write-off accrual \u2014 Plant 2010 Bangalore DC",
+      "assignment": "INV-WO-EXPIRED-2026Q2"
+    },
+    {
+      "line_number": 40,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-off Expense",
+      "company_code": "1000",
+      "cost_center": "CC-3010",
+      "profit_center": "PC-3010",
+      "plant": "3010",
+      "amount_local": 154450.0,
+      "amount_doc": 154450.0,
+      "currency": "USD",
+      "line_item_text": "Expired-batch write-off accrual \u2014 Plant 3010 Sao Paulo DC",
+      "assignment": "INV-WO-EXPIRED-2026Q2"
+    },
+    {
+      "line_number": 50,
+      "posting_key": "40",
+      "debit_credit": "S",
+      "gl_account": "894500",
+      "gl_account_name": "Inventory Write-off Expense",
+      "company_code": "1000",
+      "cost_center": "CC-4010",
+      "profit_center": "PC-4010",
+      "plant": "4010",
+      "amount_local": 1946750.0,
+      "amount_doc": 1946750.0,
+      "currency": "USD",
+      "line_item_text": "Expired-batch write-off accrual \u2014 Plant 4010 Singapore DC",
+      "assignment": "INV-WO-EXPIRED-2026Q2"
+    },
+    {
+      "line_number": 60,
+      "posting_key": "50",
+      "debit_credit": "H",
+      "gl_account": "220100",
+      "gl_account_name": "Accrued Inventory Write-off",
+      "company_code": "1000",
+      "cost_center": null,
+      "profit_center": null,
+      "plant": null,
+      "amount_local": 7229580.0,
+      "amount_doc": 7229580.0,
+      "currency": "USD",
+      "line_item_text": "Accrual for expired pharma batch write-off (Q2 2026)",
+      "assignment": "INV-WO-EXPIRED-2026Q2"
+    }
+  ],
+  "totals": {
+    "total_debit": 7229580.0,
+    "total_credit": 7229580.0,
+    "balanced": true,
+    "line_count": 6
+  },
+  "supporting_documents": [
+    {
+      "type": "MB52_MBEW_EXPIRED_EXTRACT",
+      "path": "expired_writeoff/expired_batches_extract.csv",
+      "line_count": 35,
+      "extracted_at": "2026-05-21T19:29:20Z"
+    }
+  ],
+  "supporting_detail": [
+    {
+      "material": "PH-AMX-250",
+      "batch": "B0001001",
+      "plant": "1010",
+      "days_expired": 94,
+      "qty": 500.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 2250.0
+    },
+    {
+      "material": "PH-AMX-500",
+      "batch": "B0001000",
+      "plant": "1010",
+      "days_expired": 65,
+      "qty": 100.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 450.0
+    },
+    {
+      "material": "PH-AZI-250",
+      "batch": "B0001002",
+      "plant": "1010",
+      "days_expired": 176,
+      "qty": 100.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 450.0
+    },
+    {
+      "material": "PH-CIP-500",
+      "batch": "B0001003",
+      "plant": "1010",
+      "days_expired": 45,
+      "qty": 100.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 450.0
+    },
+    {
+      "material": "PH-FXA-500",
+      "batch": "B0001105",
+      "plant": "1010",
+      "days_expired": 152,
+      "qty": 5000.0,
+      "standard_price": 850.0,
+      "writeoff_amount": 4250000.0
+    },
+    {
+      "material": "PH-IBU-200",
+      "batch": "B0001004",
+      "plant": "1010",
+      "days_expired": 96,
+      "qty": 5000.0,
+      "standard_price": 0.3,
+      "writeoff_amount": 1500.0
+    },
+    {
+      "material": "PH-LIS-10",
+      "batch": "B0001085",
+      "plant": "1010",
+      "days_expired": 199,
+      "qty": 250.0,
+      "standard_price": 0.8,
+      "writeoff_amount": 200.0
+    },
+    {
+      "material": "PH-MET-500",
+      "batch": "B0001040",
+      "plant": "1010",
+      "days_expired": 34,
+      "qty": 2500.0,
+      "standard_price": 0.8,
+      "writeoff_amount": 2000.0
+    },
+    {
+      "material": "PH-MET-500",
+      "batch": "B0001090",
+      "plant": "1010",
+      "days_expired": 10,
+      "qty": 2500.0,
+      "standard_price": 0.8,
+      "writeoff_amount": 2000.0
+    },
+    {
+      "material": "PH-ONC-GLC",
+      "batch": "B0001100",
+      "plant": "1010",
+      "days_expired": 140,
+      "qty": 500.0,
+      "standard_price": 250.0,
+      "writeoff_amount": 125000.0
+    },
+    {
+      "material": "PH-SOF-400",
+      "batch": "B0001070",
+      "plant": "1010",
+      "days_expired": 25,
+      "qty": 100.0,
+      "standard_price": 18.0,
+      "writeoff_amount": 1800.0
+    },
+    {
+      "material": "PH-VAC-FLU",
+      "batch": "B0001045",
+      "plant": "1010",
+      "days_expired": 122,
+      "qty": 2500.0,
+      "standard_price": 35.0,
+      "writeoff_amount": 87500.0
+    },
+    {
+      "material": "PH-ATV-20",
+      "batch": "B0001026",
+      "plant": "1710",
+      "days_expired": 226,
+      "qty": 5000.0,
+      "standard_price": 0.8,
+      "writeoff_amount": 4000.0
+    },
+    {
+      "material": "PH-ATV-20",
+      "batch": "B0001076",
+      "plant": "1710",
+      "days_expired": 92,
+      "qty": 10000.0,
+      "standard_price": 0.8,
+      "writeoff_amount": 8000.0
+    },
+    {
+      "material": "PH-FNT-50",
+      "batch": "B0001107",
+      "plant": "2010",
+      "days_expired": 49,
+      "qty": 1000.0,
+      "standard_price": 5.0,
+      "writeoff_amount": 5000.0
+    },
+    {
+      "material": "PH-IBU-200",
+      "batch": "B0001032",
+      "plant": "2010",
+      "days_expired": 167,
+      "qty": 100.0,
+      "standard_price": 0.3,
+      "writeoff_amount": 30.0
+    },
+    {
+      "material": "PH-ONC-RTX",
+      "batch": "B0001102",
+      "plant": "2010",
+      "days_expired": 12,
+      "qty": 2500.0,
+      "standard_price": 250.0,
+      "writeoff_amount": 625000.0
+    },
+    {
+      "material": "PH-PRE-20",
+      "batch": "B0001037",
+      "plant": "2010",
+      "days_expired": 194,
+      "qty": 5000.0,
+      "standard_price": 0.8,
+      "writeoff_amount": 4000.0
+    },
+    {
+      "material": "PH-VAC-HPV",
+      "batch": "B0001097",
+      "plant": "2010",
+      "days_expired": 41,
+      "qty": 250.0,
+      "standard_price": 35.0,
+      "writeoff_amount": 8750.0
+    },
+    {
+      "material": "PH-AMP-1G",
+      "batch": "B0001073",
+      "plant": "3010",
+      "days_expired": 81,
+      "qty": 1000.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 4500.0
+    },
+    {
+      "material": "PH-AMX-250",
+      "batch": "B0001033",
+      "plant": "3010",
+      "days_expired": 50,
+      "qty": 100.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 450.0
+    },
+    {
+      "material": "PH-AMX-250",
+      "batch": "B0001083",
+      "plant": "3010",
+      "days_expired": 149,
+      "qty": 1000.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 4500.0
+    },
+    {
+      "material": "PH-CIP-500",
+      "batch": "B0001038",
+      "plant": "3010",
+      "days_expired": 171,
+      "qty": 500.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 2250.0
+    },
+    {
+      "material": "PH-CIP-500",
+      "batch": "B0001088",
+      "plant": "3010",
+      "days_expired": 139,
+      "qty": 500.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 2250.0
+    },
+    {
+      "material": "PH-MID-2",
+      "batch": "B0001058",
+      "plant": "3010",
+      "days_expired": 135,
+      "qty": 100.0,
+      "standard_price": 5.0,
+      "writeoff_amount": 500.0
+    },
+    {
+      "material": "PH-TAC-1",
+      "batch": "B0001068",
+      "plant": "3010",
+      "days_expired": 67,
+      "qty": 250.0,
+      "standard_price": 150.0,
+      "writeoff_amount": 37500.0
+    },
+    {
+      "material": "PH-TAC-1",
+      "batch": "B0001118",
+      "plant": "3010",
+      "days_expired": 18,
+      "qty": 100.0,
+      "standard_price": 150.0,
+      "writeoff_amount": 15000.0
+    },
+    {
+      "material": "PH-VAC-COV",
+      "batch": "B0001048",
+      "plant": "3010",
+      "days_expired": 87,
+      "qty": 2500.0,
+      "standard_price": 35.0,
+      "writeoff_amount": 87500.0
+    },
+    {
+      "material": "PH-IGG-5",
+      "batch": "B0001104",
+      "plant": "4010",
+      "days_expired": 141,
+      "qty": 500.0,
+      "standard_price": 850.0,
+      "writeoff_amount": 425000.0
+    },
+    {
+      "material": "PH-MMF-500",
+      "batch": "B0001069",
+      "plant": "4010",
+      "days_expired": 222,
+      "qty": 1000.0,
+      "standard_price": 150.0,
+      "writeoff_amount": 150000.0
+    },
+    {
+      "material": "PH-MMF-500",
+      "batch": "B0001119",
+      "plant": "4010",
+      "days_expired": 193,
+      "qty": 500.0,
+      "standard_price": 150.0,
+      "writeoff_amount": 75000.0
+    },
+    {
+      "material": "PH-OMP-20",
+      "batch": "B0001029",
+      "plant": "4010",
+      "days_expired": 233,
+      "qty": 5000.0,
+      "standard_price": 0.3,
+      "writeoff_amount": 1500.0
+    },
+    {
+      "material": "PH-ONC-TRZ",
+      "batch": "B0001049",
+      "plant": "4010",
+      "days_expired": 182,
+      "qty": 5000.0,
+      "standard_price": 250.0,
+      "writeoff_amount": 1250000.0
+    },
+    {
+      "material": "PH-SAL-100",
+      "batch": "B0001064",
+      "plant": "4010",
+      "days_expired": 201,
+      "qty": 100.0,
+      "standard_price": 2.5,
+      "writeoff_amount": 250.0
+    },
+    {
+      "material": "PH-VAN-500",
+      "batch": "B0001124",
+      "plant": "4010",
+      "days_expired": 206,
+      "qty": 10000.0,
+      "standard_price": 4.5,
+      "writeoff_amount": 45000.0
+    }
+  ]
+}

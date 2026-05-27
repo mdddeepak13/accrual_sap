@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="API_PURCHASEORDER_PROCESS_SRV" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="A_PurchaseOrderItem" EntityType="API_PURCHASEORDER_PROCESS_SRV.A_PurchaseOrderItem"/>
+      </EntityContainer>
+      <EntityType Name="A_PurchaseOrderItem">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="PurchaseOrderItem"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="PurchaseOrderType" Type="Edm.String" MaxLength="4"/>
+        <Property Name="PurchasingDocumentDate" Type="Edm.Date"/>
+        <Property Name="Supplier" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SupplierName" Type="Edm.String" MaxLength="80"/>
+        <Property Name="Material" Type="Edm.String" MaxLength="40"/>
+        <Property Name="PurchaseOrderItemText" Type="Edm.String" MaxLength="80"/>
+        <Property Name="OrderQuantity" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="OrderPriceUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="NetPriceAmount" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="DocumentCurrency" Type="Edm.String" MaxLength="3"/>
+        <Property Name="AccountAssignmentCategory" Type="Edm.String" MaxLength="2"/>
+        <Property Name="CostCenter" Type="Edm.String" MaxLength="10"/>
+        <Property Name="GLAccount" Type="Edm.String" MaxLength="10"/>
+        <Property Name="LatestGoodsReceiptDate" Type="Edm.Date"/>
+        <Property Name="InvoicedQuantity" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="IsFullyDelivered" Type="Edm.Boolean" DefaultValue="false"/>
+        <Property Name="IsFullyInvoiced" Type="Edm.Boolean" DefaultValue="false"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

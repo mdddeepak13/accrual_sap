@@ -38,6 +38,7 @@ from accrual_pipeline.persistence import (
     record_run_start,
     update_run_accrual_count,
 )
+from accrual_pipeline.postback import post_blackline_je_batch
 from accrual_pipeline.router import route, route_payroll
 
 log = structlog.get_logger(__name__)
@@ -113,8 +114,9 @@ async def run_pipeline(
         results = await asyncio.gather(*analysis_jobs)
         result_iter = iter(results)
 
+        approved_accruals = []
         if accruals:
-            await route(next(result_iter), accruals, run_id=run_id)
+            approved_accruals = await route(next(result_iter), accruals, run_id=run_id)
 
         if payroll_reconciliations:
             await route_payroll(
@@ -122,6 +124,10 @@ async def run_pipeline(
                 payroll_reconciliations,
                 run_id=run_id,
             )
+
+        # Send all approved accruals as ONE BlackLine JE file instead of
+        # posting each item individually.
+        await post_blackline_je_batch(approved_accruals, run_id=run_id)
 
         record_run_finish(run_id, status="completed")
         log.info(

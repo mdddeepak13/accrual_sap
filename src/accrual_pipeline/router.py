@@ -5,7 +5,9 @@ Equivalent to CPI's Router + multi-receiver fan-out. Stage 5 of the pipeline.
 Dispatch rules:
   flag_stale_po_accrual   → persist FlaggedItem (+ notify on severity=high)
   flag_duplicate_accrual  → persist ONE FlaggedItem per accrual_id in the group
-  approve_accrual         → persist ApprovedItem AND postback to S/4 (mock)
+  approve_accrual         → persist ApprovedItem; approved items are collected
+                            and returned so the pipeline can send ONE batch
+                            BlackLine JE file instead of N individual postbacks.
 
 Unknown tool names raise ValueError — that catches prompt/schema drift
 loudly rather than silently dropping calls.
@@ -27,7 +29,6 @@ from accrual_pipeline.persistence import (
     persist_approved_item,
     persist_flagged_item,
 )
-from accrual_pipeline.postback import post_journal_entry
 
 log = structlog.get_logger(__name__)
 
@@ -37,10 +38,16 @@ async def route(
     accruals: list[AccrualObject],
     *,
     run_id: str,
-) -> None:
-    """Dispatch each tool call by name. See module docstring for rules."""
+) -> list[AccrualObject]:
+    """Dispatch each tool call by name. See module docstring for rules.
+
+    Returns the list of approved AccrualObjects so the pipeline can build
+    and send a single batch BlackLine JE file rather than N individual posts.
+    """
     snapshot_lookup = {a.accrual_id: a.model_dump(mode="json") for a in accruals}
+    accrual_lookup = {a.accrual_id: a for a in accruals}
     stats = {"flagged": 0, "duplicates_expanded": 0, "approved": 0}
+    approved_accruals: list[AccrualObject] = []
 
     for call in tool_calls:
         if call.tool == "flag_stale_po_accrual":
@@ -51,7 +58,9 @@ async def route(
             stats["flagged"] += n
             stats["duplicates_expanded"] += 1
         elif call.tool == "approve_accrual":
-            await _handle_approve(call, snapshot_lookup, run_id=run_id)
+            accrual = await _handle_approve(call, snapshot_lookup, accrual_lookup, run_id=run_id)
+            if accrual is not None:
+                approved_accruals.append(accrual)
             stats["approved"] += 1
         else:
             raise ValueError(
@@ -60,6 +69,7 @@ async def route(
             )
 
     log.info("router.done", run_id=run_id, **stats)
+    return approved_accruals
 
 
 async def _handle_stale_po(
@@ -130,9 +140,10 @@ async def _handle_duplicate(
 async def _handle_approve(
     call: ToolCall,
     snapshot_lookup: dict[str, dict[str, Any]],
+    accrual_lookup: dict[str, AccrualObject],
     *,
     run_id: str,
-) -> None:
+) -> AccrualObject | None:
     accrual_id = _require(call.input, "accrual_id")
     notes = _require(call.input, "notes")
     persist_approved_item(
@@ -141,7 +152,9 @@ async def _handle_approve(
         notes=notes,
         accrual_snapshot=snapshot_lookup.get(accrual_id),
     )
-    await post_journal_entry(run_id=run_id, accrual_id=accrual_id, notes=notes)
+    # Return the AccrualObject so the pipeline can batch all approved items
+    # into a single BlackLine JE file instead of posting one-by-one.
+    return accrual_lookup.get(accrual_id)
 
 
 async def route_payroll(

@@ -99,8 +99,14 @@ async def fetch_workday_payroll_results(
     settings = get_settings()
     resolved_group = pay_group or settings.workday_pay_group
 
-    if settings.mock_mode:
-        log.info("workday.mock_mode", fixture=WORKDAY_FIXTURE)
+    # Workday lives outside SAP. Even when MOCK_MODE=false (i.e. FI/MM/CO/Plan
+    # all come from BTP), the Workday side stays on the fixture unless a real
+    # tenant is wired up via WORKDAY_TENANT_URL.
+    if settings.mock_mode or not settings.workday_tenant_url:
+        if not settings.mock_mode:
+            log.info("workday.fixture_fallback", reason="workday_tenant_url_unset")
+        else:
+            log.info("workday.mock_mode", fixture=WORKDAY_FIXTURE)
         payload = load_fixture(WORKDAY_FIXTURE)
         records = _unwrap_workday(payload)
     else:
@@ -117,37 +123,20 @@ async def fetch_peci_fi_lines(
 ) -> list[FIJournalEntry]:
     """Fetch the FI journal lines PECI posted for the demo pay period.
 
-    These are the same shape as the FI lines from ``fetch_journal_entries``;
-    the GL filter is different so we don't pull the regular non-payroll
-    accruals here.
+    Always served from the local fixture — even when ``MOCK_MODE=false``.
+    The CAP mocksap service doesn't carry PECI extension fields
+    (``WorkerReference`` / ``PayGroupReference`` / ``PayPeriodEndDate``) on
+    ``A_OperationalAcctgDocItemCube``, so a live query against it can't
+    feed the payroll reconciliation. Keeping the payroll FI side on the
+    bundled fixture mirrors what the Workday side already does (the live
+    Workday SOAP path is intentionally stubbed) and keeps the demo
+    reliable regardless of the SAP/CAP integration state.
+
+    The ``client`` parameter is kept for signature compatibility with the
+    sibling FI fetcher; it is ignored.
     """
-    settings = get_settings()
-    if settings.mock_mode:
-        log.info("peci_fi.mock_mode", fixture=FI_PAYROLL_FIXTURE)
-        payload = load_fixture(FI_PAYROLL_FIXTURE)
-    else:
-        # OR-of-ranges on GLAccount: payroll expense range plus the two
-        # liability accruals. SAP's OData $filter doesn't support a true
-        # IN clause, so we use grouped ranges.
-        filter_clause = (
-            f"CompanyCode eq '{DEFAULT_COMPANY_CODE}' and ("
-            f"(GLAccount ge '{PAYROLL_EXPENSE_GL_FROM}' "
-            f"and GLAccount le '{PAYROLL_EXPENSE_GL_TO}') "
-            f"or GLAccount eq '{PAYROLL_ACCRUAL_GLS[0]}' "
-            f"or GLAccount eq '{PAYROLL_ACCRUAL_GLS[1]}'"
-            f")"
-        )
-        log.info("peci_fi.fetch", path=FI_PATH, limit=limit)
-        response = await get_with_retry(
-            client,
-            FI_PATH,
-            params={
-                "$format": "json",
-                "$top": str(limit),
-                "$filter": filter_clause,
-            },
-        )
-        payload = response.json()
+    log.info("peci_fi.fixture", fixture=FI_PAYROLL_FIXTURE)
+    payload = load_fixture(FI_PAYROLL_FIXTURE)
     records = unwrap_odata(payload)
     return [FIJournalEntry.model_validate(r) for r in records]
 

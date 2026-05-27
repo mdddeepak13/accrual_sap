@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="API_MATERIAL_VALUATION_SRV" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <Annotation Term="Core.Links">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="MaterialValuation" EntityType="API_MATERIAL_VALUATION_SRV.MaterialValuation"/>
+      </EntityContainer>
+      <EntityType Name="MaterialValuation">
+        <Key>
+          <PropertyRef Name="Material"/>
+          <PropertyRef Name="ValuationArea"/>
+        </Key>
+        <Property Name="Material" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="ValuationArea" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="ValuationClass" Type="Edm.String" MaxLength="4"/>
+        <Property Name="Currency" Type="Edm.String" MaxLength="3"/>
+        <Property Name="StandardPrice" Type="Edm.Decimal" Precision="13" Scale="2"/>
+        <Property Name="PriceUnit" Type="Edm.Decimal" Precision="5" Scale="0"/>
+        <Property Name="MovingAvgPrice" Type="Edm.Decimal" Precision="13" Scale="2"/>
+        <Property Name="TotalStockQty" Type="Edm.Decimal" Precision="15" Scale="3"/>
+        <Property Name="TotalStockValue" Type="Edm.Decimal" Precision="15" Scale="2"/>
+      </EntityType>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

@@ -129,8 +129,9 @@ export default async function RunDetailPage({ params }: Props) {
             Accruals to be posted ({run.approved.length})
           </CardTitle>
           <CardDescription>
-            Claude approved these as clean; each was sent to the mock S/4
-            postback with the approval notes shown.
+            Claude approved these as clean. At the end of the run they are
+            collected into a single BlackLine JE file and sent to BlackLine
+            in one batch POST — not posted individually.
           </CardDescription>
         </CardHeader>
         <CardContent>

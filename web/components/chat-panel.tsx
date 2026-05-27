@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import type { ChatStatus } from "ai";
 
 import { ChatMessage } from "@/components/chat-message";
+import { WelcomePicker } from "@/components/suggestions-list";
 import { Button } from "@/components/ui/button";
 import type { AccrualAgentUIMessage } from "@/agent/accrual-agent";
 
@@ -38,31 +39,21 @@ export function ChatPanel({
   };
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div className="flex h-full min-h-0 flex-col bg-background">
       <div
         ref={scrollRef}
         className="flex-1 overflow-y-auto px-4 py-6 md:px-8"
       >
         {messages.length === 0 ? (
-          <div className="mx-auto max-w-2xl pt-8 md:pt-16">
-            <h2 className="mb-2 text-xl font-semibold md:text-2xl">
-              Ask anything about accruals, plan, or variance
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              The agent queries your SAP cube and plan data in real time.
-              Pick an example from the sidebar or type your own question
-              below. Conversation history persists until you start a new
-              chat.
-            </p>
-          </div>
+          <WelcomePicker onPick={submit} disabled={isBusy} />
         ) : (
-          <div className="mx-auto max-w-3xl space-y-4">
+          <div className="mx-auto max-w-5xl space-y-4">
             {messages.map((m) => (
               <ChatMessage key={m.id} message={m} />
             ))}
             {isBusy && (
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-foreground/40" />
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
                 <span>Thinking…</span>
               </div>
             )}
@@ -75,9 +66,9 @@ export function ChatPanel({
           e.preventDefault();
           submit(input);
         }}
-        className="shrink-0 border-t bg-background px-4 py-3 md:px-8 md:py-4"
+        className="shrink-0 border-t border-border bg-card/80 px-4 py-3 backdrop-blur md:px-8 md:py-4"
       >
-        <div className="mx-auto flex max-w-3xl items-end gap-2">
+        <div className="mx-auto flex max-w-5xl items-end gap-2">
           <textarea
             value={input}
             onChange={(e) => onInputChange(e.target.value)}
@@ -87,12 +78,16 @@ export function ChatPanel({
                 submit(input);
               }
             }}
-            placeholder="Ask about accruals, budgets, variances, or irregularities…"
+            placeholder="Ask about accruals, payroll, inventory, write-offs…"
             rows={1}
-            className="flex-1 resize-none rounded-md border bg-background px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring"
+            className="flex-1 resize-none rounded-md border border-border bg-card px-3 py-2 text-base text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary/60 focus:ring-1 focus:ring-primary/40 disabled:opacity-50"
             disabled={isBusy}
           />
-          <Button type="submit" disabled={isBusy || !input.trim()}>
+          <Button
+            type="submit"
+            disabled={isBusy || !input.trim()}
+            className="bg-primary text-primary-foreground hover:bg-[#0052A3]"
+          >
             {isBusy ? "Working…" : "Ask"}
           </Button>
         </div>

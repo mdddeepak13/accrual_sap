@@ -8,7 +8,6 @@ so we can assert the router called into it without touching the real
 from __future__ import annotations
 
 from typing import Any
-from unittest.mock import AsyncMock, patch
 
 import pytest
 
@@ -153,7 +152,7 @@ async def test_flag_duplicate_with_fewer_than_two_ids_raises(run_id: str) -> Non
         await route([call], [], run_id=run_id)
 
 
-async def test_approve_accrual_invokes_postback(run_id: str) -> None:
+async def test_approve_accrual_persists_and_returns_accrual(run_id: str) -> None:
     call = ToolCall(
         id="t4",
         tool="approve_accrual",
@@ -162,19 +161,17 @@ async def test_approve_accrual_invokes_postback(run_id: str) -> None:
             "notes": "Clean service accrual, valid CC, reasonable amount.",
         },
     )
-    with patch(
-        "accrual_pipeline.router.post_journal_entry", new_callable=AsyncMock
-    ) as mock_postback:
-        await route([call], [], run_id=run_id)
-    mock_postback.assert_awaited_once_with(
-        run_id=run_id,
-        accrual_id="1010/2026/0100000001/001",
-        notes="Clean service accrual, valid CC, reasonable amount.",
-    )
+    approved = await route([call], [], run_id=run_id)
     # No FlaggedItem written for approvals.
     summary = get_run_summary(run_id)
     assert summary is not None
     assert summary["flagged"] == []
+    # Approved item persisted.
+    assert len(summary["approved"]) == 1
+    assert summary["approved"][0]["accrual_id"] == "1010/2026/0100000001/001"
+    # route() returns the list of approved AccrualObjects (empty here since
+    # no AccrualObject was passed in the accruals list).
+    assert approved == []
 
 
 async def test_mixed_dispatch_tracks_all_tool_calls(run_id: str) -> None:
@@ -211,13 +208,11 @@ async def test_mixed_dispatch_tracks_all_tool_calls(run_id: str) -> None:
             },
         ),
     ]
-    with patch(
-        "accrual_pipeline.router.post_journal_entry", new_callable=AsyncMock
-    ) as mock_postback:
-        await route(calls, [], run_id=run_id)
+    approved = await route(calls, [], run_id=run_id)
 
-    # 2 approves → 2 postbacks
-    assert mock_postback.await_count == 2
+    # route() returns approved AccrualObjects — empty because no AccrualObjects
+    # were passed in (accrual_lookup has no matches for the approved IDs).
+    assert approved == []
     # 2 from duplicate + 1 from stale = 3 FlaggedItem rows
     summary = get_run_summary(run_id)
     assert summary is not None
@@ -225,6 +220,8 @@ async def test_mixed_dispatch_tracks_all_tool_calls(run_id: str) -> None:
     tool_names = [r["tool_name"] for r in summary["flagged"]]
     assert tool_names.count("flag_duplicate_accrual") == 2
     assert tool_names.count("flag_stale_po_accrual") == 1
+    # 2 approved items persisted
+    assert len(summary["approved"]) == 2
 
 
 async def test_unknown_tool_name_raises(run_id: str) -> None:
@@ -245,18 +242,13 @@ async def test_tool_missing_required_field_raises(run_id: str) -> None:
 
 # --------------------------- postback direct ---------------------------
 
-async def test_postback_logs_soap_envelope_without_calling_network(
-    run_id: str, caplog: pytest.LogCaptureFixture
+async def test_postback_batch_skips_when_no_approved_items(
+    run_id: str,
 ) -> None:
-    from accrual_pipeline.postback import post_journal_entry
+    from accrual_pipeline.postback import post_blackline_je_batch
 
-    # We just want to confirm it returns cleanly and does not raise — the
-    # envelope content is validated via structlog's log event in other harnesses.
-    await post_journal_entry(
-        run_id=run_id,
-        accrual_id="1010/2026/0100000001/001",
-        notes="clean",
-    )
+    result = await post_blackline_je_batch([], run_id=run_id)
+    assert result is None
 
 
 def test_flagged_item_payload_is_round_trip_json(run_id: str) -> None:
